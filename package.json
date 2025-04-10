@@ -2,6 +2,9 @@
   "name": "spca-wtf",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -19,6 +22,7 @@
     "recharts": "^2.15.2"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.10.4",
     "@types/node": "^20.17.30",
     "@types/react": "^18.3.20",
     "@types/react-dom": "^18.3.6",
