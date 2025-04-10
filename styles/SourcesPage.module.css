@@ -1,0 +1,177 @@
+/* Styles for the Sources Page */
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  font-family: sans-serif;
+  line-height: 1.7;
+  color: #333;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1a1a1a;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.section h2 {
+  margin-top: 2rem; /* Add space above section headers */
+  margin-bottom: 1rem;
+  color: #444;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.3rem;
+  scroll-margin-top: 70px; /* Offset for fixed headers when linking */
+}
+.section:first-of-type h2 {
+  margin-top: 0; /* No top margin for the very first h2 */
+}
+
+.section ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.section li {
+  margin-bottom: 0.75rem;
+}
+
+.sourceList {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sourceItem {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+  /* scroll-margin-top: 70px; Already on h2 */
+}
+
+/* Style for the invisible anchor if needed, usually just targeting the li#id is enough */
+/* .sourceAnchor {
+  display: block;
+  position: relative;
+  top: -70px; 
+  visibility: hidden;
+} */
+
+.sourceItem h3 {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  color: #2a2a2a;
+  display: flex; /* Align number and title */
+  align-items: baseline;
+}
+
+.sourceNumber {
+  color: #888;
+  margin-right: 0.75rem;
+  font-weight: normal;
+}
+
+.sourceItem p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.sourceItem p strong {
+  color: #555;
+  min-width: 150px; /* Align keys */
+  display: inline-block;
+}
+
+.sourceItem em { /* Style for the claim text */
+    background-color: #e9ecef;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.reliabilityKey {
+    background-color: #f1f3f5;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.reliabilityKey strong {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.reliabilityItem {
+    display: block; /* Each key item on new line */
+    margin-bottom: 0.3rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+/* Reliability Indicator (dot) */
+.reliabilityIndicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Combining indicator color with text styling */
+.reliabilityDetails {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.reliabilityText {
+    font-weight: bold;
+}
+
+.reliabilityHigh .reliabilityIndicator {
+  background-color: #28a745; /* Green */
+}
+.reliabilityHigh .reliabilityText {
+  color: #1c7430;
+}
+
+.reliabilityMedium .reliabilityIndicator {
+  background-color: #ffc107; /* Yellow */
+}
+.reliabilityMedium .reliabilityText {
+   color: #b98c00;
+}
+
+.reliabilityLow .reliabilityIndicator {
+  background-color: #dc3545; /* Red */
+}
+.reliabilityLow .reliabilityText {
+  color: #a71d2a;
+}
+
+.reliabilityUnverified .reliabilityIndicator {
+  background-color: #6c757d; /* Gray */
+}
+.reliabilityUnverified .reliabilityText {
+   color: #495057;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+} 

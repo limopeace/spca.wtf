@@ -1,0 +1,133 @@
+/* Cookie Consent Banner Styles */
+
+.banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #2d3748; /* Darker background */
+  color: #edf2f7;
+  padding: 18px 25px;
+  z-index: 1050; /* High z-index */
+  display: flex;
+  flex-direction: column; /* Default stack vertically */
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.15);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.content {
+  text-align: center;
+  flex-grow: 1; /* Allow content to take space */
+}
+
+.content p {
+  margin: 0 0 10px 0;
+}
+
+.content a {
+  color: #63b3ed; /* Brighter link color */
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.content a:hover {
+  color: #90cdf4;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap */
+  justify-content: center;
+  align-items: center; /* Vertically align items if wrapping */
+  gap: 12px; /* Space between buttons */
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.button {
+  padding: 9px 18px;
+  border: 1px solid #4a5568;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #4a5568; /* Button background */
+  color: #e2e8f0;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+  white-space: nowrap; /* Prevent button text wrapping */
+}
+
+.button:hover {
+  background-color: #5a6578;
+  border-color: #718096;
+  transform: translateY(-1px);
+}
+
+.button:active {
+    transform: translateY(0px);
+}
+
+.acceptAllButton {
+  background-color: #38a169; /* Green */
+  border-color: #38a169;
+  color: white;
+}
+
+.acceptAllButton:hover {
+  background-color: #2f855a;
+  border-color: #2f855a;
+}
+
+.customizeButton {
+  /* Slightly less prominent */
+  background-color: transparent;
+  border: 1px solid #718096;
+  color: #cbd5e0;
+}
+
+.customizeButton:hover {
+   background-color: rgba(255, 255, 255, 0.05);
+   border-color: #a0aec0;
+   color: #e2e8f0;
+}
+
+.rejectButton {
+  /* Similar to customize or slightly different */
+   background-color: transparent;
+   border: 1px solid #718096;
+   color: #cbd5e0;
+}
+
+.rejectButton:hover {
+   background-color: rgba(255, 255, 255, 0.05);
+   border-color: #a0aec0;
+   color: #e2e8f0;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .banner {
+    flex-direction: row; /* Horizontal layout */
+    justify-content: space-between;
+    padding: 15px 30px; /* Adjust padding */
+    font-size: 0.95rem;
+  }
+  .content {
+    text-align: left;
+    margin-right: 20px; /* Space between text and buttons */
+  }
+  .content p {
+      margin-bottom: 0; /* Remove bottom margin on larger screens */
+  }
+}
+
+/* Styles for the Customization Modal (if implemented) */
+/* .modalOverlay { ... } */
+/* .modalContent { ... } */
+/* .modalHeader { ... } */
+/* .modalBody { ... } */
+/* .modalFooter { ... } */
+/* .cookieCategory { ... } */
+/* .cookieToggle { ... } */ 

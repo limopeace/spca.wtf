@@ -1,0 +1,398 @@
+{
+  "documentCategories": [
+    {
+      "id": "emails",
+      "title": "Email Communications",
+      "description": "Official email correspondences between volunteers, officials, and Maneka Gandhi regarding SPCA Chandigarh operations.",
+      "icon": "mail",
+      "count": 2
+    },
+    {
+      "id": "reports",
+      "title": "RTI Responses & Reports",
+      "description": "Official RTI responses revealing mortality rates and AWBI inspection reports detailing infrastructure and staffing issues.",
+      "icon": "file-text",
+      "count": 2
+    },
+    {
+      "id": "communications",
+      "title": "WhatsApp Communications",
+      "description": "Documentation of WhatsApp group conversations related to SPCA operations and volunteer activities.",
+      "icon": "message-circle",
+      "count": 1
+    },
+    {
+      "id": "legal",
+      "title": "Court Cases & Orders",
+      "description": "Legal documents related to court interventions regarding SPCA operations and animal welfare concerns.",
+      "icon": "book",
+      "count": 2
+    }
+  ],
+  "documents": [
+    {
+      "id": "maneka-gandhi-2023",
+      "title": "Urgent Action Needed: SPCA Chandigarh",
+      "category": "emails",
+      "categoryName": "Email Communications",
+      "date": "2023-12-18",
+      "author": "Kashish Kumar",
+      "recipient": "Municipal Commissioner, Chandigarh",
+      "cc": "Maneka Gandhi",
+      "filePath": "/documents/emails/maneka-gandhi-2023.pdf",
+      "fileType": "pdf",
+      "description": "Official correspondence regarding urgent needs at the SPCA Chandigarh facility, including management issues, infrastructure requirements, and operational challenges.",
+      "thumbnail": "/images/document-previews/email-preview.jpg",
+      "featured": true,
+      "metadata": {
+        "pages": 15,
+        "size": "1.2 MB",
+        "created": "2023-12-18"
+      },
+      "keyPoints": [
+        "Absence of qualified supervisor for three months",
+        "Extensive repair needs for SPCA building",
+        "Need for dedicated Executive Secretary",
+        "Animals exposed to harsh weather due to inadequate shelter"
+      ]
+    },
+    {
+      "id": "veterinary-involvement-2024",
+      "title": "Request for Increased Veterinary Officer Involvement",
+      "category": "emails",
+      "categoryName": "Email Communications",
+      "date": "2024-09-13",
+      "author": "Kashish Kumar",
+      "recipient": "DC Chandigarh",
+      "cc": "Maneka Gandhi, MCC Chandigarh",
+      "filePath": "/documents/emails/veterinary-involvement-2024.pdf",
+      "fileType": "pdf",
+      "description": "Request to increase the involvement of veterinary officers at the SPCA facility to improve animal care and meet regulatory requirements.",
+      "thumbnail": "/images/document-previews/report-preview.jpg",
+      "featured": true,
+      "metadata": {
+        "pages": 10,
+        "size": "0.9 MB",
+        "created": "2024-09-13"
+      },
+      "keyPoints": [
+        "Request for twice-weekly visits from Dr. Munish Sharma",
+        "Reference to Prevention of Cruelty to Animals Act requirements",
+        "Need for regular veterinary-led staff meetings",
+        "Impact of insufficient veterinary oversight on animal health"
+      ]
+    },
+    {
+      "id": "whatsapp-chat",
+      "title": "SPCA Shramdaan WhatsApp Chat",
+      "category": "communications",
+      "categoryName": "WhatsApp Communications",
+      "date": "2023-10-09",
+      "author": "Various Contributors",
+      "filePath": "/documents/communications/whatsapp-chat.pdf",
+      "fileType": "pdf",
+      "description": "WhatsApp group conversation containing messages between volunteers, staff, and officials regarding SPCA operations and activities from October 2023 to April 2025.",
+      "thumbnail": "/images/document-previews/whatsapp-preview.jpg",
+      "featured": true,
+      "metadata": {
+        "pages": 25,
+        "size": "2.3 MB",
+        "created": "2025-02-27"
+      },
+      "keyPoints": [
+        "Day-to-day operational challenges documented",
+        "Evidence of staff attendance issues",
+        "Documentation of facility repair progress",
+        "Staff conduct concerns with specific examples",
+        "Communication gaps between administration and operations"
+      ]
+    },
+    {
+      "id": "comprehensive-report-nov-2024",
+      "title": "Comprehensive SPCA Issues Report",
+      "category": "reports",
+      "categoryName": "Reports & Forms",
+      "date": "2024-11-05",
+      "author": "Kashish Kumar",
+      "recipient": "DC Chandigarh, Admin Chandigarh",
+      "cc": "Maneka Gandhi, MCC Chandigarh",
+      "filePath": "/documents/reports/comprehensive-report-nov-2024.pdf",
+      "fileType": "pdf",
+      "description": "Detailed report submitted in November 2024 cataloging persistent issues at SPCA Chandigarh despite some improvements in cleanliness and organization.",
+      "thumbnail": "/images/document-previews/report-preview.jpg",
+      "featured": false,
+      "metadata": {
+        "pages": 12,
+        "size": "1.5 MB",
+        "created": "2024-11-05"
+      },
+      "keyPoints": [
+        "Failure to protect visitors and volunteers from harassment",
+        "Gross discipline failure during Diwali night (October 31, 2024)",
+        "Lack of complaint redressal system",
+        "Pending structural repairs and ambulance procurement",
+        "Ongoing issues with essential supplies procurement",
+        "Lack of supervision during evening shifts"
+      ]
+    },
+    {
+      "id": "mortality-rti-response",
+      "title": "Animal Mortality RTI Response",
+      "category": "reports",
+      "categoryName": "RTI Responses & Reports",
+      "date": "2021-10-15",
+      "author": "SPCA Chandigarh",
+      "recipient": "RTI Applicant",
+      "filePath": "/documents/reports/mortality-rti-response.pdf",
+      "fileType": "pdf",
+      "description": "Official RTI response revealing that 47% of animals (6,383 out of 13,567) brought to the shelter between January 2019 and September 2021 died during treatment.",
+      "thumbnail": "/images/document-previews/rti-preview.jpg",
+      "featured": true,
+      "metadata": {
+        "pages": 5,
+        "size": "0.7 MB",
+        "created": "2021-10-15"
+      },
+      "keyPoints": [
+        "47% overall mortality rate from January 2019 to September 2021",
+        "73% of deaths were street dogs (4,665 animals)",
+        "2,315 deaths during a nine-month period in 2021 alone",
+        "Month-by-month breakdown of mortality statistics",
+        "No explanation provided for high death rates"
+      ]
+    },
+    {
+      "id": "high-court-visiting-hours",
+      "title": "Punjab and Haryana HC Order on Visiting Hours",
+      "category": "legal",
+      "categoryName": "Court Cases & Orders",
+      "date": "2022-04-09",
+      "author": "Punjab and Haryana High Court",
+      "filePath": "/documents/legal/high-court-visiting-hours.pdf",
+      "fileType": "pdf",
+      "description": "High Court order directing the Chandigarh administration to restore earlier visiting hours for animal lovers after determining that restrictive timings were hampering animal welfare.",
+      "thumbnail": "/images/document-previews/legal-preview.jpg",
+      "featured": false,
+      "metadata": {
+        "pages": 8,
+        "size": "1.1 MB",
+        "created": "2022-04-09"
+      },
+      "keyPoints": [
+        "Court recognition of animal lovers' right to participate in welfare",
+        "Directive to return to previous visiting hour schedule",
+        "Acknowledgment of volunteer contribution to animal care",
+        "Requirement for administration to hear volunteers before making policy changes",
+        "Precedent set for public participation in animal welfare facilities"
+      ],
+      "caseDetails": {
+        "caseNumber": "CWP-4526-2022",
+        "court": "Punjab and Haryana High Court",
+        "petitioner": "Animal Welfare Society",
+        "respondent": "Chandigarh Administration",
+        "status": "Resolved - Order Issued"
+      }
+    },
+    {
+      "id": "high-court-facility-discrepancies",
+      "title": "High Court Order on SPCA Facility Discrepancies",
+      "category": "legal",
+      "categoryName": "Court Cases & Orders",
+      "date": "2023-02-15",
+      "author": "Punjab and Haryana High Court",
+      "filePath": "/documents/legal/high-court-facility-discrepancies.pdf",
+      "fileType": "pdf",
+      "description": "Court order directing Punjab and Haryana to rectify discrepancies within 15 days as identified by court-appointed local commissioners regarding SPCA functioning.",
+      "thumbnail": "/images/document-previews/legal-preview.jpg",
+      "featured": false,
+      "metadata": {
+        "pages": 10,
+        "size": "1.3 MB",
+        "created": "2023-02-15"
+      },
+      "keyPoints": [
+        "Identification of serious operational deficiencies by court-appointed commissioners",
+        "15-day deadline imposed for rectification",
+        "Threat of penalties for non-compliance",
+        "Direction to implement proper animal welfare standards",
+        "Court monitoring of compliance with animal welfare laws"
+      ],
+      "caseDetails": {
+        "caseNumber": "CWP-1879-2023",
+        "court": "Punjab and Haryana High Court",
+        "petitioner": "People for Animals",
+        "respondent": "State of Punjab, State of Haryana",
+        "status": "Ongoing Monitoring"
+      }
+    }
+  ],
+  "issueCategories": [
+    {
+      "id": "administrative",
+      "title": "Administrative Issues",
+      "description": "Problems related to leadership, staff conduct, communication failures, and operational inefficiencies.",
+      "icon": "users",
+      "color": "#FF2E63"
+    },
+    {
+      "id": "infrastructure",
+      "title": "Infrastructure Issues",
+      "description": "Facility structure problems, equipment shortages, inadequate animal housing, and administrative infrastructure deficiencies.",
+      "icon": "home",
+      "color": "#08D9D6"
+    },
+    {
+      "id": "medical",
+      "title": "Medical Care Issues",
+      "description": "Veterinary staffing problems, animal care standards, medical record keeping deficiencies, and disease management shortcomings.",
+      "icon": "activity",
+      "color": "#F9C80E"
+    },
+    {
+      "id": "financial",
+      "title": "Financial Issues",
+      "description": "Budget allocation problems, payment delays, procurement challenges, and transparency concerns.",
+      "icon": "dollar-sign",
+      "color": "#7A77FF"
+    },
+    {
+      "id": "welfare",
+      "title": "Animal Welfare Impact",
+      "description": "Direct impacts on animal suffering, increased mortality, compromised emergency response, and public trust erosion.",
+      "icon": "heart",
+      "color": "#FF5252"
+    }
+  ],
+  "issues": [
+    {
+      "id": "leadership-gaps",
+      "category": "administrative",
+      "title": "Leadership and Accountability Gaps",
+      "description": "Inconsistent leadership with frequent changes in administration has severely impacted continuity and implementation of reforms.",
+      "details": [
+        "MC Commissioner Anindita Mitra's term ended August 2024",
+        "Responsibility temporarily assigned to DC Chandigarh",
+        "Honorary General Secretary (MOH) retired",
+        "Lack of continuity in policy implementation",
+        "Stalled progress on approved initiatives",
+        "Confusion regarding responsibility and accountability",
+        "Absence of regular monitoring meetings previously agreed upon"
+      ],
+      "severity": "high",
+      "status": "ongoing",
+      "relatedDocuments": ["comprehensive-report-nov-2024", "whatsapp-chat"]
+    },
+    {
+      "id": "staff-conduct",
+      "category": "administrative",
+      "title": "Staff Conduct Problems",
+      "description": "Numerous instances of staff misconduct, particularly toward visitors and volunteers, with limited accountability.",
+      "details": [
+        "Harassment of female volunteers and senior citizens",
+        "Verbal targeting of visitors who report issues",
+        "Staff absenteeism during critical times (Diwali incident)",
+        "Reports of staff demanding excessive payments for medicines (Rs. 500 for Rs. 25 injection)",
+        "Doctors socializing during duty hours, making patients wait",
+        "Reports of doctors' quarters being used inappropriately",
+        "Doctors maintaining private practices creating conflicts of interest",
+        "Concerning conduct of Dr. Vikram, arriving only at 5:30 PM after private clinic"
+      ],
+      "severity": "high",
+      "status": "ongoing",
+      "relatedDocuments": ["comprehensive-report-nov-2024", "whatsapp-chat"]
+    },
+    {
+      "id": "communication-failures",
+      "category": "administrative",
+      "title": "Communication Failures",
+      "description": "Significant communication gaps hampering effective operations and emergency responses.",
+      "details": [
+        "Landline frequently disconnected due to non-payment",
+        "No WhatsApp helpline despite requests",
+        "No publicly visible contact information for complaints",
+        "Limited digital communication channels (no website or official social media)",
+        "Poor internal communication between departments"
+      ],
+      "severity": "medium",
+      "status": "ongoing",
+      "relatedDocuments": ["whatsapp-chat", "comprehensive-report-nov-2024"]
+    },
+    {
+      "id": "operational-inefficiencies",
+      "category": "administrative",
+      "title": "Operational Inefficiencies",
+      "description": "Systemic operational inefficiencies preventing effective animal care and facility management.",
+      "details": [
+        "Delayed implementation of approved plans from 2024 AGM",
+        "Bottlenecks in procurement processes",
+        "No formal complaint redressal system",
+        "Inadequate documentation of veterinary visits and treatments",
+        "Lack of standard operating procedures",
+        "Absence of proper administrative oversight for financial transactions"
+      ],
+      "severity": "high",
+      "status": "ongoing",
+      "relatedDocuments": ["comprehensive-report-nov-2024", "maneka-gandhi-2023"]
+    },
+    {
+      "id": "facility-structure",
+      "category": "infrastructure",
+      "title": "Facility Structure Problems",
+      "description": "Significant structural issues compromising animal welfare and staff functionality.",
+      "details": [
+        "Leaking walls allowing water ingress during rain",
+        "Broken sheds exposing animals to extreme weather",
+        "Deteriorated flooring in animal housing areas",
+        "Inadequate drainage systems causing hygiene issues",
+        "Security vulnerabilities including broken gates",
+        "Poor insulation making temperature control difficult"
+      ],
+      "severity": "high",
+      "status": "partially-addressed",
+      "relatedDocuments": ["maneka-gandhi-2023", "whatsapp-chat"]
+    },
+    {
+      "id": "equipment-shortages",
+      "category": "infrastructure",
+      "title": "Equipment Shortages",
+      "description": "Critical equipment shortages impacting animal care and emergency response capabilities.",
+      "details": [
+        "Non-functional ambulance limiting emergency response",
+        "Insufficient heating equipment for winter months",
+        "Lack of proper medical equipment for basic treatments",
+        "Insufficient isolation equipment for disease control",
+        "Missing or broken animal handling tools"
+      ],
+      "severity": "high",
+      "status": "ongoing",
+      "relatedDocuments": ["comprehensive-report-nov-2024", "maneka-gandhi-2023"]
+    },
+    {
+      "id": "animal-housing",
+      "category": "infrastructure",
+      "title": "Inadequate Animal Housing",
+      "description": "Animal housing facilities that fall below acceptable standards for proper care.",
+      "details": [
+        "Cages lacking proper locks, posing safety risks",
+        "Insufficient isolation areas for contagious cases",
+        "Inadequate bedding especially during winter",
+        "Delayed procurement of bori/tirpal for animal protection",
+        "Poor segregation of animals based on health status, age, or temperament"
+      ],
+      "severity": "high",
+      "status": "partially-addressed",
+      "relatedDocuments": ["maneka-gandhi-2023", "whatsapp-chat"]
+    },
+    {
+      "id": "administrative-infrastructure",
+      "category": "infrastructure",
+      "title": "Administrative Infrastructure Deficiencies",
+      "description": "Severely lacking administrative infrastructure hampering efficient operations.",
+      "details": [
+        "No computers for efficient record-keeping",
+        "Absence of digital database for animal records",
+        "Limited office equipment for day-to-day operations",
+        "No proper meeting space for staff and volunteer coordination",
+        "Insufficient storage for supplies and medications",
+        "No functioning security cameras despite approval",
+    

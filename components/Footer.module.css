@@ -1,0 +1,73 @@
+/* Footer Component Styles */
+
+.footer {
+  background-color: #f8f9fa; /* Light gray background */
+  color: #6c757d; /* Muted text color */
+  padding: 2.5rem 1.5rem; /* Increased padding */
+  margin-top: 4rem; /* More space above the footer */
+  border-top: 1px solid #e7e7e7;
+  font-size: 0.9rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* Stack sections vertically by default */
+  align-items: center;
+  gap: 1.5rem; /* Gap between sections */
+}
+
+.legalNav {
+  display: flex;
+  flex-wrap: wrap; /* Allow links to wrap */
+  justify-content: center;
+  gap: 0.75rem 1.5rem; /* Row and column gap for links */
+  order: 2; /* Copyright comes first on mobile */
+}
+
+.legalNav a {
+  color: #495057; /* Slightly darker link color */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.legalNav a:hover,
+.legalNav a:focus {
+  color: #0056b3; /* Standard hover blue */
+  text-decoration: underline;
+  outline: none;
+}
+
+.copyrightContainer {
+    order: 1; /* Copyright first on mobile */
+    text-align: center;
+}
+
+.copyright {
+  margin: 0;
+  font-weight: 500;
+  color: #495057;
+}
+
+.tagline {
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    color: #6c757d;
+}
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row; /* Side-by-side layout */
+    justify-content: space-between;
+    align-items: center; /* Align items vertically */
+  }
+  .legalNav {
+    order: 1; /* Links first on larger screens */
+  }
+  .copyrightContainer {
+    order: 2; /* Copyright second */
+    text-align: right;
+  }
+} 

@@ -1,0 +1,110 @@
+/* ImageWithNotice Component Styles */
+
+.container {
+  margin: 1.5rem 0; /* Spacing around the component */
+  /* text-align: center; Removed default centering */
+  max-width: 100%; /* Ensure container doesn't exceed parent */
+}
+
+.imageWrapper {
+  position: relative; 
+  display: block; /* Make wrapper block-level */
+  max-width: 100%; 
+  margin-bottom: 0.5rem; /* Space between image and caption */
+}
+
+.image {
+  display: block; /* Remove extra space below image */
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  border: 1px solid #e0e0e0; /* Lighter border */
+  border-radius: 4px;
+  background-color: #f8f9fa; /* Light bg for loading/transparency */
+}
+
+/* Add specific max-width if needed, e.g., for large images */
+/* .imageWrapper,
+.image {
+  max-width: 800px; 
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+.figcaption {
+  padding: 0.5rem 0.25rem; /* Padding around caption text */
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+  text-align: left; /* Default caption alignment */
+}
+
+.captionText {
+    display: block; /* Ensure caption text is on its own line */
+    margin-bottom: 0.4rem; /* Space between caption and notice */
+}
+
+.notice {
+  font-size: 0.85rem; /* Slightly smaller notice */
+  font-style: italic;
+  color: #6c757d;
+  display: block; /* Ensure notice is on its own line */
+}
+
+.notice a {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.notice a:hover {
+    color: #0056b3;
+}
+
+/* Alignment classes for the entire container */
+.alignCenter {
+  margin-left: auto;
+  margin-right: auto;
+  /* max-width needs to be set for centering block elements effectively */
+  /* e.g., add max-width: 700px; here or on the specific instance */
+}
+
+.alignCenter .figcaption {
+    text-align: center;
+}
+
+.alignLeft .figcaption {
+    text-align: left;
+}
+
+.alignRight {
+    /* For floating right, use floatRight class */
+    /* If just aligning text, use text-align on parent */
+}
+.alignRight .figcaption {
+    text-align: right;
+}
+
+/* Float styles (apply to .container) */
+.floatLeft {
+  float: left;
+  margin-right: 1.5rem;
+  margin-bottom: 0.75rem; 
+  max-width: 50%; /* Default float width - adjust as needed */
+}
+
+.floatRight {
+  float: right;
+  margin-left: 1.5rem;
+  margin-bottom: 0.75rem; 
+  max-width: 50%; /* Default float width - adjust as needed */
+}
+
+/* Apply clearfix to the PARENT element containing the floated image and the text */
+/* Example: <div className="clearfix"> <ImageWithNotice layout="floatLeft" ... /> <p>Text...</p> </div> */
+/* Add this class to your globals.css or relevant parent component's CSS */
+/* 
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+*/ 

@@ -1,0 +1,81 @@
+/* Add these styles to your global CSS (styles/globals.css) */
+/* Make sure they don't conflict with other global rules or imports */
+
+/* --- Style for Commentary/Analysis Blocks --- */
+.commentaryBlock {
+  background-color: #f1f3f5; /* Slightly different background */
+  border-left: 5px solid #868e96; /* Distinctive left border */
+  padding: 1.25rem 1.75rem;
+  margin: 2rem 0; /* Clear spacing around the block */
+  font-style: italic;
+  color: #495057; /* Slightly muted text color */
+  border-radius: 0 4px 4px 0; /* Optional: rounded corners on right */
+  position: relative;
+}
+
+/* Optional: Add a text label using a pseudo-element */
+.commentaryBlock::before {
+  content: "Analysis"; /* Text label */
+  display: block;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #868e96; /* Match border color */
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.25rem;
+  /* Optional: Add a subtle line below the label */
+  /* border-bottom: 1px dashed #ced4da; */
+}
+
+/* Ensure paragraphs inside the block have appropriate margins */
+.commentaryBlock p:first-of-type {
+  margin-top: 0;
+}
+
+.commentaryBlock p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* --- Style for Factual Reporting (Usually Default) --- */
+/* Generally, no specific class is needed if standard <p> tags represent facts. */
+/* The .citation component handles its own styling. */
+
+/* --- Optional: Inline Commentary --- */
+.inlineCommentary {
+    font-style: italic;
+    color: #5a636b; /* Slightly different color for inline */
+    /* Optional: Add subtle visual cues */
+    /* padding: 0 2px; */
+    /* background-color: #f8f9fa; */
+}
+
+/* --- Base HTML & Body Styles (Example - Keep or merge with yours) --- */
+/* It's generally good practice to have some base styles */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0; /* Remove default body margin */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.6; 
+  color: #333;
+  background-color: #fff;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+} 

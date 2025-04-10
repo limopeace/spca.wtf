@@ -1,0 +1,110 @@
+/* Citation Component Styles */
+
+.citation {
+  display: inline-block; /* Allows superscript/subscript positioning */
+  margin: 0 2px; /* Small spacing around the citation */
+  position: relative; /* Context for the tooltip */
+}
+
+.referenceLink {
+  font-size: 0.75em; /* Smaller font size */
+  vertical-align: super; /* Superscript style */
+  text-decoration: none;
+  color: #007bff; /* Link color */
+  padding: 1px 3px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background-color: #f8f9fa; /* Light background */
+  transition: background-color 0.2s ease, color 0.2s ease;
+  cursor: pointer; /* Indicate interactivity */
+}
+
+.referenceLink:hover,
+.referenceLink:focus {
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  outline: none;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 100%; /* Position above the citation number */
+  left: 50%;
+  transform: translateX(-50%) translateY(-5px); /* Center tooltip and add small gap */
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  z-index: 1010; /* Above modal overlay, potentially */
+  width: max-content; /* Adjust width based on content */
+  max-width: 300px;
+  text-align: left;
+  line-height: 1.4;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  white-space: normal; /* Allow text wrapping */
+  pointer-events: none; /* Prevent tooltip from blocking hover on link */
+}
+
+.citation:hover .tooltip,
+.citation:focus-within .tooltip { /* Show on hover or focus */
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto; /* Allow interaction with tooltip content if needed */
+}
+
+.tooltipHeader {
+  font-weight: bold;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #555;
+  padding-bottom: 5px;
+}
+
+.tooltipContent p {
+  margin: 5px 0;
+}
+
+.reliability {
+  margin-top: 8px;
+  font-style: italic;
+  display: flex;
+  align-items: center; /* Align icon and text */
+  gap: 5px;
+}
+
+/* Reliability Indicators (using colored dots as an example) */
+.reliabilityIndicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.reliabilityHigh .reliabilityIndicator {
+  background-color: #28a745; /* Green */
+}
+.reliabilityMedium .reliabilityIndicator {
+  background-color: #ffc107; /* Yellow */
+}
+.reliabilityLow .reliabilityIndicator {
+  background-color: #dc3545; /* Red */
+}
+.reliabilityUnverified .reliabilityIndicator {
+  background-color: #6c757d; /* Gray */
+}
+
+.reliabilityText {
+  /* Style for the text part if needed */
+}
+
+.tooltipContent a {
+    color: #87ceeb; /* Lighter blue for links inside tooltip */
+    text-decoration: underline;
+}
+.tooltipContent a:hover {
+    color: #add8e6;
+} 

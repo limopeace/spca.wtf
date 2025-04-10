@@ -1,0 +1,220 @@
+{
+  "timelineEvents": [
+    {
+      "id": "initial-complaint",
+      "date": "2023-12-18",
+      "title": "Initial Complaint Sent",
+      "category": "Administrative",
+      "description": "Comprehensive complaint email sent to Municipal Commissioner detailing absence of qualified supervisor, extensive repair needs, and animals exposed to harsh weather.",
+      "keyPoints": [
+        "Absence of qualified supervisor for three months",
+        "Extensive repair needs for SPCA building",
+        "Need for dedicated Executive Secretary",
+        "Exposed animals facing harsh weather conditions"
+      ],
+      "relatedDocumentId": "maneka-gandhi-2023",
+      "icon": "mail"
+    },
+    {
+      "id": "maneka-intervention",
+      "date": "2023-12-21",
+      "title": "Maneka Gandhi Intervention",
+      "category": "Administrative",
+      "description": "Smt. Maneka Gandhi personally contacted the Municipal Commissioner (Anindita Mitra) to address concerns about SPCA Chandigarh conditions.",
+      "keyPoints": [
+        "Personal intervention by prominent animal welfare advocate",
+        "Direct communication with Municipal Commissioner",
+        "Instructions to prepare repair list",
+        "Promise of improvement within 3 months"
+      ],
+      "relatedDocumentId": "maneka-gandhi-2023",
+      "icon": "phone"
+    },
+    {
+      "id": "commissioner-meeting",
+      "date": "2024-01-04",
+      "title": "Meeting with Municipal Commissioner",
+      "category": "Administrative",
+      "description": "Meeting with Municipal Commissioner resulting in several commitments including supervisor recruitment, camera installation, and improved monitoring.",
+      "keyPoints": [
+        "Recruitment of Supervisor Saurav Sharma",
+        "Installation of cameras with feed to MC commissioner",
+        "Implementation of automated attendance system",
+        "Relocation of bovines to gaushala in Raipur Kalan",
+        "Creation of isolation kennel for aggressive dogs",
+        "Agreement to monthly meetings with volunteers"
+      ],
+      "relatedDocumentId": "commissioner-meeting-update",
+      "icon": "users"
+    },
+    {
+      "id": "leadership-change",
+      "date": "2024-08-15",
+      "title": "Leadership Transition",
+      "category": "Administrative",
+      "description": "MC Commissioner Anindita Mitra's term ended; responsibility temporarily assigned to DC Chandigarh. Honorary General Secretary also retired.",
+      "keyPoints": [
+        "End of term for key leadership figure",
+        "Temporary assignment to DC Chandigarh",
+        "Retirement of instrumental Honorary General Secretary",
+        "Loss of continuity in policy implementation",
+        "Stalled progress on approved initiatives"
+      ],
+      "icon": "user-x"
+    },
+    {
+      "id": "veterinary-request",
+      "date": "2024-09-13",
+      "title": "Veterinary Officer Issues Raised",
+      "category": "Medical",
+      "description": "Formal request made for increased involvement of Veterinary Officer Dr. Munish Sharma, who was stationed 100m from SPCA but rarely visited the facility.",
+      "keyPoints": [
+        "Request for at least twice-weekly documented visits",
+        "Highlighting critical role of Veterinary Officer per PCA Act",
+        "Need for regular meetings led by VO",
+        "Second intervention by Maneka Gandhi",
+        "Commitment to daily visits (unfulfilled)"
+      ],
+      "relatedDocumentId": "veterinary-involvement-2024",
+      "icon": "user-plus"
+    },
+    {
+      "id": "diwali-incident",
+      "date": "2024-10-31",
+      "title": "Diwali Night Staff Absence",
+      "category": "Administrative",
+      "description": "Critical staff absence during Diwali night when animals needed emergency care due to fireworks. Appointed doctor, medical staff, ambulance driver, and van duty worker all absent.",
+      "keyPoints": [
+        "Complete staff absence during high-risk period",
+        "Only security guard on site",
+        "No ambulance services available",
+        "No emergency medical care available",
+        "Animals frightened by fireworks injured on roads",
+        "No disciplinary action taken despite reports"
+      ],
+      "icon": "alert-triangle"
+    },
+    {
+      "id": "comprehensive-report",
+      "date": "2024-11-05",
+      "title": "Comprehensive Issues Report",
+      "category": "Administrative",
+      "description": "Detailed report submitted documenting persistent issues despite some improvements in cleanliness and organization under Supervisor Saurav Sharma.",
+      "keyPoints": [
+        "Failure to protect visitors and volunteers from harassment",
+        "Gross discipline failure during Diwali night",
+        "Lack of complaint redressal system",
+        "Pending structural repairs and ambulance procurement",
+        "Ongoing issues with essential supplies procurement",
+        "Lack of supervision during evening shifts"
+      ],
+      "relatedDocumentId": "comprehensive-report-nov-2024",
+      "icon": "file-text"
+    },
+    {
+      "id": "landline-disconnection",
+      "date": "2024-12-23",
+      "title": "Landline Service Disconnection",
+      "category": "Operational",
+      "description": "SPCA landline service disconnected due to non-payment of bills, hampering emergency communications and public access.",
+      "keyPoints": [
+        "Essential communication service disrupted",
+        "Unpaid utility bills",
+        "Added barrier to emergency reporting",
+        "Financial management concerns",
+        "Public access to SPCA impeded"
+      ],
+      "icon": "phone-off"
+    },
+    {
+      "id": "kennel-repairs",
+      "date": "2025-01-11",
+      "title": "Kennel Repairs Undertaken",
+      "category": "Infrastructure",
+      "description": "Repairs to front kennels initiated as documented in WhatsApp communications, showing some progress on infrastructure improvements.",
+      "keyPoints": [
+        "5 kennels repaired initially",
+        "Later expanded to 14 kennels",
+        "Improved animal housing conditions",
+        "Volunteer-driven initiative",
+        "Incremental improvement to facility"
+      ],
+      "icon": "tool"
+    },
+    {
+      "id": "salary-delays",
+      "date": "2025-01-15",
+      "title": "Staff Salary Delays Reported",
+      "category": "Financial",
+      "description": "Reports that staff salaries remained unpaid for over two months, affecting morale and potentially contributing to absenteeism.",
+      "keyPoints": [
+        "2+ months of unpaid salaries",
+        "Staff morale issues",
+        "Increased risk of absenteeism",
+        "Doctor complaints about payment",
+        "Administrative budget management failure"
+      ],
+      "icon": "dollar-sign"
+    },
+    {
+      "id": "bori-procurement-delay",
+      "date": "2025-01-24",
+      "title": "Essential Supplies Procurement Delayed",
+      "category": "Operational",
+      "description": "Procurement of jute bori (sacks) for animal protection during winter delayed due to administrative bottlenecks.",
+      "keyPoints": [
+        "Critical winter protection materials delayed",
+        "Administrative approval process bottlenecks",
+        "Animals exposed to harsh winter conditions",
+        "Reliance on donations for essentials",
+        "Preventable suffering due to bureaucracy"
+      ],
+      "icon": "shopping-bag"
+    },
+    {
+      "id": "birds-release",
+      "date": "2025-02-12",
+      "title": "Rehabilitated Birds Released",
+      "category": "Positive",
+      "description": "Successful rehabilitation and release of 15 pigeons, demonstrating some positive animal welfare outcomes despite challenges.",
+      "keyPoints": [
+        "15 pigeons successfully rehabilitated",
+        "Coordinated release operation",
+        "Documented wildlife rehabilitation success",
+        "Positive outcome despite facility limitations",
+        "Example of staff dedication"
+      ],
+      "icon": "feather"
+    },
+    {
+      "id": "decreased-engagement",
+      "date": "2025-03-15",
+      "title": "Volunteer Frustration and Decreased Engagement",
+      "category": "Administrative",
+      "description": "Reports of volunteer frustration leading to decreased engagement due to persistent unresolved issues despite repeated appeals.",
+      "keyPoints": [
+        "Declining volunteer participation",
+        "Frustration with lack of progress",
+        "Reduced external support",
+        "Loss of additional resources",
+        "Deterioration of public-private partnership"
+      ],
+      "icon": "user-minus"
+    },
+    {
+      "id": "website-launch",
+      "date": "2025-04-09",
+      "title": "SPCA.wtf Transparency Portal Launched",
+      "category": "Public Awareness",
+      "description": "Launch of SPCA.wtf document transparency portal to provide public access to all documentation regarding SPCA Chandigarh issues.",
+      "keyPoints": [
+        "Public access to all documentation",
+        "Timeline of events made transparent",
+        "Statistical data visualization",
+        "Recommended action plans presented",
+        "Platform for continued reporting"
+      ],
+      "icon": "globe"
+    }
+  ]
+}

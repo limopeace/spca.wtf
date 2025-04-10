@@ -1,0 +1,102 @@
+/* Reusable Styles for Legal Pages (Privacy, Terms, etc.) */
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  font-family: sans-serif;
+  line-height: 1.7;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.title {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+  font-size: 2rem;
+}
+
+.effectiveDate,
+.lastUpdated {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+
+.lastUpdated {
+  margin-bottom: 2.5rem;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #eee;
+  color: #333;
+  font-size: 1.5rem;
+  scroll-margin-top: 70px;
+}
+
+.section:first-of-type h2 {
+  margin-top: 0;
+}
+
+.section h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: #444;
+  font-size: 1.2rem;
+}
+
+.section p {
+  margin-bottom: 1rem;
+}
+
+.section ul {
+  list-style: disc;
+  margin-left: 1.8rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.section li {
+  margin-bottom: 0.6rem;
+}
+
+.section a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.section a:hover {
+  text-decoration: underline;
+}
+
+strong {
+  color: #222;
+}
+
+/* Basic responsiveness */
+@media (max-width: 768px) {
+  .container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  .title {
+    font-size: 1.7rem;
+  }
+  .section h2 {
+    font-size: 1.3rem;
+  }
+} 

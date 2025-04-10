@@ -1,0 +1,23 @@
+/* Styles for the Report Error Page */
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  font-family: sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #555;
+  font-size: 1.05rem;
+} 
