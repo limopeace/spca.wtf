@@ -1,13 +1,13 @@
-# Netlify configuration file
+# Netlify configuration file for Next.js static export
 [build]
   # Directory where your project is located
   base = ""
   
-  # Command to build your site
+  # Command to build your site - for Next.js static export
   command = "npm run build"
   
   # Directory that contains the deploy-ready files
-  publish = ".next"
+  publish = "out"
   
   # Default build environment variables
   environment = { NODE_VERSION = "18" }
@@ -20,8 +20,8 @@
 [functions]
   directory = "netlify/functions"
   
-# Redirect all traffic to the Next.js app
+# Handle SPA routing
 [[redirects]]
   from = "/*"
-  to = "/.netlify/functions/nextjs-server"
+  to = "/index.html"
   status = 200 
