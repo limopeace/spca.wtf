@@ -9,12 +9,6 @@ const nextConfig = {
     domains: ['highcourtchd.gov.in'],
     unoptimized: true
   },
-  // Disable server-side features when using export
-  experimental: {
-    images: {
-      allowFutureImage: true
-    }
-  }
 };
 
 module.exports = nextConfig; 

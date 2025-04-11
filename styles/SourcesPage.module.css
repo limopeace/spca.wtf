@@ -167,11 +167,11 @@
    color: #495057;
 }
 
-a {
+:global(a) {
     color: #007bff;
     text-decoration: none;
 }
 
-a:hover {
+:global(a:hover) {
     text-decoration: underline;
 } 

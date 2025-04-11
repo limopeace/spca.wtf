@@ -46,7 +46,12 @@ const ReportErrorForm = ({ defaultUrl = '' }) => {
 
     // --- Actual submission logic --- 
     try {
-      const response = await fetch('/api/report-error', { // Your API endpoint
+      // Determine which endpoint to use based on environment
+      const endpoint = process.env.NODE_ENV === 'development' 
+        ? '/api/report-error'  // Use Next.js API route in development
+        : '/.netlify/functions/report-error'; // Use Netlify function in production
+      
+      const response = await fetch(endpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
