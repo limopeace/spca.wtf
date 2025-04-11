@@ -18,8 +18,12 @@ const Citation = ({ sourceId, sourceData, citationNumber }) => {
     // Display a placeholder if data is missing, linking to the potential anchor
     return (
       <span className={styles.citation}>
-        <Link href={`/sources#${sourceId}`} legacyBehavior>
-          <a className={styles.referenceLink} aria-label={`Missing source data for citation ${citationNumber || ''}`}>[{citationNumber || '?'}]</a>
+        <Link 
+          href={`/sources#${sourceId}`} 
+          className={styles.referenceLink}
+          aria-label={`Missing source data for citation ${citationNumber || ''}`}
+        >
+          [{citationNumber || '?'}]
         </Link>
       </span>
     );
@@ -35,15 +39,14 @@ const Citation = ({ sourceId, sourceData, citationNumber }) => {
   return (
     <span className={styles.citation}>
       {/* Link wrapping the citation number */}
-      <Link href={sourcesPageLink} legacyBehavior>
-        <a
-          className={styles.referenceLink}
-          aria-label={`Source ${citationNumber}: ${type} dated ${date || 'N/A'}`}
-          aria-describedby={`tooltip-${sourceId}`} // Link tooltip for screen readers
-          tabIndex={0} // Make it focusable
-        >
-          {citationNumber}
-        </a>
+      <Link 
+        href={sourcesPageLink}
+        className={styles.referenceLink}
+        aria-label={`Source ${citationNumber}: ${type} dated ${date || 'N/A'}`}
+        aria-describedby={`tooltip-${sourceId}`} // Link tooltip for screen readers
+        tabIndex={0} // Make it focusable
+      >
+        {citationNumber}
       </Link>
 
       {/* Tooltip, positioned relative to the span */}
@@ -59,7 +62,11 @@ const Citation = ({ sourceId, sourceData, citationNumber }) => {
              <span className={styles.reliabilityIndicator} aria-hidden="true"></span> {/* Visual indicator */}
              <span className={styles.reliabilityText}>{reliabilityText}</span>
           </p>
-          <p><Link href={sourcesPageLink}><a>See full details on Sources page</a></Link></p>
+          <p>
+            <Link href={sourcesPageLink} className="inline-link">
+              See full details on Sources page
+            </Link>
+          </p>
         </div>
       </div>
     </span>

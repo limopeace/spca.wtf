@@ -30,7 +30,7 @@ async function testMenu() {
     // Find all menu items
     const menuItems = await page.evaluate(() => {
       // Adjust the selector to match your actual menu structure
-      const items = Array.from(document.querySelectorAll('nav a, button.mobile-menu-button'));
+      const items = Array.from(document.querySelectorAll('header nav a, button.hamburger, button.menuToggle'));
       return items.map(item => ({
         text: item.textContent.trim(),
         href: item.href || null,
@@ -52,7 +52,7 @@ async function testMenu() {
     // Check if mobile menu button exists
     const hasMobileMenuButton = await page.evaluate(() => {
       // Adjust selector to match your mobile menu button
-      return !!document.querySelector('button.mobile-menu-button');
+      return !!document.querySelector('button.hamburger, button.menuToggle');
     });
     
     if (hasMobileMenuButton) {
@@ -65,7 +65,7 @@ async function testMenu() {
       // Find and click the mobile menu button
       const mobileMenuButton = await page.evaluate(() => {
         // Adjust selector for your mobile menu button
-        const button = document.querySelector('button.mobile-menu-button');
+        const button = document.querySelector('button.hamburger, button.menuToggle');
         if (button) {
           const rect = button.getBoundingClientRect();
           return {
@@ -82,7 +82,7 @@ async function testMenu() {
         console.log('Clicked mobile menu button');
         
         // Wait for animation
-        await page.waitForTimeout(500);
+        await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 500)));
         
         // Take screenshot with menu open
         await page.screenshot({ path: path.join(screenshotsDir, 'mobile-menu-open.png') });
@@ -90,7 +90,7 @@ async function testMenu() {
         // Check if mobile menu is visible
         const isMobileMenuVisible = await page.evaluate(() => {
           // Adjust selector for your mobile menu
-          const mobileMenu = document.querySelector('nav.mobile-menu');
+          const mobileMenu = document.querySelector('nav.mobile-menu, nav.mobileMenu, div.mobileMenu');
           return mobileMenu && window.getComputedStyle(mobileMenu).display !== 'none';
         });
         
@@ -99,7 +99,7 @@ async function testMenu() {
         // Find all mobile menu items
         const mobileMenuItems = await page.evaluate(() => {
           // Adjust selector for your mobile menu items
-          const items = Array.from(document.querySelectorAll('nav.mobile-menu a'));
+          const items = Array.from(document.querySelectorAll('nav.mobile-menu a, nav.mobileMenu a, div.mobileMenu a'));
           return items.map(item => ({
             text: item.textContent.trim(),
             href: item.href
@@ -155,18 +155,20 @@ async function testMenu() {
     // Find and click a desktop menu item
     const desktopMenuItem = await page.evaluate(() => {
       // Adjust selector to match your desktop navigation
-      const items = Array.from(document.querySelectorAll('nav a'));
+      const items = Array.from(document.querySelectorAll('header nav a'));
       if (items.length > 0) {
-        // Get the "Legal" link or the second link if not found
-        const legalLink = items.find(i => i.textContent.includes('Legal')) || 
-                         (items.length > 1 ? items[1] : items[0]);
-        const rect = legalLink.getBoundingClientRect();
-        return {
-          text: legalLink.textContent.trim(),
-          href: legalLink.href,
-          x: rect.x + rect.width / 2,
-          y: rect.y + rect.height / 2
-        };
+        // Get the "About" link or the first link if not found
+        const aboutLink = items.find(i => i.textContent.includes('About')) || 
+                         (items.length > 0 ? items[0] : null);
+        if (aboutLink) {
+          const rect = aboutLink.getBoundingClientRect();
+          return {
+            text: aboutLink.textContent.trim(),
+            href: aboutLink.href,
+            x: rect.x + rect.width / 2,
+            y: rect.y + rect.height / 2
+          };
+        }
       }
       return null;
     });

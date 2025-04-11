@@ -147,7 +147,7 @@ const CookieConsentBanner = () => {
         <p>
           We use cookies to enhance your experience and for analytics. You can accept all cookies, reject non-essential cookies, or customize your preferences. Learn more in our
           {' '}
-          <Link href="/cookie-policy"><a>Cookie Policy</a></Link>.
+          <Link href="/cookie-policy">Cookie Policy</Link>.
           {/* Ensure /cookie-policy page exists */}
         </p>
       </div>

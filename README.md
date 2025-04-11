@@ -1,21 +1,108 @@
-# SPCA.wtf - Chandigarh Animal Welfare Transparency Portal
+# SPCA.wtf - Transparency Initiative
 
-This project serves as a transparency portal for documenting and raising awareness about animal welfare issues at the Society for Prevention of Cruelty to Animals (SPCA) Chandigarh. The website provides access to official documents, legal cases, and evidence related to the conditions at the facility.
+A website dedicated to documenting and providing transparency about animal welfare issues at SPCA Chandigarh.
 
 ## Project Overview
 
-SPCA.wtf is built using:
-- Next.js (React framework)
-- TypeScript
-- Tailwind CSS for styling
+This project uses Next.js to provide a comprehensive documentation portal for sharing evidence, documents, legal cases, and timelines related to animal welfare issues at SPCA Chandigarh.
 
-## Key Features
+## 🔧 Technology Stack
 
-- **Document Repository**: Access to RTI responses, court orders, and official communications
-- **Legal Cases Section**: Comprehensive database of all legal interventions related to SPCA Chandigarh
-- **Timeline**: Chronological presentation of key events
-- **Compliance Components**: Includes disclaimer, terms of use, privacy policy, and cookie consent
-- **Citation System**: Proper sourcing and attribution for all claims
+- **Framework**: Next.js 14.x
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Deployment**: Netlify
+- **Additional Tools**: React Icons, Recharts
+
+## 📂 Project Structure
+
+```
+/
+├── components/           # React components
+│   └── layout/           # Layout components like Header and Footer
+├── lib/                  # Utility functions and helpers
+├── netlify/              # Netlify specific files and functions
+├── pages/                # Next.js pages (JavaScript re-exports)
+├── public/               # Static assets
+├── src/                  
+│   └── pages/            # Main page components (TypeScript)
+│   └── styles/           # Global styles
+├── next.config.js        # Next.js configuration
+├── package.json          # Dependencies and scripts
+├── tailwind.config.js    # Tailwind CSS configuration
+└── netlify.toml          # Netlify deployment configuration
+```
+
+## 🚀 Local Development
+
+1. Ensure you have Node.js 18+ installed
+2. Clone this repository
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## 📝 Key Routes
+
+- `/` - Homepage with overview
+- `/documents` - Document repository
+- `/legal` - Legal cases and court records
+- `/timeline` - Timeline of key events
+- `/faq` - Frequently asked questions
+- `/contact` - Contact form for reporting issues
+
+## 🖥️ Deployment to Netlify
+
+This project is configured for seamless deployment on Netlify. 
+
+### Automatic Deployment
+
+1. Connect your GitHub repository to Netlify
+2. Netlify will automatically detect the Next.js configuration
+3. Deploy settings are already configured in `netlify.toml`
+
+### Manual Deployment
+
+You can also deploy manually using the Netlify CLI:
+
+```bash
+# Install Netlify CLI
+npm install netlify-cli -g
+
+# Login to your Netlify account
+netlify login
+
+# Deploy the site
+netlify deploy --prod
+```
+
+## 💡 Important Configuration Notes
+
+- The project uses the official `@netlify/plugin-nextjs` for optimal Netlify integration
+- Next.js `output: 'standalone'` is configured for optimal Netlify deployment
+- Environment variables are set in `netlify.toml` for production
+- Image optimization is configured to work with Netlify Image CDN
+
+## 📚 Contributing
+
+1. Create a new branch for your changes
+2. Make your changes
+3. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## ❓ Troubleshooting
+
+- **404 Errors**: Make sure your Netlify redirects are properly configured in `netlify.toml`
+- **Image Loading Issues**: Ensure images use the Next.js Image component and proper paths
+- **Deployment Issues**: Check Netlify build logs for specific errors
 
 ## Purpose of the Website
 
@@ -25,19 +112,6 @@ This website aims to:
 - Promote transparency in public institutions
 - Exercise the constitutional right to freedom of speech and expression
 - Facilitate community engagement for animal welfare improvement
-
-## Local Development
-
-```bash
-# Install dependencies
-npm install
-
-# Run the development server
-npm run dev
-
-# Build for production
-npm run build
-```
 
 ## Legal Information
 

@@ -82,7 +82,7 @@ const ImageWithNotice = ({
                 {/* Conditionally render the link to usage policy */}
                 {usagePolicyLink && (
                   <>
-                    {' ('}<Link href={usagePolicyLink}><a>Policy</a></Link>{/* Closing parenthesis is now outside the Link */}
+                    {' ('}<Link href={usagePolicyLink}>Policy</Link>{/* Closing parenthesis is now outside the Link */}
                   {')'}
                   </>
                 )}

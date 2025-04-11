@@ -11,15 +11,15 @@ const Footer = () => {
       <div className={styles.container}>
         {/* Legal Links Section */}
         <nav className={styles.legalNav} aria-label="Legal Pages">
-          <Link href="/terms-of-use"><a>Terms of Use</a></Link>
-          <Link href="/privacy-policy"><a>Privacy Policy</a></Link>
-          <Link href="/cookie-policy"><a>Cookie Policy</a></Link>
-          <Link href="/disclaimer"><a>Disclaimer</a></Link>
-          <Link href="/sources"><a>Sources</a></Link>
-          <Link href="/report-error"><a>Report Error</a></Link>
+          <Link href="/terms-of-use">Terms of Use</Link>
+          <Link href="/privacy-policy">Privacy Policy</Link>
+          <Link href="/cookie-policy">Cookie Policy</Link>
+          <Link href="/disclaimer">Disclaimer</Link>
+          <Link href="/sources">Sources</Link>
+          <Link href="/report-error">Report Error</Link>
            {/* Add other relevant links: About, Contact, Press, etc. */} 
-           {/* <Link href="/about"><a>About</a></Link> */}
-           {/* <Link href="/press-media-guidelines"><a>Press/Media</a></Link> */} 
+           {/* <Link href="/about">About</Link> */}
+           {/* <Link href="/press-media-guidelines">Press/Media</Link> */} 
         </nav>
 
          {/* Copyright Notice Section */}

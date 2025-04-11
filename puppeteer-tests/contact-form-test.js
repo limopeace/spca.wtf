@@ -19,7 +19,7 @@ async function testContactForm() {
     const page = await browser.newPage();
     
     // Navigate to the contact page
-    const contactUrl = 'http://localhost:3000/contact';
+    const contactUrl = 'http://localhost:3000/report-error';
     console.log(`Navigating to ${contactUrl}...`);
     await page.goto(contactUrl, { waitUntil: 'networkidle2' });
     
@@ -28,7 +28,7 @@ async function testContactForm() {
     
     // Find all form fields
     const formFields = await page.evaluate(() => {
-      const inputs = Array.from(document.querySelectorAll('input, textarea, select'));
+      const inputs = Array.from(document.querySelectorAll('form input, form textarea, form select'));
       return inputs.map(input => ({
         name: input.name,
         id: input.id,
@@ -48,7 +48,7 @@ async function testContactForm() {
     
     // Look for the submit button
     const submitButton = await page.evaluate(() => {
-      const buttons = Array.from(document.querySelectorAll('button[type="submit"], input[type="submit"]'));
+      const buttons = Array.from(document.querySelectorAll('form button[type="submit"], form input[type="submit"], form button'));
       if (buttons.length > 0) {
         const button = buttons[0];
         const rect = button.getBoundingClientRect();
@@ -66,7 +66,7 @@ async function testContactForm() {
       await page.mouse.click(submitButton.x, submitButton.y);
       
       // Wait a bit for validation errors to appear
-      await page.waitForTimeout(500);
+      await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 500)));
       
       // Take screenshot of validation errors
       await page.screenshot({ path: path.join(screenshotsDir, 'empty-form-validation.png') });
@@ -74,7 +74,7 @@ async function testContactForm() {
       // Check for validation error messages
       const validationErrors = await page.evaluate(() => {
         // This selector might need to be adjusted based on your site's error message format
-        const errors = Array.from(document.querySelectorAll('.error, .field-error, [role="alert"]'));
+        const errors = Array.from(document.querySelectorAll('.error, .field-error, [role="alert"], .errorMessage, .formError'));
         return errors.map(error => error.textContent.trim());
       });
       
@@ -170,7 +170,7 @@ async function testContactForm() {
       await page.mouse.click(submitButton.x, submitButton.y);
       
       // Wait for submission response
-      await page.waitForTimeout(2000);
+      await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 2000)));
       
       // Take screenshot of result
       await page.screenshot({ path: path.join(screenshotsDir, 'form-submission-result.png') });

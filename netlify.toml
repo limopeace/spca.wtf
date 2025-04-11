@@ -20,5 +20,14 @@
 [functions]
   directory = "netlify/functions"
   
+# Image optimization config
+[[plugins]]
+  package = "netlify-plugin-nextjs-cache"
+
+# Enable Next.js ISR capabilities
+[build.environment]
+  NEXT_USE_NETLIFY_EDGE = "true"
+  NEXT_FORCE_EDGE_IMAGES = "true"
+
 # No need for 404 redirects as the Next.js adapter handles this
 # Remove the static redirects since they're not compatible with SSR 

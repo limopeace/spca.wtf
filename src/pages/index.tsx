@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const Home: React.FC = () => {
   return (
@@ -48,7 +49,16 @@ const Home: React.FC = () => {
             <div className="md:w-1/2 flex justify-center mt-8 md:mt-0">
               <div className="w-full max-w-md animate-float">
                 <div className="bg-white p-1 rounded-lg shadow-xl transform rotate-3 relative">
-                  <img src="/placeholder.jpg" alt="Document preview" className="rounded-md w-full" />
+                  <div className="w-full h-64 relative">
+                    <Image 
+                      src="/images/document-preview.jpg" 
+                      alt="Document preview" 
+                      className="rounded-md"
+                      fill
+                      style={{ objectFit: 'cover' }}
+                      priority
+                    />
+                  </div>
                   <div className="absolute top-0 right-0 transform translate-x-0 sm:translate-x-1/4 -translate-y-1/4">
                     <span className="inline-flex items-center px-2 sm:px-3 py-0.5 rounded-full text-xs sm:text-sm font-medium bg-primary text-white whitespace-normal sm:whitespace-nowrap">
                       47% Mortality Rate Revealed in RTI

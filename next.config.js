@@ -2,10 +2,13 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  // Point to the correct pages directory
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
   // Ensure images work properly
   images: {
     domains: ['highcourtchd.gov.in'],
-    unoptimized: true
+    formats: ['image/avif', 'image/webp'],
+    unoptimized: process.env.NODE_ENV === 'development'
   },
   // Only use trailing slash in production
   trailingSlash: process.env.NODE_ENV === 'production',
@@ -26,6 +29,8 @@ const nextConfig = {
           },
         ];
   },
+  // Properly configure output for Netlify
+  output: 'standalone',
 };
 
 // Debug output to help diagnose configuration issues

@@ -49,7 +49,7 @@ const PrivacyPolicyPage = () => {
         <p>
             We may use cookies, web beacons, tracking pixels, and other tracking technologies on the Site to help customize the Site and improve your experience. When you access the Site, your personal information is not collected through the use of tracking technology unless you explicitly consent (e.g., via our cookie banner). Most browsers are set to accept cookies by default. You can remove or reject cookies, but be aware that such action could affect the availability and functionality of the Site.
         </p>
-        <p>For more detailed information on the cookies we use, their purpose, and how you can manage your preferences, please refer to our <Link href="/cookie-policy"><a>Cookie Policy</a></Link>.</p>
+        <p>For more detailed information on the cookies we use, their purpose, and how you can manage your preferences, please refer to our <Link href="/cookie-policy">Cookie Policy</Link>.</p>
          {/* Add other types if applicable, e.g., Data from Mobile Devices, Third-Party Data */} 
       </section>
 

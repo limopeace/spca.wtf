@@ -24,18 +24,17 @@ async function checkPages() {
   });
   
   try {
+    // Base URL - change this if needed
+    const baseUrl = 'http://localhost:3000';
+    
     // List of all pages to check
     const pagesToCheck = [
       { name: 'Home', path: '/' },
-      { name: 'Documents', path: '/documents' },
-      { name: 'Legal', path: '/legal' },
-      { name: 'Contact', path: '/contact' },
-      { name: 'FAQ', path: '/faq' },
-      { name: 'Timeline', path: '/timeline' }
+      { name: 'About', path: '/about' },
+      { name: 'Terms', path: '/terms-of-use' },
+      { name: 'Privacy', path: '/privacy-policy' },
+      { name: 'Sources', path: '/sources' }
     ];
-    
-    // Base URL - change this if needed
-    const baseUrl = 'http://localhost:3000';
     
     console.log('Starting page checks...');
     
