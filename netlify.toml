@@ -1,13 +1,13 @@
-# Netlify configuration file for Next.js static export
+# Netlify configuration file for Next.js
 [build]
   # Directory where your project is located
   base = ""
   
-  # Command to build your site - ensure dev dependencies are installed
-  command = "npm ci && NODE_ENV=production npm run build"
+  # Command to build your site - use standard Next.js build
+  command = "npm ci && npm run build"
   
   # Directory that contains the deploy-ready files
-  publish = "out"
+  publish = ".next"
   
   # Default build environment variables
   environment = { NODE_ENV = "production", NEXT_PUBLIC_ENV = "production" }
@@ -20,14 +20,5 @@
 [functions]
   directory = "netlify/functions"
   
-# Handle 404 errors
-[[redirects]]
-  from = "/*"
-  to = "/404.html"
-  status = 404
-
-# Handle SPA-like behavior for the home page
-[[redirects]]
-  from = "/"
-  to = "/index.html"
-  status = 200 
+# No need for 404 redirects as the Next.js adapter handles this
+# Remove the static redirects since they're not compatible with SSR 

@@ -2,8 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  // IMPORTANT: Only use export for production builds, never in development
-  output: process.env.NODE_ENV === 'production' ? 'export' : undefined,
   // Ensure images work properly
   images: {
     domains: ['highcourtchd.gov.in'],
