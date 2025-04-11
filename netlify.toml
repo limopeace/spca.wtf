@@ -3,8 +3,8 @@
   # Directory where your project is located
   base = ""
   
-  # Command to build your site - specifically for production builds
-  command = "npm run build:prod"
+  # Command to build your site - use direct environment setting instead of cross-env
+  command = "NODE_ENV=production npm run build"
   
   # Directory that contains the deploy-ready files
   publish = "out"

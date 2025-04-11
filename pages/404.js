@@ -1,16 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import styles from '../styles/404.module.css';
+import { useRouter } from 'next/router';
 
 export default function Custom404() {
-  const [isStatic, setIsStatic] = useState(true);
+  const router = useRouter();
   
-  // Detect if we're in static export mode (client-side only)
-  useEffect(() => {
-    setIsStatic(process.env.NODE_ENV === 'production');
-  }, []);
-
+  // Use router for client-side navigation
+  const handleHomeClick = (e) => {
+    e.preventDefault();
+    router.push('/');
+  };
+  
   return (
     <div className={styles.container}>
       <Head>
@@ -24,13 +26,9 @@ export default function Custom404() {
           Sorry, the page you're looking for cannot be found.
         </p>
         <div className={styles.actions}>
-          {isStatic ? (
-            // For production/static export use regular anchor tag
-            <a href="/" className={styles.button}>Return to Homepage</a>
-          ) : (
-            // For development use Next.js Link
-            <Link href="/" className={styles.button}>Return to Homepage</Link>
-          )}
+          <a href="/" onClick={handleHomeClick} className={styles.button}>
+            Return to Homepage
+          </a>
         </div>
       </main>
     </div>

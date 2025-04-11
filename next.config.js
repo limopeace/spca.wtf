@@ -16,6 +16,18 @@ const nextConfig = {
     NEXT_PUBLIC_DEPLOYMENT_ENV: process.env.NODE_ENV || 'development',
     NEXT_PUBLIC_NETLIFY_CONTEXT: process.env.CONTEXT || '',
   },
+  // Handle redirects for development mode
+  async redirects() {
+    return process.env.NODE_ENV === 'production' 
+      ? []
+      : [
+          {
+            source: '/404',
+            destination: '/',
+            permanent: false,
+          },
+        ];
+  },
 };
 
 // Debug output to help diagnose configuration issues
