@@ -11,6 +11,7 @@ const ReportErrorForm = ({ defaultUrl = '' }) => {
   });
   const [status, setStatus] = useState(''); // '', 'submitting', 'success', 'error'
   const [message, setMessage] = useState('');
+  const [isStatic, setIsStatic] = useState(false);
 
   // Pre-fill URL if provided (e.g., from query parameter or parent)
   useEffect(() => {
@@ -20,6 +21,13 @@ const ReportErrorForm = ({ defaultUrl = '' }) => {
     // Try to get current page URL if none provided (runs client-side only)
     else if (typeof window !== 'undefined' && !formData.pageUrl) {
          setFormData(prevData => ({ ...prevData, pageUrl: window.location.href }));
+    }
+    
+    // Check if we're running in static export mode
+    if (typeof window !== 'undefined') {
+      // If we're in production and output is 'export', we're in static mode
+      const netlifyContext = window.netlifyIdentity?.context?.deployContext || '';
+      setIsStatic(netlifyContext === 'production' || netlifyContext === 'deploy-preview');
     }
   }, [defaultUrl]); // Rerun if defaultUrl prop changes
 
@@ -46,10 +54,8 @@ const ReportErrorForm = ({ defaultUrl = '' }) => {
 
     // --- Actual submission logic --- 
     try {
-      // Determine which endpoint to use based on environment
-      const endpoint = process.env.NODE_ENV === 'development' 
-        ? '/api/report-error'  // Use Next.js API route in development
-        : '/.netlify/functions/report-error'; // Use Netlify function in production
+      // Always use Netlify function in production/static export
+      const endpoint = '/.netlify/functions/report-error';
       
       const response = await fetch(endpoint, {
         method: 'POST',
@@ -69,8 +75,14 @@ const ReportErrorForm = ({ defaultUrl = '' }) => {
       console.log('Form Data Submitted:', formData);
       setStatus('success');
       setMessage(result.message || 'Thank you for your report! We will review the information submitted.');
-      // Optionally clear the form after successful submission:
-      // setFormData({ pageUrl: defaultUrl || window.location.href || '', incorrectInfo: '', suggestedCorrection: '', evidence: '', contactEmail: '' });
+      // Reset form after successful submission
+      setFormData({ 
+        pageUrl: defaultUrl || (typeof window !== 'undefined' ? window.location.href : ''), 
+        incorrectInfo: '', 
+        suggestedCorrection: '', 
+        evidence: '', 
+        contactEmail: '' 
+      });
 
     } catch (error) {
       console.error('Form Submission Error:', error);
@@ -82,6 +94,13 @@ const ReportErrorForm = ({ defaultUrl = '' }) => {
 
   return (
     <form onSubmit={handleSubmit} className={styles.form} noValidate>
+      {/* Static mode warning for local testing */}
+      {process.env.NODE_ENV === 'development' && (
+        <div className={styles.warningMessage}>
+          <p><strong>Note:</strong> Form submissions in local development will be sent to Netlify functions.</p>
+        </div>
+      )}
+      
       {/* Status Message Area */} 
       <div className={styles.statusMessageContainer}>
         {message && (

@@ -167,11 +167,12 @@
    color: #495057;
 }
 
-:global(a) {
+/* Modified selectors to include local class to make them "pure" */
+.container :global(a) {
     color: #007bff;
     text-decoration: none;
 }
 
-:global(a:hover) {
+.container :global(a:hover) {
     text-decoration: underline;
 } 
