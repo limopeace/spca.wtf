@@ -1,0 +1,12 @@
+{
+  "name": "spca-wtf-puppeteer-tests",
+  "version": "1.0.0",
+  "description": "Puppeteer tests for the spca-wtf website",
+  "main": "puppeteer-test.js",
+  "scripts": {
+    "test": "node puppeteer-test.js"
+  },
+  "dependencies": {
+    "puppeteer": "^22.9.0"
+  }
+} 

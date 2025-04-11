@@ -12,7 +12,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build:prod": "cross-env NODE_ENV=production next build"
+    "build:prod": "cross-env NODE_ENV=production next build",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@react-pdf/renderer": "^3.4.5",
