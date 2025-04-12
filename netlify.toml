@@ -1,0 +1,39 @@
+# Netlify configuration file for Next.js
+[build]
+  # Directory where your project is located
+  base = "/"
+  
+  # Command to build your site - use standard Next.js build
+  command = "npm ci && npm run build"
+  
+  # Directory that contains the deploy-ready files
+  publish = ".next"
+  
+  # Default build environment variables
+  environment = { NODE_ENV = "production", NEXT_PUBLIC_ENV = "production" }
+
+# Use the NextJS plugin for Netlify
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Specify where functions are located
+[functions]
+  directory = "netlify/functions"
+  
+# Image optimization config
+[[plugins]]
+  package = "netlify-plugin-nextjs-cache"
+
+# Enable Next.js ISR capabilities
+[build.environment]
+  NEXT_USE_NETLIFY_EDGE = "true"
+  NEXT_FORCE_EDGE_IMAGES = "true"
+
+# Next.js handles 404 pages automatically 
+
+# This makes sure that all routes are directed to the index.html file
+# which is necessary for client-side routing to work
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

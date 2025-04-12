@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "npm i typescript @types/react @types/node @types/react-dom --no-save || true",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
