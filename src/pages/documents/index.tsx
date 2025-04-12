@@ -4,6 +4,13 @@ import Link from 'next/link';
 
 const documents = [
   { 
+    id: 11, 
+    title: 'SPCA Chandigarh Whitepaper (April 2025)', 
+    description: 'A comprehensive analysis of the current situation at SPCA Chandigarh, created by concerned citizens to help the public understand the issues.', 
+    link: '/whitepaper.pdf',
+    featured: true
+  },
+  { 
     id: 1, 
     title: 'PIL Petition 2022', 
     description: 'Public Interest Litigation filed in 2022 regarding animal welfare issues at SPCA Chandigarh', 
@@ -66,6 +73,10 @@ const documents = [
 ];
 
 const DocumentsPage = () => {
+  // Filter documents to separate featured from regular
+  const featuredDocuments = documents.filter(doc => doc.featured);
+  const regularDocuments = documents.filter(doc => !doc.featured);
+
   return (
     <div>
       <Head>
@@ -78,9 +89,58 @@ const DocumentsPage = () => {
           Access official documents related to SPCA Chandigarh, including court records, RTI responses, and other evidence. 
           These documents provide transparency about the ongoing issues and the legal actions being taken.
         </p>
+
+        {/* Featured Documents Section */}
+        {featuredDocuments.length > 0 && (
+          <div className="mb-12">
+            <h2 className="text-xl font-semibold mb-4 flex items-center">
+              <span className="inline-block bg-primary bg-opacity-10 text-primary text-sm font-medium px-2 py-1 rounded mr-2">NEW</span>
+              Featured Document
+            </h2>
+            <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-xl p-6 border border-gray-200 shadow-sm">
+              {featuredDocuments.map((doc) => (
+                <div key={doc.id} className="md:flex items-start justify-between">
+                  <div className="mb-4 md:mb-0 md:mr-8 md:flex-1">
+                    <h3 className="text-lg font-semibold mb-1">{doc.title}</h3>
+                    <p className="text-gray-700 mb-4">
+                      {doc.description}
+                    </p>
+                    <p className="text-sm text-gray-500 italic">
+                      This citizen-created whitepaper is designed to help the public and authorities understand the current situation at SPCA Chandigarh.
+                    </p>
+                  </div>
+                  <div className="flex flex-col space-y-3">
+                    <a 
+                      href={doc.link} 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-dark transition-colors inline-flex items-center justify-center"
+                    >
+                      View Whitepaper
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
+                    <a 
+                      href={doc.link} 
+                      download
+                      className="bg-white text-primary border border-primary px-4 py-2 rounded-md hover:bg-gray-50 transition-colors inline-flex items-center justify-center"
+                    >
+                      Download
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
         
+        <h2 className="text-xl font-semibold mb-4">Official Records & Evidence</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {documents.map((doc) => (
+          {regularDocuments.map((doc) => (
             <div key={doc.id} className="border rounded-lg shadow-sm bg-white hover:shadow-md transition-shadow duration-200 flex flex-col">
               <div className="p-5 flex-grow">
                 <h2 className="text-lg font-semibold mb-2">{doc.title}</h2>
@@ -119,7 +179,7 @@ const DocumentsPage = () => {
           <h2 className="text-xl font-semibold mb-4">Document Verification</h2>
           <p className="text-gray-700">
             All documents provided on this website are official records obtained through legal channels including RTI requests, court filings, and other official sources.
-            The authenticity of these documents can be verified through their respective official sources. 
+            The authenticity of these documents can be verified through their respective official sources. The whitepaper is a citizen-created document to help understand the situation.
           </p>
         </div>
       </main>
