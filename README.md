@@ -14,6 +14,7 @@ SPCA.wtf is built using:
 - **Document Repository**: Access to RTI responses, court orders, and official communications
 - **Legal Cases Section**: Comprehensive database of all legal interventions related to SPCA Chandigarh
 - **Timeline**: Chronological presentation of key events
+- **Visual Evidence Slideshow**: Carousel showcasing photographic documentation of facility conditions
 - **Compliance Components**: Includes disclaimer, terms of use, privacy policy, and cookie consent
 - **Citation System**: Proper sourcing and attribution for all claims
 
@@ -25,6 +26,17 @@ This website aims to:
 - Promote transparency in public institutions
 - Exercise the constitutional right to freedom of speech and expression
 - Facilitate community engagement for animal welfare improvement
+
+## Components
+
+### Image Carousel/Slideshow
+
+The site features a responsive image carousel that:
+- Displays photographic evidence from SPCA Chandigarh facilities
+- Works on both desktop and mobile devices with touch/swipe support
+- Auto-advances through images with navigation controls
+- Displays contextual captions for each image
+- Adapts to different screen sizes and orientations
 
 ## Local Development
 
@@ -47,4 +59,18 @@ For more information, please see the [Disclaimer and Terms of Use](/terms-of-use
 
 ## Contact
 
-For inquiries: info@spca.wtf 
+For inquiries: info@spca.wtf
+
+## Changelog
+
+### v1.1.0 - April 2023
+- Added responsive image carousel/slideshow feature
+- Integrated photographic evidence display on homepage and about page
+- Improved mobile experience with touch navigation
+- Added testing page for slideshow component
+
+### v1.0.0 - Initial Release
+- Core website functionality
+- Document repository
+- Legal cases section
+- Timeline of events 
