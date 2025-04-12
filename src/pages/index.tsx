@@ -73,8 +73,8 @@ const Home: React.FC = () => {
                 </p>
                 <p className="text-sm text-yellow-700 max-w-2xl">
                   We're just keeping it 💯 about what's happening at SPCA Chandigarh specifically. 
-                  This is a public awareness vibe for citizens and officials to see the full picture.
-                  Social media coming soon! <span className="text-xs">(No cap)</span>
+                  This is a public awareness initiative for citizens and officials to see the full picture.
+                  <span className="italic ml-1">SPCA.wtf stands for "Welfare Transparency Framework"</span> – documenting animal welfare transparency.
                 </p>
               </div>
             </div>
