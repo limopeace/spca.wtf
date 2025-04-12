@@ -1,5 +1,5 @@
 [build]
-  command = "NODE_ENV=development npm ci && npm run build && echo '/*    /index.html   200' > out/_redirects"
+  command = "./build.sh"
   publish = "out"
 
 [build.environment]
