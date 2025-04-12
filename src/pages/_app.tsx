@@ -3,7 +3,7 @@ import type { AppProps } from 'next/app'
 import { Poppins, Space_Grotesk } from 'next/font/google'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
-import '@/styles/globals.css'
+import '../styles/globals.css'
 
 const poppins = Poppins({
   subsets: ['latin'],
