@@ -42,6 +42,9 @@ const Home: React.FC = () => {
                 <Link href="/legal" className="w-full sm:w-auto px-6 py-3 bg-transparent border border-white text-white font-medium rounded-md hover:bg-white hover:bg-opacity-10 transition-colors text-center">
                   View Legal Cases
                 </Link>
+                <a href="/spca-infographic.pdf" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-6 py-3 bg-secondary text-white font-medium rounded-md hover:bg-opacity-90 transition-colors text-center">
+                  Download Infographic
+                </a>
               </div>
             </div>
             
@@ -64,6 +67,38 @@ const Home: React.FC = () => {
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" fill="#FAFAFA">
             <path d="M0,96L60,80C120,64,240,32,360,21.3C480,11,600,21,720,42.7C840,64,960,96,1080,101.3C1200,107,1320,85,1380,74.7L1440,64L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"></path>
           </svg>
+        </div>
+      </section>
+
+      {/* SPCA Infographic Section */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <span className="inline-block py-1 px-3 bg-primary bg-opacity-20 text-primary rounded-md text-sm font-medium mb-3">
+              Infographic
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-bold">SPCA Structure & Stakeholders</h2>
+            <p className="text-gray-600 mt-2">Understanding the organization, problems, and key stakeholders</p>
+          </div>
+          
+          <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 mb-6">
+            <div className="aspect-w-16 aspect-h-12 overflow-hidden">
+              <embed src="/spca-infographic.pdf" type="application/pdf" className="w-full h-full rounded" />
+            </div>
+          </div>
+          
+          <div className="text-center">
+            <a 
+              href="/spca-infographic.pdf" 
+              download 
+              className="inline-flex items-center justify-center px-4 py-2 border border-primary text-primary bg-white rounded-md hover:bg-primary hover:text-white transition-colors"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              Download Full Infographic
+            </a>
+          </div>
         </div>
       </section>
 
@@ -112,7 +147,7 @@ const Home: React.FC = () => {
                 <div className="relative w-full max-w-md mx-auto">
                   <div className="bg-gray-100 rounded-lg overflow-hidden shadow-lg h-full flex items-center justify-center">
                     <iframe
-                      src="https://www.youtube.com/embed/XcFvze7v-V0"
+                      src="https://www.youtube.com/embed/XxhV9bmgInM"
                       title="SPCA Chandigarh Documentary"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
