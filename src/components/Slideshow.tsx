@@ -12,43 +12,43 @@ const Slideshow: React.FC<SlideshowProps> = ({ className = '', rotate = true, fu
   const slideshowImages = [
     {
       src: '/sourceDocs/slideshow/1.png',
-      alt: 'SPCA Slideshow Image 1',
-      caption: 'Current conditions at SPCA Chandigarh shelter facilities'
+      alt: 'SPCA Shelter Conditions',
+      caption: 'Shelter conditions documentation'
     },
     {
       src: '/sourceDocs/slideshow/2.png',
-      alt: 'SPCA Slideshow Image 2',
-      caption: 'Documentation of animal welfare concerns'
+      alt: 'Animal Welfare Issues',
+      caption: 'Animal welfare concerns'
     },
     {
       src: '/sourceDocs/slideshow/3.png',
-      alt: 'SPCA Slideshow Image 3',
-      caption: 'Evidence of neglect at SPCA facilities'
+      alt: 'SPCA Facility',
+      caption: 'Evidence of facility neglect'
     },
     {
       src: '/sourceDocs/slideshow/4.png',
-      alt: 'SPCA Slideshow Image 4',
-      caption: 'Photographic evidence of shelter conditions'
+      alt: 'Shelter Conditions',
+      caption: 'Photographic evidence'
     },
     {
       src: '/sourceDocs/slideshow/5.png',
-      alt: 'SPCA Slideshow Image 5',
-      caption: 'Documentation from inside the shelter'
+      alt: 'Inside Documentation',
+      caption: 'Inside the shelter'
     },
     {
       src: '/sourceDocs/slideshow/6.png',
-      alt: 'SPCA Slideshow Image 6',
-      caption: 'Animal welfare investigation findings'
+      alt: 'Investigation Findings',
+      caption: 'Investigation findings'
     },
     {
       src: '/sourceDocs/slideshow/7.png',
-      alt: 'SPCA Slideshow Image 7',
-      caption: 'Evidence of improper animal housing'
+      alt: 'Animal Housing',
+      caption: 'Improper animal housing'
     },
     {
       src: '/sourceDocs/slideshow/8.png',
-      alt: 'SPCA Slideshow Image 8',
-      caption: 'SPCA facility photographic evidence'
+      alt: 'Evidence Documentation',
+      caption: 'SPCA facility evidence'
     }
   ];
 

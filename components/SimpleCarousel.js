@@ -43,19 +43,30 @@ const SimpleCarousel = ({ images }) => {
           }}
         />
         
-        {/* Caption */}
+        {/* Caption - Improved styling to prevent overlap */}
         {images[currentIndex].caption && (
           <div style={{
             position: 'absolute',
             bottom: 0,
             left: 0,
             right: 0,
-            background: 'linear-gradient(to top, rgba(0,0,0,0.7), transparent)',
+            background: 'linear-gradient(to top, rgba(0,0,0,0.8), transparent)',
             color: 'white',
-            padding: '20px 15px 15px',
-            textAlign: 'center'
+            padding: '30px 15px 15px',
+            textAlign: 'center',
+            zIndex: 3,
+            maxHeight: '30%',
+            overflow: 'hidden',
+            textShadow: '0px 1px 2px rgba(0,0,0,0.8)'
           }}>
-            <p>{images[currentIndex].caption}</p>
+            <p style={{
+              margin: 0,
+              fontSize: '14px',
+              lineHeight: 1.4,
+              fontWeight: '500'
+            }}>
+              {images[currentIndex].caption}
+            </p>
           </div>
         )}
       </div>
@@ -79,7 +90,7 @@ const SimpleCarousel = ({ images }) => {
           border: 'none',
           fontSize: '18px',
           cursor: 'pointer',
-          zIndex: 2
+          zIndex: 4
         }}
         aria-label="Previous slide"
       >
@@ -104,22 +115,22 @@ const SimpleCarousel = ({ images }) => {
           border: 'none',
           fontSize: '18px',
           cursor: 'pointer',
-          zIndex: 2
+          zIndex: 4
         }}
         aria-label="Next slide"
       >
         &#10095;
       </button>
       
-      {/* Indicators */}
+      {/* Indicators - Improved positioning */}
       <div style={{
         position: 'absolute',
-        bottom: '15px',
+        bottom: '20px',
         left: '0',
         right: '0',
         display: 'flex',
         justifyContent: 'center',
-        zIndex: 2
+        zIndex: 5
       }}>
         {images.map((_, index) => (
           <button
@@ -132,7 +143,8 @@ const SimpleCarousel = ({ images }) => {
               background: index === currentIndex ? 'white' : 'rgba(255,255,255,0.6)',
               margin: '0 5px',
               cursor: 'pointer',
-              border: 'none'
+              border: 'none',
+              boxShadow: '0px 1px 3px rgba(0,0,0,0.3)'
             }}
             aria-label={`Go to slide ${index + 1}`}
           />
