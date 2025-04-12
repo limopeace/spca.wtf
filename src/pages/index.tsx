@@ -70,101 +70,103 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* SPCA Infographic Section */}
-      <section className="py-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <span className="inline-block py-1 px-3 bg-primary bg-opacity-20 text-primary rounded-md text-sm font-medium mb-3">
-              Infographic
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-bold">SPCA Structure & Stakeholders</h2>
-            <p className="text-gray-600 mt-2">Understanding the organization, problems, and key stakeholders</p>
-          </div>
-          
-          <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 mb-6">
-            <div className="aspect-w-16 aspect-h-12 overflow-hidden">
-              <embed src="/spca-infographic.pdf" type="application/pdf" className="w-full h-full rounded" />
-            </div>
-          </div>
-          
-          <div className="text-center">
-            <a 
-              href="/spca-infographic.pdf" 
-              download 
-              className="inline-flex items-center justify-center px-4 py-2 border border-primary text-primary bg-white rounded-md hover:bg-primary hover:text-white transition-colors"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-              </svg>
-              Download Full Infographic
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Why This Matters Section */}
+      {/* Why This Matters Section with Video */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-          <div className="mb-16 md:mb-24">
+          <div className="text-center mb-10">
             <span className="inline-block py-1 px-3 bg-secondary bg-opacity-20 text-secondary rounded-md text-sm font-medium mb-4">
               Why This Matters
             </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
               The <span className="text-primary">Truth</span> About SPCA Chandigarh
             </h2>
+          </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-              <div>
-                <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6">
-                  After years of documented issues, we're making all the evidence public. This is about accountability and transparency in animal welfare.
-                </p>
-                
-                <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6">
-                  RTI responses reveal that 47% of animals (6,383) brought to the shelter between January 2019 and September 2021 died during treatment. These documents show a pattern of issues including:
-                </p>
-                
-                <ul className="space-y-2 sm:space-y-3 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">•</span>
-                    <span>Severe overcrowding in kennels</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">•</span>
-                    <span>Inadequate veterinary care and oversight</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">•</span>
-                    <span>Mismanagement of funds and resources</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">•</span>
-                    <span>Lack of proper facilities and equipment</span>
-                  </li>
-                </ul>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            {/* Text Content */}
+            <div>
+              <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6">
+                After years of documented issues, we're making all the evidence public. This is about accountability and transparency in animal welfare.
+              </p>
               
-              <div className="flex justify-center items-center">
-                <div className="relative w-full max-w-md mx-auto">
-                  <div className="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
-                    <div className="relative" style={{ paddingBottom: '177.77%', /* 9:16 aspect ratio */ height: 0 }}>
-                      <iframe
-                        src="https://www.youtube.com/embed/XxhV9bmgInM"
-                        title="SPCA Chandigarh Documentary"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                        className="absolute top-0 left-0 w-full h-full"
-                        style={{ 
-                          margin: '0 auto',
-                          maxWidth: '100%',
-                          maxHeight: '100%',
-                          objectFit: 'cover',
-                        }}
-                      ></iframe>
-                    </div>
+              <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6">
+                RTI responses reveal that 47% of animals (6,383) brought to the shelter between January 2019 and September 2021 died during treatment. These documents show a pattern of issues including:
+              </p>
+              
+              <ul className="space-y-2 sm:space-y-3 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">•</span>
+                  <span>Severe overcrowding in kennels</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">•</span>
+                  <span>Inadequate veterinary care and oversight</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">•</span>
+                  <span>Mismanagement of funds and resources</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">•</span>
+                  <span>Lack of proper facilities and equipment</span>
+                </li>
+              </ul>
+            </div>
+            
+            {/* Video Content - Portrait Mode */}
+            <div className="flex justify-center items-center">
+              <div className="relative w-full max-w-xs mx-auto">
+                <div className="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+                  <div className="relative" style={{ paddingBottom: '177.77%', /* 9:16 aspect ratio */ height: 0 }}>
+                    <iframe
+                      src="https://www.youtube.com/embed/XxhV9bmgInM"
+                      title="SPCA Chandigarh Documentary"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="absolute top-0 left-0 w-full h-full"
+                      style={{ 
+                        margin: '0 auto',
+                        maxWidth: '100%',
+                        maxHeight: '100%',
+                        objectFit: 'cover',
+                      }}
+                    ></iframe>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SPCA Infographic Section - Now below the video section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <span className="inline-block py-1 px-3 bg-primary bg-opacity-20 text-primary rounded-md text-sm font-medium mb-3">
+              Organization Structure
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-bold">SPCA Structure & Stakeholders</h2>
+            <p className="text-gray-600 mt-2 max-w-2xl mx-auto">Understanding the organizational structure, key stakeholders, and systemic issues within SPCA Chandigarh</p>
+          </div>
+          
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden max-w-4xl mx-auto">
+            <div className="aspect-w-16 aspect-h-12 overflow-hidden">
+              <embed src="/spca-infographic.pdf" type="application/pdf" className="w-full h-full" />
+            </div>
+          </div>
+          
+          <div className="text-center mt-6">
+            <a 
+              href="/spca-infographic.pdf" 
+              download 
+              className="inline-flex items-center justify-center px-5 py-3 border border-primary text-primary bg-white rounded-md hover:bg-primary hover:text-white transition-colors font-medium"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              Download Infographic
+            </a>
           </div>
         </div>
       </section>
