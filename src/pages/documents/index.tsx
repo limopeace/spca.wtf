@@ -5,7 +5,7 @@ import Link from 'next/link';
 const documents = [
   { 
     id: 11, 
-    title: 'SPCA Chandigarh Whitepaper (April 2025)', 
+    title: 'SPCA Chandigarh Key Details Document (April 2025)', 
     description: 'A comprehensive analysis of the current situation at SPCA Chandigarh, created by concerned citizens to help the public understand the issues.', 
     link: '/whitepaper.pdf',
     featured: true
@@ -106,7 +106,7 @@ const DocumentsPage = () => {
               </div>
             </div>
             <a href="/whitepaper.pdf" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-yellow-200 text-yellow-800 rounded-md hover:bg-yellow-300 transition-colors text-sm font-medium whitespace-nowrap">
-              Read Our Whitepaper
+              Key Details Document
             </a>
           </div>
         </div>
@@ -121,7 +121,7 @@ const DocumentsPage = () => {
           <h2 className="text-2xl font-bold mb-3">Coming Soon!</h2>
           <p className="text-gray-600 mb-4">
             We're working hard to bring you all the official documents related to SPCA Chandigarh.
-            This section will be available shortly.
+            This section will be available by the end of April 2025.
           </p>
           <Link href="/" className="inline-block px-5 py-3 bg-primary text-white font-medium rounded-md hover:bg-opacity-90 transition-colors">
             Back to Home
@@ -129,7 +129,7 @@ const DocumentsPage = () => {
         </div>
       </div>
       
-      <main className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-8 sm:py-12 filter blur-sm pointer-events-none">
+      <main className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-8 sm:py-12 filter blur-[2px] pointer-events-none">
         <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8">Official Documents</h1>
         <p className="text-gray-700 mb-8 max-w-3xl">
           Access official documents related to SPCA Chandigarh, including court records, RTI responses, and other evidence. 
@@ -152,7 +152,7 @@ const DocumentsPage = () => {
                       {doc.description}
                     </p>
                     <p className="text-sm text-gray-500 italic">
-                      This citizen-created whitepaper is designed to help the public and authorities understand the current situation at SPCA Chandigarh.
+                      This citizen-created document is designed to help the public and authorities understand the current situation at SPCA Chandigarh.
                     </p>
                   </div>
                   <div className="flex flex-col space-y-3">
@@ -162,7 +162,7 @@ const DocumentsPage = () => {
                       rel="noopener noreferrer"
                       className="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-dark transition-colors inline-flex items-center justify-center"
                     >
-                      View Whitepaper
+                      View Document
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
@@ -225,7 +225,7 @@ const DocumentsPage = () => {
           <h2 className="text-xl font-semibold mb-4">Document Verification</h2>
           <p className="text-gray-700">
             All documents provided on this website are official records obtained through legal channels including RTI requests, court filings, and other official sources.
-            The authenticity of these documents can be verified through their respective official sources. The whitepaper is a citizen-created document to help understand the situation.
+            The authenticity of these documents can be verified through their respective official sources. The key details document is citizen-created to help understand the situation.
           </p>
         </div>
       </main>

@@ -148,7 +148,7 @@ const LegalCases: React.FC = () => {
               </div>
             </div>
             <a href="/whitepaper.pdf" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-yellow-200 text-yellow-800 rounded-md hover:bg-yellow-300 transition-colors text-sm font-medium whitespace-nowrap">
-              Read Our Whitepaper
+              Key Details Document
             </a>
           </div>
         </div>
@@ -163,7 +163,7 @@ const LegalCases: React.FC = () => {
           <h2 className="text-2xl font-bold mb-3">Coming Soon!</h2>
           <p className="text-gray-600 mb-4">
             We're working on compiling all legal cases and court documents related to SPCA Chandigarh.
-            This section will be available shortly.
+            This section will be available by the end of April 2025.
           </p>
           <Link href="/" className="inline-block px-5 py-3 bg-primary text-white font-medium rounded-md hover:bg-opacity-90 transition-colors">
             Back to Home
@@ -171,7 +171,7 @@ const LegalCases: React.FC = () => {
         </div>
       </div>
 
-      <div className="py-12 bg-white filter blur-sm pointer-events-none">
+      <div className="py-12 bg-white filter blur-[2px] pointer-events-none">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-12">

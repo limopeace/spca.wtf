@@ -1,69 +1,148 @@
-/* Basic styles for the Disclaimer Modal */
+/* Updated styles for the Disclaimer Modal */
 
 .overlay {
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.75); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
+  align-items: flex-end;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+  height: auto;
+  max-height: 40%;
+}
+
+.expanded {
+  top: 0;
   align-items: center;
-  z-index: 1000; /* Ensure it's on top */
-  padding: 20px; /* Add padding for smaller screens */
+  max-height: 100%;
 }
 
 .modal {
   background-color: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  max-width: 700px; /* Max width of the modal */
-  width: 100%; /* Responsive width */
-  max-height: 90vh; /* Max height */
-  overflow-y: auto; /* Allow scrolling if content is long */
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+  transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
+  max-height: calc(40vh - 20px);
+}
+
+.expandedModal {
+  border-radius: 12px;
+  max-height: 80vh;
+  margin: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
 }
 
 .title {
-  margin-top: 0;
-  margin-bottom: 20px;
+  margin: 0;
   color: #333;
-  text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.expandButton {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.expandButton:hover {
+  background-color: #f0f0f0;
+  color: #333;
 }
 
 .content {
-  margin-bottom: 25px;
+  padding: 20px;
   color: #555;
   line-height: 1.6;
-  flex-grow: 1; /* Allow content to take available space */
+  overflow-y: auto;
+  flex-grow: 1;
+  max-height: calc(80vh - 140px);
+}
+
+.content h3 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 1.1rem;
 }
 
 .content p {
+  margin-bottom: 12px;
+}
+
+.content ul {
   margin-bottom: 15px;
+  padding-left: 20px;
+}
+
+.content li {
+  margin-bottom: 5px;
+}
+
+.summaryContent {
+  padding: 15px 20px;
+  color: #555;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.readMoreLink {
+  color: #007bff;
+  text-decoration: none;
+  margin-left: 5px;
+  font-weight: 500;
+}
+
+.readMoreLink:hover {
+  text-decoration: underline;
 }
 
 .actions {
   display: flex;
-  justify-content: flex-end; /* Align buttons to the right */
-  gap: 15px; /* Space between buttons */
-  margin-top: auto; /* Push actions to the bottom */
+  justify-content: flex-end;
+  padding: 15px 20px;
+  border-top: 1px solid #eee;
+  background-color: #f9f9f9;
 }
 
 .button {
-  padding: 10px 20px;
+  padding: 8px 16px;
   border: none;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 0.95rem;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  font-weight: 500;
 }
 
 .acceptButton {
-  background-color: #007bff; /* Example blue */
+  background-color: #007bff;
   color: white;
 }
 
@@ -71,28 +150,27 @@
   background-color: #0056b3;
 }
 
-.declineButton {
-  background-color: #dc3545; /* Example red */
-  color: white;
-}
-
-.declineButton:hover {
-  background-color: #c82333;
-}
-
 /* Basic responsiveness */
 @media (max-width: 600px) {
   .modal {
-    padding: 20px;
+    max-width: 100%;
+    max-height: 60vh;
   }
+  
+  .expandedModal {
+    max-height: 85vh;
+    margin: 10px;
+  }
+  
   .title {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
-  .actions {
-    flex-direction: column; /* Stack buttons on small screens */
-    align-items: stretch;
+  
+  .content {
+    max-height: calc(85vh - 120px);
   }
-  .button {
-    width: 100%;
+  
+  .summaryContent {
+    font-size: 0.9rem;
   }
 } 

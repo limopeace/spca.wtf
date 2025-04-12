@@ -3,7 +3,7 @@ import {
   FiMail, FiPhone, FiUsers, FiUserX, FiUserPlus, 
   FiAlertTriangle, FiFileText, FiPhoneOff, FiTool, 
   FiDollarSign, FiShoppingBag, FiFeather, FiUserMinus, 
-  FiGlobe, FiChevronRight, FiChevronDown 
+  FiGlobe, FiChevronRight, FiChevronDown, FiInfo 
 } from 'react-icons/fi';
 import Link from 'next/link';
 
@@ -77,6 +77,15 @@ const Timeline: React.FC<TimelineProps> = ({ events }) => {
 
   return (
     <div className="relative">
+      {/* Document availability notice */}
+      <div className="mb-8 p-4 bg-blue-50 rounded-lg flex items-start">
+        <FiInfo className="text-blue-500 mt-1 mr-3 flex-shrink-0" />
+        <p className="text-blue-700 text-sm">
+          Supporting documentation for timeline events will be available soon in our documents section. 
+          All evidence and records are being carefully compiled and organized for public access.
+        </p>
+      </div>
+      
       {/* Vertical line */}
       <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 transform -translate-x-1/2"></div>
       
@@ -139,12 +148,6 @@ const Timeline: React.FC<TimelineProps> = ({ events }) => {
                       ))}
                     </ul>
                   </div>
-                )}
-                
-                {event.relatedDocumentId && (
-                  <Link href={`/documents/${event.relatedDocumentId}`} className="inline-block mt-2 text-sm bg-primary text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors">
-                    View Related Document
-                  </Link>
                 )}
               </div>
             </div>

@@ -1,8 +1,23 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import ImageCarousel from '../../components/ImageCarousel'
 
 const Home: React.FC = () => {
+  // Define the images for the carousel
+  const slideshowImages = [
+    {
+      src: '/sourceDocs/slideshow/spca-image-1.png',
+      alt: 'SPCA Shelter Conditions',
+      caption: 'Current conditions at SPCA Chandigarh shelter facilities'
+    },
+    {
+      src: '/sourceDocs/slideshow/spca-image-2.png',
+      alt: 'Animal Welfare Issues',
+      caption: 'Documentation of animal welfare concerns'
+    }
+  ];
+
   return (
     <>
       <Head>
@@ -34,7 +49,7 @@ const Home: React.FC = () => {
               </div>
             </div>
             <a href="/whitepaper.pdf" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-yellow-200 text-yellow-800 rounded-md hover:bg-yellow-300 transition-colors text-sm font-medium whitespace-nowrap">
-              Read Our Whitepaper
+              Key Details Document
             </a>
           </div>
         </div>
@@ -79,12 +94,7 @@ const Home: React.FC = () => {
             <div className="md:w-1/2 flex justify-center mt-8 md:mt-0">
               <div className="w-full max-w-md animate-float">
                 <div className="bg-white p-1 rounded-lg shadow-xl transform rotate-3 relative">
-                  <img src="/mortality-chart.jpg" alt="SPCA Mortality Data Chart" className="rounded-md w-full" />
-                  <div className="absolute top-0 right-0 transform translate-x-0 sm:translate-x-1/4 -translate-y-1/4">
-                    <span className="inline-flex items-center px-2 sm:px-3 py-0.5 rounded-full text-xs sm:text-sm font-medium bg-primary text-white whitespace-normal sm:whitespace-nowrap">
-                      47% Mortality Rate Revealed in RTI
-                    </span>
-                  </div>
+                  <ImageCarousel images={slideshowImages} autoplaySpeed={6000} />
                 </div>
               </div>
             </div>
@@ -111,34 +121,69 @@ const Home: React.FC = () => {
           </div>
             
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-            {/* Text Content */}
+            {/* Updated Text Content with more engaging copy and CTAs */}
             <div>
               <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6">
-                After years of documented issues, we're making all the evidence public. This is about accountability and transparency in animal welfare.
+                This transparency initiative goes beyond just sharing information—it's about <span className="font-semibold">creating real change</span> in how we care for the most vulnerable animals in our community.
               </p>
               
               <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6">
-                RTI responses reveal that 47% of animals (6,383) brought to the shelter between January 2019 and September 2021 died during treatment. These documents show a pattern of issues including:
+                Our evidence-based documentation reveals systemic issues that require immediate attention:
               </p>
               
-              <ul className="space-y-2 sm:space-y-3 text-gray-700">
+              <ul className="space-y-3 sm:space-y-4 text-gray-700 mb-6">
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
-                  <span>Severe overcrowding in kennels</span>
+                  <span className="text-primary mr-2 text-xl">•</span>
+                  <span><span className="font-medium">Inadequate Medical Care:</span> Critical shortages in veterinary staff and resources</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
-                  <span>Inadequate veterinary care and oversight</span>
+                  <span className="text-primary mr-2 text-xl">•</span>
+                  <span><span className="font-medium">Overcrowded Facilities:</span> Animals housed in stressful, unsanitary conditions</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
-                  <span>Mismanagement of funds and resources</span>
+                  <span className="text-primary mr-2 text-xl">•</span>
+                  <span><span className="font-medium">Resource Mismanagement:</span> Funds not properly allocated to animal welfare</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
-                  <span>Lack of proper facilities and equipment</span>
+                  <span className="text-primary mr-2 text-xl">•</span>
+                  <span><span className="font-medium">Transparency Issues:</span> Public records show discrepancies in reporting</span>
                 </li>
               </ul>
+              
+              <div className="bg-gray-50 p-4 rounded-lg border-l-4 border-primary mb-5">
+                <p className="font-medium text-gray-800">
+                  By bringing these issues to light, we can work together toward:
+                </p>
+                <ul className="mt-2 space-y-1 text-gray-700">
+                  <li className="flex items-center">
+                    <svg className="w-4 h-4 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                    </svg>
+                    Better accountability in animal welfare governance
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="w-4 h-4 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                    </svg>
+                    Improved standards of care for all animals
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="w-4 h-4 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                    </svg>
+                    Community-driven solutions to animal welfare challenges
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="flex flex-wrap gap-3 mt-6">
+                <Link href="/documents" className="px-5 py-2 bg-primary text-white font-medium rounded-md hover:bg-opacity-90 transition-colors text-sm">
+                  Review the Evidence
+                </Link>
+                <Link href="/faq" className="px-5 py-2 bg-gray-200 text-gray-800 font-medium rounded-md hover:bg-gray-300 transition-colors text-sm">
+                  How You Can Help
+                </Link>
+              </div>
             </div>
             
             {/* Video Content - Portrait Mode */}
@@ -172,15 +217,15 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <span className="inline-block py-1 px-3 bg-primary bg-opacity-20 text-primary rounded-md text-sm font-medium mb-3">
-              Organization Structure
+              Organization Overview
             </span>
-            <h2 className="text-2xl sm:text-3xl font-bold">SPCA Structure & Stakeholders</h2>
-            <p className="text-gray-600 mt-2 max-w-2xl mx-auto">Understanding the organizational structure, key stakeholders, and systemic issues within SPCA Chandigarh</p>
+            <h2 className="text-2xl sm:text-3xl font-bold">SPCA Overview & Key Issues</h2>
+            <p className="text-gray-600 mt-2 max-w-2xl mx-auto">Understanding the organizational overview, key stakeholders, and systemic issues within SPCA Chandigarh</p>
           </div>
           
           <div className="bg-white rounded-lg shadow-lg overflow-hidden max-w-4xl mx-auto">
-            <div className="aspect-w-16 aspect-h-12 overflow-hidden">
-              <embed src="/spca-infographic.pdf" type="application/pdf" className="w-full h-full" />
+            <div className="aspect-w-16 aspect-h-20 overflow-hidden" style={{ height: "800px" }}>
+              <embed src="/spca-infographic.pdf#toolbar=0&navpanes=0" type="application/pdf" className="w-full h-full" />
             </div>
           </div>
           

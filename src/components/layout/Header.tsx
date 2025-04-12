@@ -23,27 +23,27 @@ const Header: React.FC = () => {
               <Link href="/" className="text-gray-900 hover:text-primary font-medium">
                 Home
               </Link>
-              <Link href="/documents" className="text-gray-600 hover:text-primary font-medium">
-                Documents
-              </Link>
-              <Link href="/legal" className="text-gray-600 hover:text-primary font-medium">
-                Legal Cases
-              </Link>
               <Link href="/timeline" className="text-gray-600 hover:text-primary font-medium">
                 Timeline
               </Link>
               <Link href="/faq" className="text-gray-600 hover:text-primary font-medium">
                 FAQ
               </Link>
+              <Link href="/documents" className="text-gray-600 hover:text-primary font-medium">
+                Documents
+              </Link>
+              <Link href="/legal" className="text-gray-600 hover:text-primary font-medium">
+                Legal Cases
+              </Link>
             </nav>
           </div>
           
           <div className="flex items-center">
             <Link
-              href="/contact"
+              href="/about"
               className="hidden md:flex items-center px-4 py-2 text-sm font-medium rounded-md text-white bg-primary hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
             >
-              Report Issues
+              About the Initiative
             </Link>
             
             <button
@@ -85,20 +85,6 @@ const Header: React.FC = () => {
             Home
           </Link>
           <Link
-            href="/documents"
-            className="block px-4 py-3 rounded-md text-gray-300 text-lg font-medium hover:bg-gray-700 hover:text-white"
-            onClick={toggleMobileMenu}
-          >
-            Documents
-          </Link>
-          <Link
-            href="/legal"
-            className="block px-4 py-3 rounded-md text-gray-300 text-lg font-medium hover:bg-gray-700 hover:text-white"
-            onClick={toggleMobileMenu}
-          >
-            Legal Cases
-          </Link>
-          <Link
             href="/timeline"
             className="block px-4 py-3 rounded-md text-gray-300 text-lg font-medium hover:bg-gray-700 hover:text-white"
             onClick={toggleMobileMenu}
@@ -113,11 +99,25 @@ const Header: React.FC = () => {
             FAQ
           </Link>
           <Link
-            href="/contact"
+            href="/documents"
+            className="block px-4 py-3 rounded-md text-gray-300 text-lg font-medium hover:bg-gray-700 hover:text-white"
+            onClick={toggleMobileMenu}
+          >
+            Documents
+          </Link>
+          <Link
+            href="/legal"
+            className="block px-4 py-3 rounded-md text-gray-300 text-lg font-medium hover:bg-gray-700 hover:text-white"
+            onClick={toggleMobileMenu}
+          >
+            Legal Cases
+          </Link>
+          <Link
+            href="/about"
             className="block mt-6 px-4 py-3 text-center rounded-md bg-primary text-white text-lg font-medium hover:bg-opacity-90"
             onClick={toggleMobileMenu}
           >
-            Report Issues
+            About the Initiative
           </Link>
         </div>
       </div>

@@ -6,6 +6,7 @@ const EXPIRATION_DAYS = 30;
 
 const DisclaimerModal = ({ onAccept }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
     const acceptanceData = localStorage.getItem(DISCLAIMER_KEY);
@@ -32,9 +33,6 @@ const DisclaimerModal = ({ onAccept }) => {
       // First visit or no acceptance recorded
       setIsOpen(true);
     }
-    // Trigger onAccept if already accepted and valid (moved check inside condition)
-    // This ensures onAccept is called consistently if the modal condition is met
-    // This effect runs only once on mount due to the empty dependency array
   }, [onAccept]); // Include onAccept in dependencies
 
   const handleAccept = () => {
@@ -55,56 +53,78 @@ const DisclaimerModal = ({ onAccept }) => {
     // Do not call setIsOpen(false) here.
   };
 
+  const toggleExpand = () => {
+    setIsExpanded(!isExpanded);
+  };
+
   if (!isOpen) {
     return null; // Don't render anything if modal shouldn't be shown
   }
 
   return (
     <div
-      className={styles.overlay}
+      className={`${styles.overlay} ${isExpanded ? styles.expanded : ''}`}
       role="dialog"
       aria-modal="true"
       aria-labelledby="disclaimer-title"
       aria-describedby="disclaimer-content"
     >
-      <div className={styles.modal}>
-        <h2 id="disclaimer-title" className={styles.title}>
-          Disclaimer and Terms of Use
-        </h2>
-        <div id="disclaimer-content" className={styles.content}>
-          {/* --- IMPORTANT: REPLACE THIS WITH YOUR FULL LEGAL DISCLAIMER TEXT --- */}
-          <p>
-            Welcome to [Your Website Name]. Please read these terms and conditions carefully before using our service.
-          </p>
-          <p>
-            <strong>Acceptance of Terms:</strong> By accessing and using this website, you accept and agree to be bound by the terms and provisions of this agreement. If you do not agree to abide by these terms, please do not use this service.
-          </p>
-          <p>
-            <strong>Content Accuracy:</strong> This website provides information based on various sources, including documents, electronic communications, interviews, and personal observations. While we strive for accuracy and transparency (see our <a href="/sources" target="_blank" rel="noopener noreferrer">Sources page</a> for methodology), the information presented may contain interpretations, commentary, and potentially factual inaccuracies or omissions. The content is provided "as is" and "as available" without warranties of any kind, either express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, or non-infringement.
-          </p>
-          <p>
-            <strong>No Liability:</strong> In no event shall [Your Website Name], its owners, authors, or contributors be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising out of your access to, use of, or inability to use this website or any errors or omissions in the content thereof.
-          </p>
-          <p>
-            <strong>Modifications:</strong> We reserve the right to change these conditions from time to time as we see fit, and your continued use of the site will signify your acceptance of any adjustment to these terms. You are therefore advised to re-read this statement on a regular basis.
-          </p>
-           <p>
-            <strong>Governing Law:</strong> Any claim relating to [Your Website Name]'s website shall be governed by the laws of [Your Jurisdiction - e.g., State of California, Country] without regard to its conflict of law provisions.
-          </p>
-          <p>
-             <strong>User Conduct:</strong> You agree to use the website only for lawful purposes. You are prohibited from posting on or transmitting through the website any material that is harmful, threatening, abusive, harassing, defamatory, vulgar, obscene, sexually explicit, profane, hateful, fraudulent, racially, ethnically, or otherwise objectionable.
-          </p>
-          <p><strong>By clicking "Accept", you acknowledge that you have read, understood, and agree to these terms.</strong></p>
-          {/* --- END OF DISCLAIMER TEXT --- */}
-        </div>
-        <div className={styles.actions}>
-          <button
-            className={`${styles.button} ${styles.declineButton}`}
-            onClick={handleDecline}
-            aria-label="Decline Terms of Use and Disclaimer"
+      <div className={`${styles.modal} ${isExpanded ? styles.expandedModal : ''}`}>
+        <div className={styles.header}>
+          <h2 id="disclaimer-title" className={styles.title}>
+            Disclaimer and Terms of Use
+          </h2>
+          <button 
+            className={styles.expandButton} 
+            onClick={toggleExpand}
+            aria-label={isExpanded ? "Minimize disclaimer" : "Expand disclaimer"}
           >
-            Decline
+            {isExpanded ? '↓' : '↑'}
           </button>
+        </div>
+
+        {isExpanded ? (
+          <div id="disclaimer-content" className={styles.content}>
+            <h3>Introduction</h3>
+            <p>
+              This website is a private initiative dedicated to documenting and raising awareness about animal welfare issues, specifically concerning the Society for Prevention of Cruelty to Animals (SPCA) Chandigarh. The content provided here is for informational purposes only and represents personal observations, experiences, and documentation of public interest matters.
+            </p>
+            
+            <h3>Purpose of the Website</h3>
+            <p>The sole purpose of this website is to:</p>
+            <ul>
+              <li>Raise awareness about animal welfare issues</li>
+              <li>Document the conditions at animal welfare facilities</li>
+              <li>Promote transparency in public institutions</li>
+              <li>Exercise the constitutional right to freedom of speech and expression</li>
+              <li>Facilitate community engagement for animal welfare improvement</li>
+            </ul>
+            
+            <h3>Disclaimer of Liability</h3>
+            <p>
+              The information contained on this website is provided in good faith and for general informational purposes only. While we strive to keep the information up to date and correct, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose.
+            </p>
+            <p>
+              This website does not intend to defame, disparage, or criticize any individual or organization. All content is presented as factual documentation based on personal observations, official communications, and publicly available information.
+            </p>
+            
+            <h3>Privacy Policy</h3>
+            <p>
+              This website may collect certain personal information from visitors, such as IP addresses, browser types, and timestamps. This information is used solely for improving the user experience and website security.
+            </p>
+            
+            <p><strong>By clicking "Accept", you acknowledge that you have read, understood, and agree to these terms.</strong></p>
+          </div>
+        ) : (
+          <div className={styles.summaryContent}>
+            <p>
+              By accepting, you acknowledge this is a private initiative for animal welfare documentation and awareness, not affiliated with SPCA Chandigarh. All information is provided in good faith for public interest. 
+              <a href="#" onClick={(e) => { e.preventDefault(); toggleExpand(); }} className={styles.readMoreLink}>Read full disclaimer</a>
+            </p>
+          </div>
+        )}
+        
+        <div className={styles.actions}>
           <button
             className={`${styles.button} ${styles.acceptButton}`}
             onClick={handleAccept}
