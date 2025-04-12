@@ -42,7 +42,7 @@ When deploying Next.js TypeScript projects to Netlify, you may encounter these c
    `netlify.toml`:
    ```toml
    [build]
-     command = "NODE_ENV=development npm ci && npm run build && cp public/_redirects out/"
+     command = "NODE_ENV=development npm ci && npm run build && echo '/*    /index.html   200' > out/_redirects"
      publish = "out"
 
    [build.environment]
@@ -84,13 +84,13 @@ Next.js apps deployed to Netlify may experience 404 errors for several reasons:
    - Without static export, use `.next` as the publish directory
 
 3. **Client-side routing issues**:
-   - Create a `public/_redirects` file with:
+   - Create a `_redirects` file in the output directory with:
      ```
      /*    /index.html   200
      ```
-   - Make sure this file is copied to the output directory with the command:
+   - You can generate this file during build with:
      ```
-     cp public/_redirects out/
+     echo '/*    /index.html   200' > out/_redirects
      ```
    - This tells Netlify to serve your index.html for all routes, allowing client-side routing to handle them
 
@@ -114,7 +114,7 @@ When deploying, check these settings in the Netlify dashboard:
 
 1. **Build Settings**:
    - Site configuration > Build & deploy > Continuous deployment > Build settings
-   - Set build command to: `NODE_ENV=development npm ci && npm run build && cp public/_redirects out/`
+   - Set build command to: `NODE_ENV=development npm ci && npm run build && echo '/*    /index.html   200' > out/_redirects`
    - Set publish directory to: `out` (when using static export) or `.next` (for SSR)
 
 2. **Environment Variables**:
