@@ -5,6 +5,10 @@ const nextConfig = {
   images: {
     domains: [],
   },
+  // This setting helps with Netlify deployments
+  trailingSlash: true,
+  // Ensures Next.js outputs HTML files for each page
+  output: 'export',
 }
 
 module.exports = nextConfig 

@@ -1,6 +1,6 @@
 [build]
-  command = "NODE_ENV=development npm ci && npm run build"
-  publish = ".next"
+  command = "NODE_ENV=development npm ci && npm run build && cp public/_redirects out/"
+  publish = "out"
 
 [build.environment]
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
@@ -8,4 +8,11 @@
   NODE_ENV = "development"
 
 [[plugins]]
-  package = "@netlify/plugin-nextjs" 
+  package = "@netlify/plugin-nextjs"
+
+# This makes sure that all routes are directed to the index.html file
+# which is necessary for client-side routing to work
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200 
