@@ -84,12 +84,6 @@ const Home: React.FC = () => {
           <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 mb-6">
             <div className="aspect-w-16 aspect-h-12 overflow-hidden">
               <embed src="/spca-infographic.pdf" type="application/pdf" className="w-full h-full rounded" />
-              <div className="absolute inset-0 flex items-center justify-center bg-gray-100 bg-opacity-80 p-6 text-center">
-                <div>
-                  <p className="text-gray-700 font-medium mb-2">Infographic is being updated</p>
-                  <p className="text-sm text-gray-600">Our team is working on a more detailed infographic. Check back soon!</p>
-                </div>
-              </div>
             </div>
           </div>
           
