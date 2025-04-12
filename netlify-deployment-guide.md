@@ -245,6 +245,7 @@ For this project, we successfully fixed the deployment issues by:
 
 2. **Optimizing package.json**:
    - Moved TypeScript dependencies to the main `dependencies` section
+   - Moved Tailwind CSS and related packages (postcss, autoprefixer) to `dependencies`
    - Fixed build issues caused by `NODE_ENV=production`
    - Removed the custom prebuild script (no longer needed)
 
@@ -261,4 +262,20 @@ For this project, we successfully fixed the deployment issues by:
    NEXT_FORCE_EDGE_IMAGES=true
    ```
 
-This combination of fixes resolved both the build errors and 404 routing issues, allowing the Next.js application to deploy successfully on Netlify. 
+This combination of fixes resolved both the build errors and 404 routing issues, allowing the Next.js application to deploy successfully on Netlify.
+
+## Key Lessons Learned
+
+1. When deploying Next.js with TypeScript and other build tools like Tailwind CSS to Netlify, you need to ensure all the required packages are available during the build process, even in production mode.
+
+2. With `NODE_ENV=production` in Netlify:
+   - `devDependencies` are not installed by default
+   - Any packages needed for the build (TypeScript, Tailwind, etc.) should be moved to `dependencies`
+   
+3. TOML configuration requires careful attention to syntax, especially with:
+   - Table definitions (`[section]` vs. inline `{ key = value }`)
+   - Preventing duplicate section definitions
+
+4. The correct publishing directory depends on your Next.js setup:
+   - `.next` for server-side rendering (default)
+   - `out` for static site generation (when using `output: 'export'`) 
