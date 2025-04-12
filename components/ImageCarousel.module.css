@@ -8,6 +8,10 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+.fullWidth {
+  max-width: 100%;
+}
+
 .carouselWrapper {
   position: relative;
   display: flex;
@@ -49,7 +53,6 @@
   height: auto;
   display: block;
   object-fit: cover;
-  aspect-ratio: 16/9;
   transition: transform 0.5s ease;
 }
 
@@ -91,6 +94,7 @@
   color: #333;
   font-weight: bold;
   font-size: 18px;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .carouselButton:hover {
@@ -125,6 +129,7 @@
   cursor: pointer;
   border: none;
   transition: all 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .indicator:hover {
@@ -139,6 +144,11 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .carouselContainer {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
   .carouselButton {
     width: 35px;
     height: 35px;
@@ -158,5 +168,42 @@
   .activeIndicator {
     width: 10px;
     height: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carouselButton {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    opacity: 0.9;
+  }
+  
+  .caption {
+    padding: 10px;
+  }
+  
+  .caption p {
+    font-size: 0.75rem;
+  }
+  
+  .carouselIndicators {
+    bottom: 10px;
+  }
+  
+  .imageWrapper:active .carouselImage {
+    transform: scale(1.01);
+  }
+  
+  /* Touch-friendly adjustments */
+  .indicator {
+    width: 10px;
+    height: 10px;
+    margin: 0 6px;
+  }
+  
+  .activeIndicator {
+    width: 12px;
+    height: 12px;
   }
 } 

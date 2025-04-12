@@ -1,20 +1,50 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import ImageCarousel from '../../components/ImageCarousel'
+import Slideshow from '../components/Slideshow'
 
 const Home: React.FC = () => {
   // Define the images for the carousel
   const slideshowImages = [
     {
-      src: '/sourceDocs/slideshow/spca-image-1.png',
-      alt: 'SPCA Shelter Conditions',
+      src: '/sourceDocs/slideshow/1.png',
+      alt: 'SPCA Slideshow Image 1',
       caption: 'Current conditions at SPCA Chandigarh shelter facilities'
     },
     {
-      src: '/sourceDocs/slideshow/spca-image-2.png',
-      alt: 'Animal Welfare Issues',
+      src: '/sourceDocs/slideshow/2.png',
+      alt: 'SPCA Slideshow Image 2',
       caption: 'Documentation of animal welfare concerns'
+    },
+    {
+      src: '/sourceDocs/slideshow/3.png',
+      alt: 'SPCA Slideshow Image 3',
+      caption: 'Evidence of neglect at SPCA facilities'
+    },
+    {
+      src: '/sourceDocs/slideshow/4.png',
+      alt: 'SPCA Slideshow Image 4',
+      caption: 'Photographic evidence of shelter conditions'
+    },
+    {
+      src: '/sourceDocs/slideshow/5.png',
+      alt: 'SPCA Slideshow Image 5',
+      caption: 'Documentation from inside the shelter'
+    },
+    {
+      src: '/sourceDocs/slideshow/6.png',
+      alt: 'SPCA Slideshow Image 6',
+      caption: 'Animal welfare investigation findings'
+    },
+    {
+      src: '/sourceDocs/slideshow/7.png',
+      alt: 'SPCA Slideshow Image 7',
+      caption: 'Evidence of improper animal housing'
+    },
+    {
+      src: '/sourceDocs/slideshow/8.png',
+      alt: 'SPCA Slideshow Image 8',
+      caption: 'SPCA facility photographic evidence'
     }
   ];
 
@@ -44,8 +74,7 @@ const Home: React.FC = () => {
                 <p className="text-sm text-yellow-700 max-w-2xl">
                   This is SPCA Chandigarh's animal welfare transparency portal that puts critical issues on display. 
                   Created by the public, for the public—serving citizens of all ages and backgrounds in Chandigarh. 
-                  We're documenting what's happening so everyone can see the full picture and drive positive change.
-                  <span className="text-xs ml-1">(No cap)</span>
+                  <span className="italic ml-1">SPCA.wtf stands for "Welfare Transparency Framework"</span> – documenting what's happening so everyone can see the full picture and drive positive change.
                 </p>
               </div>
             </div>
@@ -94,9 +123,7 @@ const Home: React.FC = () => {
             
             <div className="md:w-1/2 flex justify-center mt-8 md:mt-0">
               <div className="w-full max-w-md animate-float">
-                <div className="bg-white p-1 rounded-lg shadow-xl transform rotate-3 relative">
-                  <ImageCarousel images={slideshowImages} autoplaySpeed={6000} />
-                </div>
+                <Slideshow />
               </div>
             </div>
           </div>
@@ -284,23 +311,6 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Footer Section */}
-      <footer className="bg-gray-900 text-white py-8">
-        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <p className="text-sm text-gray-400">© {new Date().getFullYear()} SPCA.wtf - Transparency Initiative</p>
-            </div>
-            <div className="flex items-center">
-              <p className="text-sm text-gray-400 mr-2">For inquiries:</p>
-              <a href="mailto:info@spca.wtf" className="text-sm text-white hover:text-primary-light transition-colors">
-                info@spca.wtf
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
     </>
   )
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { FiInfo, FiMail, FiPhone, FiMapPin, FiHeart, FiAlertCircle, FiAlertTriangle } from 'react-icons/fi';
+import Slideshow from '../components/Slideshow';
 
 const About: React.FC = () => {
   return (
@@ -177,6 +178,37 @@ const About: React.FC = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Evidence Gallery Section */}
+      <div className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="inline-block py-1 px-3 bg-secondary bg-opacity-20 text-secondary rounded-md text-sm font-medium mb-4">
+              Photo Evidence
+            </span>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Visual Documentation
+            </h2>
+            <p className="max-w-2xl mx-auto text-lg text-gray-600">
+              Browse through our photographic evidence documenting conditions at SPCA Chandigarh
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <Slideshow fullWidth={true} rotate={false} />
+          </div>
+          
+          <div className="mt-10 text-center">
+            <p className="text-gray-600 mb-6">
+              These images were collected during official visits and inspections of the SPCA Chandigarh facilities.
+              They represent actual conditions documented by our team and concerned citizens.
+            </p>
+            <Link href="/documents" className="inline-flex items-center px-6 py-3 bg-primary text-white font-medium rounded-md hover:bg-opacity-90 transition-colors">
+              View More Evidence
+            </Link>
           </div>
         </div>
       </div>

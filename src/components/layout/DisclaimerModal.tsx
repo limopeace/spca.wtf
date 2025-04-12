@@ -50,7 +50,7 @@ const DisclaimerModal: React.FC<DisclaimerModalProps> = ({ onAccept }) => {
       <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 md:p-8">
         <h2 id="disclaimer-title" className="text-2xl font-bold text-gray-900 mb-4">Disclaimer and Terms of Use</h2>
         <div id="disclaimer-description" className="prose prose-sm max-w-none text-gray-600 mb-6 space-y-3">
-          <p><strong>Introduction:</strong> This website (SPCA.wtf) is a private initiative dedicated to documenting and raising awareness about animal welfare issues, specifically concerning the Society for Prevention of Cruelty to Animals (SPCA) facility in Chandigarh. The content provided here is for informational purposes only and represents observations, experiences, and documentation of public interest matters related to this specific facility.</p>
+          <p><strong>Introduction:</strong> This website (SPCA.wtf, where "wtf" stands for "Welfare Transparency Framework") is a private initiative dedicated to documenting and raising awareness about animal welfare issues, specifically concerning the Society for Prevention of Cruelty to Animals (SPCA) facility in Chandigarh. The content provided here is for informational purposes only and represents observations, experiences, and documentation of public interest matters related to this specific facility.</p>
           
           <p><strong>1. Not the Official SPCA:</strong> This website, SPCA.wtf, is <strong className="underline">NOT</strong> the official website of the SPCA Chandigarh or any other official SPCA branch or governing body. It is an independent public awareness project.</p>
 
