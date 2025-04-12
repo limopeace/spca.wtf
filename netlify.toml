@@ -10,7 +10,13 @@
   publish = ".next"
   
   # Default build environment variables
-  environment = { NODE_ENV = "production", NEXT_PUBLIC_ENV = "production" }
+  environment = {
+    NODE_ENV = "production",
+    NEXT_PUBLIC_ENV = "production",
+    NODE_VERSION = "18", # Specify Node version
+    NEXT_USE_NETLIFY_EDGE = "true", # Enable Next.js ISR/Edge
+    NEXT_FORCE_EDGE_IMAGES = "true" # Force edge image optimization
+  }
 
 # Use the NextJS plugin for Netlify
 [[plugins]]
@@ -23,11 +29,6 @@
 # Image optimization config
 [[plugins]]
   package = "netlify-plugin-nextjs-cache"
-
-# Enable Next.js ISR capabilities
-[build.environment]
-  NEXT_USE_NETLIFY_EDGE = "true"
-  NEXT_FORCE_EDGE_IMAGES = "true"
 
 # Next.js handles 404 pages automatically 
 
