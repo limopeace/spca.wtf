@@ -55,11 +55,6 @@ const ImageCarousel = ({ images, autoplaySpeed = 5000 }) => {
                   className={styles.carouselImage}
                   onLoad={handleImageLoad}
                 />
-                {image.caption && (
-                  <div className={styles.caption}>
-                    <p>{image.caption}</p>
-                  </div>
-                )}
               </div>
             </div>
           ))}

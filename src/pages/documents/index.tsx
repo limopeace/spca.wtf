@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { FiClock, FiFileText, FiExternalLink, FiDownload } from 'react-icons/fi';
 
 const documents = [
   { 
@@ -112,29 +113,21 @@ const DocumentsPage = () => {
         </div>
       </section>
       
-      {/* Coming Soon Overlay */}
-      <div className="fixed inset-0 z-50 bg-gray-900 bg-opacity-70 flex items-center justify-center">
-        <div className="bg-white p-8 rounded-lg max-w-md mx-auto text-center">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mx-auto text-primary mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          <h2 className="text-2xl font-bold mb-3">Coming Soon!</h2>
-          <p className="text-gray-600 mb-4">
-            We're working hard to bring you all the official documents related to SPCA Chandigarh.
-            This section will be available by the end of April 2025.
-          </p>
-          <Link href="/" className="inline-block px-5 py-3 bg-primary text-white font-medium rounded-md hover:bg-opacity-90 transition-colors">
-            Back to Home
-          </Link>
-        </div>
-      </div>
-      
-      <main className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-8 sm:py-12 filter blur-[2px] pointer-events-none">
+      <main className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-8 sm:py-12">
         <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8">Official Documents</h1>
         <p className="text-gray-700 mb-8 max-w-3xl">
           Access official documents related to SPCA Chandigarh, including court records, RTI responses, and other evidence. 
           These documents provide transparency about the ongoing issues and the legal actions being taken.
         </p>
+
+        {/* Coming Soon Banner */}
+        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-10 flex items-center">
+          <FiClock className="text-blue-500 mr-2 flex-shrink-0" size={20} />
+          <div>
+            <p className="text-blue-800 font-medium">Document Access Coming Soon</p>
+            <p className="text-blue-700 text-sm">We're working hard to bring you all the official documents related to SPCA Chandigarh. This section will be available by the end of April 2025.</p>
+          </div>
+        </div>
 
         {/* Featured Documents Section */}
         {featuredDocuments.length > 0 && (
@@ -194,27 +187,16 @@ const DocumentsPage = () => {
               </div>
               <div className="border-t p-4 bg-gray-50">
                 <div className="flex space-x-4">
-                  <a 
-                    href={doc.link} 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:text-primary-dark font-medium inline-flex items-center"
-                  >
-                    View Document
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </a>
-                  <a 
-                    href={doc.link} 
-                    download
-                    className="text-secondary hover:text-secondary-dark font-medium inline-flex items-center"
-                  >
+                  <span className="text-gray-400 cursor-not-allowed font-medium inline-flex items-center">
+                    <FiFileText className="mr-1" />
+                    View
+                    <FiClock className="ml-1 text-yellow-600" size={14} />
+                  </span>
+                  <span className="text-gray-400 cursor-not-allowed font-medium inline-flex items-center">
+                    <FiDownload className="mr-1" />
                     Download
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                    </svg>
-                  </a>
+                    <FiClock className="ml-1 text-yellow-600" size={14} />
+                  </span>
                 </div>
               </div>
             </div>

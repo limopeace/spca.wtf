@@ -42,9 +42,10 @@ const Home: React.FC = () => {
                   <span className="font-bold">Heads up!</span> This is <span className="underline">not</span> the official SPCA Chandigarh website.
                 </p>
                 <p className="text-sm text-yellow-700 max-w-2xl">
-                  We're just keeping it 💯 about what's happening at SPCA Chandigarh specifically. 
-                  This is a public awareness vibe for citizens and officials to see the full picture.
-                  Social media coming soon! <span className="text-xs">(No cap)</span>
+                  This is SPCA Chandigarh's animal welfare transparency portal that puts critical issues on display. 
+                  Created by the public, for the public—serving citizens of all ages and backgrounds in Chandigarh. 
+                  We're documenting what's happening so everyone can see the full picture and drive positive change.
+                  <span className="text-xs ml-1">(No cap)</span>
                 </p>
               </div>
             </div>
@@ -223,23 +224,63 @@ const Home: React.FC = () => {
             <p className="text-gray-600 mt-2 max-w-2xl mx-auto">Understanding the organizational overview, key stakeholders, and systemic issues within SPCA Chandigarh</p>
           </div>
           
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden max-w-4xl mx-auto">
-            <div className="aspect-w-16 aspect-h-20 overflow-hidden" style={{ height: "800px" }}>
-              <embed src="/spca-infographic.pdf#toolbar=0&navpanes=0" type="application/pdf" className="w-full h-full" />
+          {/* Mobile view - Download button only */}
+          <div className="md:hidden bg-white rounded-lg shadow-sm overflow-hidden p-6 max-w-sm mx-auto text-center">
+            <div className="border border-gray-200 rounded-md p-4 mb-4 flex items-center justify-center bg-gray-50">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 2v5a2 2 0 002 2h5" />
+              </svg>
             </div>
-          </div>
-          
-          <div className="text-center mt-6">
+            <h3 className="text-lg font-semibold mb-2">SPCA Organization Infographic</h3>
+            <p className="text-gray-600 text-sm mb-4">
+              This infographic shows SPCA Chandigarh's organizational structure, key stakeholders, funding flow, and highlights critical animal welfare issues. 
+              PDF documents may not display properly on some mobile devices. Please download for the best viewing experience.
+            </p>
             <a 
               href="/spca-infographic.pdf" 
               download 
-              className="inline-flex items-center justify-center px-5 py-3 border border-primary text-primary bg-white rounded-md hover:bg-primary hover:text-white transition-colors font-medium"
+              className="w-full inline-flex items-center justify-center px-4 py-2 bg-primary text-white rounded-md hover:bg-opacity-90 transition-colors font-medium"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
               </svg>
               Download Infographic
             </a>
+            <a 
+              href="/spca-infographic.pdf" 
+              target="_blank"
+              rel="noopener noreferrer" 
+              className="w-full mt-3 inline-flex items-center justify-center px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition-colors font-medium"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+              Open in New Tab
+            </a>
+          </div>
+          
+          {/* Desktop view - embedded PDF */}
+          <div className="hidden md:block bg-white rounded-lg shadow-lg overflow-hidden max-w-4xl mx-auto">
+            <div className="relative" style={{ paddingBottom: '125%' /* 4:5 aspect ratio */ }}>
+              <embed 
+                src="/spca-infographic.pdf#toolbar=0&navpanes=0" 
+                type="application/pdf" 
+                className="absolute top-0 left-0 w-full h-full"
+              />
+            </div>
+            <div className="p-4 text-center border-t border-gray-100">
+              <a 
+                href="/spca-infographic.pdf" 
+                download 
+                className="inline-flex items-center justify-center px-5 py-2 border border-primary text-primary bg-white rounded-md hover:bg-primary hover:text-white transition-colors font-medium text-sm"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                Download PDF
+              </a>
+            </div>
           </div>
         </div>
       </section>

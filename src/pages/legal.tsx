@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { FiFileText, FiExternalLink, FiDownload } from 'react-icons/fi';
+import { FiFileText, FiExternalLink, FiDownload, FiClock } from 'react-icons/fi';
 
 // Define legal case type
 type LegalCase = {
@@ -154,24 +154,7 @@ const LegalCases: React.FC = () => {
         </div>
       </section>
 
-      {/* Coming Soon Overlay */}
-      <div className="fixed inset-0 z-50 bg-gray-900 bg-opacity-70 flex items-center justify-center">
-        <div className="bg-white p-8 rounded-lg max-w-md mx-auto text-center">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mx-auto text-primary mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          <h2 className="text-2xl font-bold mb-3">Coming Soon!</h2>
-          <p className="text-gray-600 mb-4">
-            We're working on compiling all legal cases and court documents related to SPCA Chandigarh.
-            This section will be available by the end of April 2025.
-          </p>
-          <Link href="/" className="inline-block px-5 py-3 bg-primary text-white font-medium rounded-md hover:bg-opacity-90 transition-colors">
-            Back to Home
-          </Link>
-        </div>
-      </div>
-
-      <div className="py-12 bg-white filter blur-[2px] pointer-events-none">
+      <div className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-12">
@@ -184,6 +167,15 @@ const LegalCases: React.FC = () => {
             <p className="max-w-2xl mx-auto text-xl text-gray-500">
               Court proceedings, official complaints, and legal interventions related to SPCA Chandigarh animal welfare issues.
             </p>
+          </div>
+          
+          {/* Coming Soon Banner */}
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-10 flex items-center">
+            <FiClock className="text-blue-500 mr-2 flex-shrink-0" size={20} />
+            <div>
+              <p className="text-blue-800 font-medium">Document Access Coming Soon</p>
+              <p className="text-blue-700 text-sm">We're working on compiling all legal cases and court documents. Access will be available by the end of April 2025.</p>
+            </div>
           </div>
           
           {/* Legal cases grid */}
@@ -228,22 +220,16 @@ const LegalCases: React.FC = () => {
                     <div className="flex flex-wrap gap-3">
                       {legalCase.documents.map(doc => (
                         <div key={doc.name} className="flex flex-col">
-                          <Link 
-                            href={`/legal/documents/${getDocumentSlug(doc.name)}`}
-                            className="flex items-center px-3 py-2 bg-gray-100 hover:bg-gray-200 rounded-md text-sm text-gray-700 transition-colors"
-                          >
+                          <div className="flex items-center px-3 py-2 bg-gray-100 rounded-md text-sm text-gray-400 cursor-not-allowed">
                             <FiFileText className="mr-2" />
                             <span>{doc.name}</span>
-                          </Link>
-                          <a 
-                            href={doc.url}
-                            target="_blank"
-                            rel="noopener noreferrer" 
-                            className="mt-1 flex items-center text-xs text-gray-500 hover:text-primary px-3"
-                          >
-                            <FiExternalLink className="mr-1" size={12} />
-                            <span>Direct link</span>
-                          </a>
+                          </div>
+                          <div className="mt-1 flex items-center justify-between px-3">
+                            <span className="text-xs text-gray-400 flex items-center">
+                              <FiClock className="mr-1" size={12} />
+                              <span>Coming soon</span>
+                            </span>
+                          </div>
                         </div>
                       ))}
                     </div>
@@ -253,33 +239,32 @@ const LegalCases: React.FC = () => {
             ))}
           </div>
           
-          {/* Call to action section */}
-          <div className="mt-16 bg-gray-50 rounded-xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              Have Information About Other Legal Cases?
-            </h2>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              If you have information about other legal cases or official complaints related to SPCA Chandigarh that are not listed here, please share them with us.
+          <div className="mt-12 p-6 bg-gray-100 rounded-lg">
+            <h2 className="text-xl font-semibold mb-4">Document Verification</h2>
+            <p className="text-gray-700">
+              All documents provided on this website are official records obtained through legal channels including RTI requests, court filings, and other official sources.
+              The authenticity of these documents can be verified through their respective official sources. The key details document is citizen-created to help understand the situation.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link 
-                href="/contact" 
-                className="inline-flex items-center px-6 py-3 bg-primary text-white font-medium rounded-md hover:bg-opacity-90 transition-colors"
-              >
-                <FiExternalLink className="mr-2" />
-                Submit Case Information
-              </Link>
-              <Link 
-                href="/documents" 
-                className="inline-flex items-center px-6 py-3 bg-transparent border border-primary text-primary font-medium rounded-md hover:bg-primary hover:text-white hover:bg-opacity-10 transition-colors"
-              >
-                <FiDownload className="mr-2" />
-                View All Documents
-              </Link>
-            </div>
           </div>
         </div>
       </div>
+
+      {/* Footer Section */}
+      <footer className="bg-gray-900 text-white py-8">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="mb-4 md:mb-0">
+              <p className="text-sm text-gray-400">© {new Date().getFullYear()} SPCA.wtf - Transparency Initiative</p>
+            </div>
+            <div className="flex items-center">
+              <p className="text-sm text-gray-400 mr-2">For inquiries:</p>
+              <a href="mailto:info@spca.wtf" className="text-sm text-white hover:text-primary-light transition-colors">
+                info@spca.wtf
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </>
   );
 };
