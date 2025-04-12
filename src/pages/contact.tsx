@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import { FiInfo, FiMail, FiPhone, FiMapPin, FiUploadCloud, FiCheck, FiAlertTriangle } from 'react-icons/fi';
 
 const Contact: React.FC = () => {
@@ -75,7 +76,52 @@ const Contact: React.FC = () => {
         />
       </Head>
 
-      <div className="py-12 bg-white">
+      {/* Disclaimer Banner - Gen Z Style */}
+      <section className="bg-yellow-100 py-4 border-t border-b border-yellow-200">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="flex items-center">
+              <span className="text-yellow-600 mr-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                </svg>
+              </span>
+              <div>
+                <p className="font-medium text-yellow-800">
+                  <span className="font-bold">Heads up!</span> This is <span className="underline">not</span> the official SPCA Chandigarh website.
+                </p>
+                <p className="text-sm text-yellow-700 max-w-2xl">
+                  We're just keeping it 💯 about what's happening at SPCA Chandigarh specifically. 
+                  This is a public awareness vibe for citizens and officials to see the full picture.
+                  Social media coming soon! <span className="text-xs">(No cap)</span>
+                </p>
+              </div>
+            </div>
+            <a href="/whitepaper.pdf" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-yellow-200 text-yellow-800 rounded-md hover:bg-yellow-300 transition-colors text-sm font-medium whitespace-nowrap">
+              Read Our Whitepaper
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Coming Soon Overlay */}
+      <div className="fixed inset-0 z-50 bg-gray-900 bg-opacity-70 flex items-center justify-center">
+        <div className="bg-white p-8 rounded-lg max-w-md mx-auto text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mx-auto text-primary mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <h2 className="text-2xl font-bold mb-3">Coming Soon!</h2>
+          <p className="text-gray-600 mb-4">
+            Our contact form is under development. 
+            For urgent inquiries, please email us directly at info@spca.wtf
+          </p>
+          <Link href="/" className="inline-block px-5 py-3 bg-primary text-white font-medium rounded-md hover:bg-opacity-90 transition-colors">
+            Back to Home
+          </Link>
+        </div>
+      </div>
+
+      <div className="py-12 bg-white filter blur-sm pointer-events-none">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-12">

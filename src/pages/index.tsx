@@ -79,7 +79,7 @@ const Home: React.FC = () => {
             <div className="md:w-1/2 flex justify-center mt-8 md:mt-0">
               <div className="w-full max-w-md animate-float">
                 <div className="bg-white p-1 rounded-lg shadow-xl transform rotate-3 relative">
-                  <img src="/placeholder.jpg" alt="Document preview" className="rounded-md w-full" />
+                  <img src="/mortality-chart.jpg" alt="SPCA Mortality Data Chart" className="rounded-md w-full" />
                   <div className="absolute top-0 right-0 transform translate-x-0 sm:translate-x-1/4 -translate-y-1/4">
                     <span className="inline-flex items-center px-2 sm:px-3 py-0.5 rounded-full text-xs sm:text-sm font-medium bg-primary text-white whitespace-normal sm:whitespace-nowrap">
                       47% Mortality Rate Revealed in RTI

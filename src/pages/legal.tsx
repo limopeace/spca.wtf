@@ -154,7 +154,24 @@ const LegalCases: React.FC = () => {
         </div>
       </section>
 
-      <div className="py-12 bg-white">
+      {/* Coming Soon Overlay */}
+      <div className="fixed inset-0 z-50 bg-gray-900 bg-opacity-70 flex items-center justify-center">
+        <div className="bg-white p-8 rounded-lg max-w-md mx-auto text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mx-auto text-primary mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <h2 className="text-2xl font-bold mb-3">Coming Soon!</h2>
+          <p className="text-gray-600 mb-4">
+            We're working on compiling all legal cases and court documents related to SPCA Chandigarh.
+            This section will be available shortly.
+          </p>
+          <Link href="/" className="inline-block px-5 py-3 bg-primary text-white font-medium rounded-md hover:bg-opacity-90 transition-colors">
+            Back to Home
+          </Link>
+        </div>
+      </div>
+
+      <div className="py-12 bg-white filter blur-sm pointer-events-none">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-12">
