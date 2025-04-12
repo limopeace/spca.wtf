@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "npm i typescript @types/react @types/node @types/react-dom --no-save || true",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -17,17 +16,17 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^4.12.0",
-    "recharts": "^2.15.2"
-  },
-  "devDependencies": {
+    "recharts": "^2.15.2",
+    "typescript": "^5.8.3",
     "@types/node": "^20.17.30",
     "@types/react": "^18.3.20",
-    "@types/react-dom": "^18.3.6",
+    "@types/react-dom": "^18.3.6"
+  },
+  "devDependencies": {
     "autoprefixer": "^10.4.21",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
     "postcss": "^8.5.3",
-    "tailwindcss": "^3.4.17",
-    "typescript": "^5.8.3"
+    "tailwindcss": "^3.4.17"
   }
 }
