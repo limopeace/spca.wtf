@@ -1,20 +1,50 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import ImageCarousel from '../../components/ImageCarousel'
+import Slideshow from '../components/Slideshow'
 
 const Home: React.FC = () => {
   // Define the images for the carousel
   const slideshowImages = [
     {
-      src: '/sourceDocs/slideshow/spca-image-1.png',
-      alt: 'SPCA Shelter Conditions',
+      src: '/sourceDocs/slideshow/1.png',
+      alt: 'SPCA Slideshow Image 1',
       caption: 'Current conditions at SPCA Chandigarh shelter facilities'
     },
     {
-      src: '/sourceDocs/slideshow/spca-image-2.png',
-      alt: 'Animal Welfare Issues',
+      src: '/sourceDocs/slideshow/2.png',
+      alt: 'SPCA Slideshow Image 2',
       caption: 'Documentation of animal welfare concerns'
+    },
+    {
+      src: '/sourceDocs/slideshow/3.png',
+      alt: 'SPCA Slideshow Image 3',
+      caption: 'Evidence of neglect at SPCA facilities'
+    },
+    {
+      src: '/sourceDocs/slideshow/4.png',
+      alt: 'SPCA Slideshow Image 4',
+      caption: 'Photographic evidence of shelter conditions'
+    },
+    {
+      src: '/sourceDocs/slideshow/5.png',
+      alt: 'SPCA Slideshow Image 5',
+      caption: 'Documentation from inside the shelter'
+    },
+    {
+      src: '/sourceDocs/slideshow/6.png',
+      alt: 'SPCA Slideshow Image 6',
+      caption: 'Animal welfare investigation findings'
+    },
+    {
+      src: '/sourceDocs/slideshow/7.png',
+      alt: 'SPCA Slideshow Image 7',
+      caption: 'Evidence of improper animal housing'
+    },
+    {
+      src: '/sourceDocs/slideshow/8.png',
+      alt: 'SPCA Slideshow Image 8',
+      caption: 'SPCA facility photographic evidence'
     }
   ];
 
@@ -93,9 +123,7 @@ const Home: React.FC = () => {
             
             <div className="md:w-1/2 flex justify-center mt-8 md:mt-0">
               <div className="w-full max-w-md animate-float">
-                <div className="bg-white p-1 rounded-lg shadow-xl transform rotate-3 relative">
-                  <ImageCarousel images={slideshowImages} autoplaySpeed={6000} />
-                </div>
+                <Slideshow />
               </div>
             </div>
           </div>
