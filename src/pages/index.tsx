@@ -84,6 +84,12 @@ const Home: React.FC = () => {
           <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 mb-6">
             <div className="aspect-w-16 aspect-h-12 overflow-hidden">
               <embed src="/spca-infographic.pdf" type="application/pdf" className="w-full h-full rounded" />
+              <div className="absolute inset-0 flex items-center justify-center bg-gray-100 bg-opacity-80 p-6 text-center">
+                <div>
+                  <p className="text-gray-700 font-medium mb-2">Infographic is being updated</p>
+                  <p className="text-sm text-gray-600">Our team is working on a more detailed infographic. Check back soon!</p>
+                </div>
+              </div>
             </div>
           </div>
           
@@ -145,14 +151,22 @@ const Home: React.FC = () => {
               
               <div className="flex justify-center items-center">
                 <div className="relative w-full max-w-md mx-auto">
-                  <div className="bg-gray-100 rounded-lg overflow-hidden shadow-lg h-full flex items-center justify-center">
-                    <iframe
-                      src="https://www.youtube.com/embed/XxhV9bmgInM"
-                      title="SPCA Chandigarh Documentary"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="w-full aspect-video"
-                    ></iframe>
+                  <div className="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+                    <div className="relative" style={{ paddingBottom: '177.77%', /* 9:16 aspect ratio */ height: 0 }}>
+                      <iframe
+                        src="https://www.youtube.com/embed/XxhV9bmgInM"
+                        title="SPCA Chandigarh Documentary"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="absolute top-0 left-0 w-full h-full"
+                        style={{ 
+                          margin: '0 auto',
+                          maxWidth: '100%',
+                          maxHeight: '100%',
+                          objectFit: 'cover',
+                        }}
+                      ></iframe>
+                    </div>
                   </div>
                 </div>
               </div>
