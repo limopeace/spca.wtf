@@ -1,9 +1,10 @@
 build:
-  command: npm i && npm run build
+  command: NODE_ENV=development npm ci && npm run build
   publish: .next
   environment:
     NODE_VERSION: 22
     NETLIFY_NEXT_PLUGIN_SKIP: true
+    NODE_ENV: development
 
 plugins:
   - package: '@netlify/plugin-nextjs' 
