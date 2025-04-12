@@ -25,10 +25,6 @@
 [functions]
   directory = "netlify/functions"
   
-# Image optimization config
-[[plugins]]
-  package = "netlify-plugin-nextjs-cache"
-
 # Next.js handles 404 pages automatically 
 
 # This makes sure that all routes are directed to the index.html file
