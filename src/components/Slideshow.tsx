@@ -11,45 +11,46 @@ const Slideshow: React.FC<SlideshowProps> = ({ className = '', rotate = true, fu
   // Define the images for the carousel
   const slideshowImages = [
     {
-      src: '/sourceDocs/slideshow/1.png',
+      src: '/sourceDocs/slideshow/new1.png',
       alt: 'SPCA Shelter Conditions',
       caption: 'Shelter conditions documentation'
     },
     {
-      src: '/sourceDocs/slideshow/2.png',
+      src: '/sourceDocs/slideshow/new2.png',
       alt: 'Animal Welfare Issues',
       caption: 'Animal welfare concerns'
     },
     {
-      src: '/sourceDocs/slideshow/3.png',
+      src: '/sourceDocs/slideshow/new3.png',
       alt: 'SPCA Facility',
       caption: 'Evidence of facility neglect'
     },
     {
-      src: '/sourceDocs/slideshow/4.png',
+      src: '/sourceDocs/slideshow/new4.png',
       alt: 'Shelter Conditions',
       caption: 'Photographic evidence'
     },
     {
-      src: '/sourceDocs/slideshow/5.png',
+      src: '/sourceDocs/slideshow/new5.png',
       alt: 'Inside Documentation',
       caption: 'Inside the shelter'
     },
     {
-      src: '/sourceDocs/slideshow/6.png',
+      src: '/sourceDocs/slideshow/new6.png',
       alt: 'Investigation Findings',
       caption: 'Investigation findings'
     },
-    {
-      src: '/sourceDocs/slideshow/7.png',
-      alt: 'Animal Housing',
-      caption: 'Improper animal housing'
-    },
-    {
-      src: '/sourceDocs/slideshow/8.png',
-      alt: 'Evidence Documentation',
-      caption: 'SPCA facility evidence'
-    }
+    // If new7.png and new8.png exist, uncomment these
+    // {
+    //   src: '/sourceDocs/slideshow/new7.png',
+    //   alt: 'Animal Housing',
+    //   caption: 'Improper animal housing'
+    // },
+    // {
+    //   src: '/sourceDocs/slideshow/new8.png',
+    //   alt: 'Evidence Documentation',
+    //   caption: 'SPCA facility evidence'
+    // }
   ];
 
   // Add console logging to debug
