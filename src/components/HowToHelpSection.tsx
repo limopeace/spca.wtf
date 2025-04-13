@@ -54,6 +54,15 @@ const HowToHelpSection: React.FC = () => {
   // Define Email Templates directly here
   const emailTemplates: EmailTemplate[] = [
     {
+      id: 'maneka-meet',
+      recipient: 'gandhim@nic.in',
+      ccRecipients: ['meet@petaindia.org', 'asharmeet02@gmail.com'],
+      title: 'Email to Smt. Maneka Gandhi & Meet Ashar (PETA)',
+      description: 'A joint appeal to prominent animal welfare advocates Smt. Maneka Gandhi and Meet Ashar (PETA) requesting intervention and assistance.',
+      subject: 'Joint Appeal: Urgent Intervention Needed for SPCA Chandigarh Animal Welfare Crisis',
+      body: `Respected Smt. Maneka Gandhi and Shri Meet Ashar,\n\nI am writing to both of you as India's foremost animal welfare advocates to request your urgent intervention in the ongoing crisis at SPCA Chandigarh. The situation documented at spca.wtf reveals systemic animal welfare violations that require the attention and authority that you both uniquely possess.\n\nAs leaders in animal welfare advocacy with significant influence and expertise, your joint intervention could be transformative in addressing the following critical issues:\n\n1. **Severe Medical Neglect:**\n   - Documented evidence shows animals with treatable conditions receiving inadequate or no medical care\n   - Historical mortality rates approximately 47%, far exceeding acceptable standards for animal shelters\n   - Reports of untreated wounds, infections, and preventable diseases spreading through the facility\n   - Inadequate veterinary staffing and apparent lack of proper medical protocols\n\n2. **Inhumane Housing Conditions:**\n   - Extreme overcrowding with multiple animals confined in spaces designed for fewer\n   - Poor sanitation with inadequate waste management systems\n   - Insufficient protection from weather extremes\n   - Lack of proper segregation for sick, injured, or vulnerable animals\n\n3. **Governance and Oversight Failures:**\n   - Apparent lack of professional standards and accountability mechanisms\n   - Local authorities failing to enforce basic animal welfare standards\n   - Resistance to external assessment and recommendations for improvement\n   - Unclear lines of responsibility among governing authorities\n\nYour combined influence could help in several crucial ways:\n\n1. **Immediate Intervention:**\n   - Directing PETA India resources toward an independent investigation\n   - Leveraging your political and administrative connections to ensure proper oversight\n   - Arranging for qualified veterinary assessment of current animal care protocols\n\n2. **Media Attention and Public Awareness:**\n   - Your advocacy would significantly amplify public awareness of these issues\n   - Media coverage following your involvement would create necessary pressure for change\n   - Your public statements would lend crucial credibility to citizen concerns\n\n3. **Administrative Reform:**\n   - Guidance on implementing proper governance structures\n   - Assistance in establishing transparent reporting and accountability mechanisms\n   - Support for developing standard operating procedures aligned with best practices\n\n4. **Legal Interventions:**\n   - Expert assessment on potential violations of animal welfare laws\n   - Guidance on appropriate legal remedies to address systemic failures\n   - Support for citizen advocates seeking legal recourse\n\nI have attached/will attach photographic evidence documenting the conditions. Additional documentation is available at spca.wtf, where comprehensive evidence has been compiled by concerned citizens.\n\nThe animals at SPCA Chandigarh urgently need the advocacy that only influential voices like yours can provide. Your intervention represents perhaps their best hope for meaningful change.\n\nI would be grateful for any form of support you can offer, and am available to provide any additional information you might require.\n\nWith deep respect for your commitment to animal welfare,\n\nA Concerned Citizen\n[Your Name/Contact - Optional]`,
+    },
+    {
       id: 'governor',
       recipient: 'admr-chd@nic.in',
       title: 'Email to Chandigarh Governor',
@@ -83,6 +92,7 @@ const HowToHelpSection: React.FC = () => {
   interface EmailTemplate {
     id: string;
     recipient: string;
+    ccRecipients?: string[];
     title: string;
     description: string;
     subject: string;
@@ -141,30 +151,43 @@ const HowToHelpSection: React.FC = () => {
           <p className="text-gray-700">Use these pre-drafted emails as a starting point. Remember to personalize them!</p>
           {emailTemplates.map((template) => (
             <div key={template.id} className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-              <div className="p-5">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">{template.title}</h3>
-                <p className="text-sm text-gray-600 mb-4">To: {template.recipient}</p>
-                <p className="text-sm text-gray-600 mb-4">Subject: {template.subject}</p>
-                <div className="bg-gray-50 p-3 rounded-md mb-4 max-h-[250px] overflow-y-auto whitespace-pre-line text-gray-700 text-xs">
+              <div className="p-4 sm:p-5">
+                <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-2">{template.title}</h3>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-3 text-xs sm:text-sm text-gray-600">
+                  <div className="flex items-center">
+                    <span className="font-medium mr-1">To:</span> 
+                    <span>{template.recipient}</span>
+                  </div>
+                  {template.ccRecipients && (
+                    <div className="flex items-center">
+                      <span className="font-medium mr-1">CC:</span> 
+                      <span>{template.ccRecipients.join(', ')}</span>
+                    </div>
+                  )}
+                </div>
+                <p className="text-xs sm:text-sm text-gray-600 mb-3">
+                  <span className="font-medium">Subject:</span> {template.subject}
+                </p>
+                <div className="bg-gray-50 p-2 sm:p-3 rounded-md mb-3 max-h-[200px] sm:max-h-[250px] overflow-y-auto whitespace-pre-line text-gray-700 text-xs">
                   {template.body}
                 </div>
-                <div className="mt-3 p-3 bg-blue-50 border border-blue-100 rounded-md text-xs text-blue-700">
+                <div className="mt-3 p-2 sm:p-3 bg-blue-50 border border-blue-100 rounded-md text-xs text-blue-700">
                   <p className="font-medium mb-1">Note:</p>
                   <p>Consider attaching photographic evidence. Images of shelter conditions can be downloaded from:</p>
-                  <p><ExtLink href={googleDriveLink}>{googleDriveLink}</ExtLink></p>
-                  <p className="mt-1">You can copy the link text: <code className="bg-blue-100 px-1 rounded">{googleDriveLink}</code></p>
+                  <p className="break-words"><ExtLink href={googleDriveLink}>{googleDriveLink}</ExtLink></p>
+                  <p className="mt-1">You can copy the link text: <code className="bg-blue-100 px-1 rounded break-all">{googleDriveLink}</code></p>
                 </div>
-                 <div className="mt-4 flex flex-col sm:flex-row gap-2">
-                    <a
-                      href={`mailto:${template.recipient}?subject=${encodeURIComponent(template.subject)}&body=${encodeURIComponent(template.body + '\n\n[Optional: Add your name/contact and mention attached images from: ' + googleDriveLink + ']')}`}
-                      target="_blank" rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md shadow-sm text-white bg-primary hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
-                    >
-                      <FiSend className="mr-1.5 h-3 w-3" />
-                      Open in Email App
-                    </a>
-                    {/* Add download button or other actions if needed */}
-                 </div>
+                <div className="mt-4 flex flex-col sm:flex-row gap-2">
+                  <a
+                    href={`mailto:${template.recipient}${template.ccRecipients ? '?cc=' + template.ccRecipients.join(',') : ''}${template.ccRecipients ? '&subject=' : '?subject='}${encodeURIComponent(template.subject)}&body=${encodeURIComponent(template.body + '\n\n[Optional: Add your name/contact and mention attached images from: ' + googleDriveLink + ']')}`}
+                    target="_blank" rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center px-3 py-2 border border-transparent text-xs font-medium rounded-md shadow-sm text-white bg-primary hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary w-full sm:w-auto"
+                  >
+                    <FiSend className="mr-1.5 h-3 w-3" />
+                    Open in Email App
+                  </a>
+                  {/* Add download button or other actions if needed */}
+                </div>
               </div>
             </div>
           ))}
