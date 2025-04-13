@@ -293,7 +293,7 @@ const HowToHelpSection: React.FC = () => {
               </button>
               <div
                 id={`content-${action.id}`}
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${openAccordion === action.id ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${openAccordion === action.id ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'}`}
                 aria-hidden={openAccordion !== action.id}
               >
                 <div className="p-4 md:p-6 border-t border-gray-200">
