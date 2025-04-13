@@ -179,7 +179,7 @@ const HowToHelpSection: React.FC = () => {
                 <p className="text-xs sm:text-sm text-gray-600 mb-3">
                   <span className="font-medium">Subject:</span> {template.subject}
                 </p>
-                <div className="bg-gray-50 p-2 sm:p-3 rounded-md mb-3 max-h-[300px] sm:max-h-[400px] overflow-y-auto whitespace-pre-line text-gray-700 text-xs">
+                <div className="bg-gray-50 p-2 sm:p-3 rounded-md mb-3 max-h-[500px] sm:max-h-[600px] overflow-y-auto whitespace-pre-line text-gray-700 text-xs">
                   {template.body}
                 </div>
                 <div className="mt-3 p-2 sm:p-3 bg-blue-50 border border-blue-100 rounded-md text-xs text-blue-700">

@@ -110,12 +110,6 @@ const Home: React.FC = () => {
               </p>
               
               <div className="flex flex-wrap gap-4">
-                <Link href="/documents" className="w-full sm:w-auto px-6 py-3 bg-primary text-white font-medium rounded-md hover:bg-opacity-90 transition-colors text-center">
-                  See The Documents
-                </Link>
-                <Link href="/legal" className="w-full sm:w-auto px-6 py-3 bg-transparent border border-white text-white font-medium rounded-md hover:bg-white hover:bg-opacity-10 transition-colors text-center">
-                  View Legal Cases
-                </Link>
                 <Link href="/help" className="w-full sm:w-auto px-6 py-3.5 bg-yellow-500 text-white font-medium rounded-md hover:bg-yellow-600 transition-colors text-center shadow-lg transform hover:scale-105 relative overflow-hidden group">
                   <span className="absolute inset-0 bg-white opacity-20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-500"></span>
                   <span className="relative font-bold">How You Can Help →</span>
