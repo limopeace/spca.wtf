@@ -241,7 +241,41 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* SPCA Infographic Section - Now below the video section */}
+      {/* Prominent CTA for How You Can Help */}
+      <section className="py-12 bg-gradient-to-r from-purple-600 via-primary to-red-500 text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <svg className="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path d="M0,0 L100,0 L100,100 L0,100 Z" fill="url(#dottedPattern)"></path>
+          </svg>
+          <defs>
+            <pattern id="dottedPattern" width="20" height="20" patternUnits="userSpaceOnUse">
+              <circle cx="10" cy="10" r="2" fill="white" />
+            </pattern>
+          </defs>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="inline-block py-1 px-3 bg-white bg-opacity-20 text-white rounded-full text-sm font-semibold mb-4">
+              Take Action Now
+            </span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6">
+              Ready to Make a <span className="underline decoration-yellow-300 decoration-4">Difference</span>?
+            </h2>
+            <p className="text-lg sm:text-xl mb-8 text-white text-opacity-90">
+              Your voice matters. Join hundreds of concerned citizens advocating for better animal welfare standards at SPCA Chandigarh.
+            </p>
+            <a href="#how-to-help" className="inline-block px-8 py-4 text-lg font-bold text-primary bg-white rounded-full shadow-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 animate-pulse">
+              See How You Can Help →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* How You Can Help Section */}
+      <HowToHelpSection />
+
+      {/* SPCA Infographic Section - moved to bottom of page */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
@@ -312,41 +346,6 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Prominent CTA for How You Can Help */}
-      <section className="py-12 bg-gradient-to-r from-purple-600 via-primary to-red-500 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <svg className="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <path d="M0,0 L100,0 L100,100 L0,100 Z" fill="url(#dottedPattern)"></path>
-          </svg>
-          <defs>
-            <pattern id="dottedPattern" width="20" height="20" patternUnits="userSpaceOnUse">
-              <circle cx="10" cy="10" r="2" fill="white" />
-            </pattern>
-          </defs>
-        </div>
-        
-        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block py-1 px-3 bg-white bg-opacity-20 text-white rounded-full text-sm font-semibold mb-4">
-              Take Action Now
-            </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6">
-              Ready to Make a <span className="underline decoration-yellow-300 decoration-4">Difference</span>?
-            </h2>
-            <p className="text-lg sm:text-xl mb-8 text-white text-opacity-90">
-              Your voice matters. Join hundreds of concerned citizens advocating for better animal welfare standards at SPCA Chandigarh.
-            </p>
-            <a href="#how-to-help" className="inline-block px-8 py-4 text-lg font-bold text-primary bg-white rounded-full shadow-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 animate-pulse">
-              See How You Can Help →
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* How You Can Help Section */}
-      <HowToHelpSection />
-
     </>
   )
 }
