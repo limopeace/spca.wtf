@@ -259,49 +259,103 @@ const About: React.FC = () => {
               </div>
             </div>
             
-            {/* Add more supporter cards here in the future */}
-            {/* Placeholder for future supporters */}
-            <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl overflow-hidden border border-white border-opacity-20 flex items-center justify-center p-8">
-              <div className="text-center">
-                <div className="h-14 w-14 rounded-full bg-white bg-opacity-20 flex items-center justify-center mx-auto mb-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                  </svg>
+            {/* Instagram Account - @chdanimalwelfare */}
+            <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl overflow-hidden border border-white border-opacity-20 hover:transform hover:scale-105 transition duration-300">
+              <div className="p-6">
+                <div className="flex items-center mb-4">
+                  <div className="h-14 w-14 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-0.5">
+                    <div className="h-full w-full rounded-full bg-white bg-opacity-20 flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="h-8 w-8 text-white">
+                        <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-xl font-bold text-white">Chandigarh Animal Welfare</h3>
+                    <a href="https://www.instagram.com/chdanimalwelfare/" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-white transition-colors">
+                      @chdanimalwelfare
+                    </a>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">Join Our Movement</h3>
-                <p className="text-white text-opacity-80">
-                  Are you an influencer or organization willing to help spread awareness? Contact us to be featured here.
+                <p className="text-white text-opacity-80 mb-4">
+                  Thank you for your dedicated support in raising awareness about animal welfare issues in Chandigarh and helping our initiative reach a wider audience.
                 </p>
-                <a href="mailto:info@spca.wtf" className="inline-block mt-4 px-4 py-2 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-md text-white transition-colors">
-                  Get in Touch
-                </a>
+                <div className="flex justify-between items-center mt-6">
+                  <span className="bg-purple-500 bg-opacity-30 text-white text-sm px-3 py-1 rounded-full">Animal Welfare Advocate</span>
+                  <a href="https://www.instagram.com/chdanimalwelfare/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-200 transition-colors text-sm">
+                    Visit Profile →
+                  </a>
+                </div>
               </div>
             </div>
             
-            {/* Placeholder for future supporters */}
-            <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl overflow-hidden border border-white border-opacity-20 flex items-center justify-center p-8">
-              <div className="text-center">
-                <div className="h-14 w-14 rounded-full bg-white bg-opacity-20 flex items-center justify-center mx-auto mb-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                  </svg>
+            {/* Instagram Account - @bullu_bow_wow */}
+            <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl overflow-hidden border border-white border-opacity-20 hover:transform hover:scale-105 transition duration-300">
+              <div className="p-6">
+                <div className="flex items-center mb-4">
+                  <div className="h-14 w-14 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-0.5">
+                    <div className="h-full w-full rounded-full bg-white bg-opacity-20 flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="h-8 w-8 text-white">
+                        <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-xl font-bold text-white">Bullu Bow Wow</h3>
+                    <a href="https://www.instagram.com/bullu_bow_wow/" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-white transition-colors">
+                      @bullu_bow_wow
+                    </a>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">Impact Statistics</h3>
-                <p className="text-white text-opacity-80">
-                  Our reach is growing every day. Check back soon for detailed statistics about our public awareness campaign.
+                <p className="text-white text-opacity-80 mb-4">
+                  Thank you for your support in spreading awareness about SPCA Chandigarh conditions and contributing to our mission for better animal welfare standards.
                 </p>
-                <button disabled className="inline-block mt-4 px-4 py-2 bg-white bg-opacity-20 rounded-md text-white cursor-not-allowed opacity-70">
-                  Coming Soon
-                </button>
+                <div className="flex justify-between items-center mt-6">
+                  <span className="bg-purple-500 bg-opacity-30 text-white text-sm px-3 py-1 rounded-full">Pet Community</span>
+                  <a href="https://www.instagram.com/bullu_bow_wow/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-200 transition-colors text-sm">
+                    Visit Profile →
+                  </a>
+                </div>
               </div>
             </div>
+            
+            {/* Instagram Account - @ruchi__2830 */}
+            <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl overflow-hidden border border-white border-opacity-20 hover:transform hover:scale-105 transition duration-300">
+              <div className="p-6">
+                <div className="flex items-center mb-4">
+                  <div className="h-14 w-14 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-0.5">
+                    <div className="h-full w-full rounded-full bg-white bg-opacity-20 flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="h-8 w-8 text-white">
+                        <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-xl font-bold text-white">Ruchi</h3>
+                    <a href="https://www.instagram.com/ruchi__2830/" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-white transition-colors">
+                      @ruchi__2830
+                    </a>
+                  </div>
+                </div>
+                <p className="text-white text-opacity-80 mb-4">
+                  Thank you for your valuable contribution in raising awareness about animal welfare issues at SPCA Chandigarh and supporting our transparency initiative.
+                </p>
+                <div className="flex justify-between items-center mt-6">
+                  <span className="bg-purple-500 bg-opacity-30 text-white text-sm px-3 py-1 rounded-full">Animal Welfare Supporter</span>
+                  <a href="https://www.instagram.com/ruchi__2830/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-200 transition-colors text-sm">
+                    Visit Profile →
+                  </a>
+                </div>
+              </div>
+            </div>
+
           </div>
           
           <div className="mt-12 text-center">
             <p className="text-white text-opacity-90 mb-6 max-w-3xl mx-auto">
               Public awareness is a critical part of our initiative. By spreading information about SPCA Chandigarh conditions, we can drive real change and ensure better standards for animal welfare.
             </p>
-            <Link href="/#how-to-help" className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-medium rounded-md hover:bg-opacity-90 transition-colors">
+            <Link href="/help" className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-medium rounded-md hover:bg-opacity-90 transition-colors">
               Join Our Efforts
             </Link>
           </div>

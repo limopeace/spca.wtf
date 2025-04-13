@@ -213,7 +213,7 @@ const Home: React.FC = () => {
                 <Link href="/documents" className="px-5 py-2 bg-primary text-white font-medium rounded-md hover:bg-opacity-90 transition-colors text-sm">
                   Review the Evidence
                 </Link>
-                <Link href="/faq" className="px-5 py-2 bg-gray-200 text-gray-800 font-medium rounded-md hover:bg-gray-300 transition-colors text-sm">
+                <Link href="/help" className="px-5 py-2 bg-gray-200 text-gray-800 font-medium rounded-md hover:bg-gray-300 transition-colors text-sm">
                   How You Can Help
                 </Link>
               </div>
