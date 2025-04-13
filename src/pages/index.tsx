@@ -116,9 +116,12 @@ const Home: React.FC = () => {
                 <Link href="/legal" className="w-full sm:w-auto px-6 py-3 bg-transparent border border-white text-white font-medium rounded-md hover:bg-white hover:bg-opacity-10 transition-colors text-center">
                   View Legal Cases
                 </Link>
-                <a href="/spca-infographic.pdf" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-6 py-3 bg-secondary text-white font-medium rounded-md hover:bg-opacity-90 transition-colors text-center">
-                  Download Infographic
-                </a>
+                <Link href="/#how-to-help" className="w-full sm:w-auto px-6 py-3 bg-yellow-500 text-white font-medium rounded-md hover:bg-opacity-90 transition-colors text-center animate-pulse">
+                  How You Can Help →
+                </Link>
+                <Link href="/about#supporters" className="w-full sm:w-auto px-6 py-3 bg-blue-500 text-white font-medium rounded-md hover:bg-opacity-90 transition-colors text-center">
+                  See Our Impact
+                </Link>
               </div>
             </div>
             
