@@ -292,6 +292,7 @@ A Concerned Animal Advocate
               <li>Personalize the template by adding your name and any personal observations.</li>
               <li>Keep your tone respectful but firm in your concerns.</li>
               <li>Add specific details if you have first-hand knowledge of issues.</li>
+              <li>Include visual evidence by downloading and attaching images of the shelter conditions from <a href="https://drive.google.com/drive/folders/12yzHCoecLxzM13fxPGfUz0OWCjLHFZG8?usp=sharing" target="_blank" rel="noopener noreferrer" className="underline">this Google Drive folder</a>.</li>
               <li>Follow up if you don't receive a response within 2 weeks.</li>
               <li>Forward responses to <a href="mailto:info@spca.wtf" className="underline">info@spca.wtf</a> to help track official actions.</li>
             </ul>
