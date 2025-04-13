@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Link from 'next/link';
-import { FiShare2, FiSend, FiMail, FiAlertCircle, FiGift, FiPhone, FiDownload, FiChevronDown, FiChevronUp, FiExternalLink, FiBriefcase, FiHeart } from 'react-icons/fi';
+import { FiShare2, FiSend, FiMail, FiAlertCircle, FiGift, FiPhone, FiDownload, FiChevronDown, FiChevronUp, FiExternalLink, FiBriefcase, FiHeart, FiCopy, FiCheck } from 'react-icons/fi';
 import ComplaintSender from './ComplaintSender'; // Assuming ComplaintSender is in the same directory
 
 interface HelpAction {
@@ -46,9 +46,20 @@ A Concerned Citizen
 
 const HowToHelpSection: React.FC = () => {
   const [openAccordion, setOpenAccordion] = useState<string | null>(null);
+  const [copiedTemplate, setCopiedTemplate] = useState<string | null>(null);
 
   const toggleAccordion = (id: string) => {
     setOpenAccordion(openAccordion === id ? null : id);
+  };
+
+  // Function to copy email template to clipboard
+  const copyToClipboard = (templateId: string, content: string) => {
+    navigator.clipboard.writeText(content).then(() => {
+      setCopiedTemplate(templateId);
+      setTimeout(() => setCopiedTemplate(null), 2000); // Reset after 2 seconds
+    }).catch(err => {
+      console.error('Failed to copy: ', err);
+    });
   };
 
   // Define Email Templates directly here
@@ -168,7 +179,7 @@ const HowToHelpSection: React.FC = () => {
                 <p className="text-xs sm:text-sm text-gray-600 mb-3">
                   <span className="font-medium">Subject:</span> {template.subject}
                 </p>
-                <div className="bg-gray-50 p-2 sm:p-3 rounded-md mb-3 max-h-[200px] sm:max-h-[250px] overflow-y-auto whitespace-pre-line text-gray-700 text-xs">
+                <div className="bg-gray-50 p-2 sm:p-3 rounded-md mb-3 max-h-[300px] sm:max-h-[400px] overflow-y-auto whitespace-pre-line text-gray-700 text-xs">
                   {template.body}
                 </div>
                 <div className="mt-3 p-2 sm:p-3 bg-blue-50 border border-blue-100 rounded-md text-xs text-blue-700">
@@ -186,7 +197,25 @@ const HowToHelpSection: React.FC = () => {
                     <FiSend className="mr-1.5 h-3 w-3" />
                     Open in Email App
                   </a>
-                  {/* Add download button or other actions if needed */}
+                  <button
+                    onClick={() => copyToClipboard(
+                      template.id, 
+                      `To: ${template.recipient}${template.ccRecipients ? '\nCC: ' + template.ccRecipients.join(', ') : ''}\nSubject: ${template.subject}\n\n${template.body}\n\n[Optional: Add your name/contact and mention attached images from: ${googleDriveLink}]`
+                    )}
+                    className="inline-flex items-center justify-center px-3 py-2 border border-gray-300 text-xs font-medium rounded-md shadow-sm text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary w-full sm:w-auto transition-all duration-200"
+                  >
+                    {copiedTemplate === template.id ? (
+                      <>
+                        <FiCheck className="mr-1.5 h-3 w-3 text-green-500" />
+                        <span className="text-green-500">Copied!</span>
+                      </>
+                    ) : (
+                      <>
+                        <FiCopy className="mr-1.5 h-3 w-3" />
+                        Copy Email
+                      </>
+                    )}
+                  </button>
                 </div>
               </div>
             </div>
