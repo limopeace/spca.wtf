@@ -56,6 +56,9 @@ const Header: React.FC = () => {
               <Link href="/legal" className="text-gray-600 hover:text-primary font-medium">
                 Legal Cases
               </Link>
+              <Link href="/#how-to-help" className="text-gray-600 hover:text-primary font-medium">
+                How to Help
+              </Link>
             </nav>
           </div>
           
@@ -113,6 +116,13 @@ const Header: React.FC = () => {
             onClick={toggleMobileMenu}
           >
             Home
+          </Link>
+          <Link
+            href="/#how-to-help"
+            className="block px-5 py-3 text-white text-lg font-medium bg-gray-700 border-l-4 border-primary"
+            onClick={toggleMobileMenu}
+          >
+            How to Help
           </Link>
           <Link
             href="/timeline"

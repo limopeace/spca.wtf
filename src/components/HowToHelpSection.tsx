@@ -154,8 +154,27 @@ const HowToHelpSection: React.FC = () => {
     <section id="how-to-help" className="py-16 md:py-24 bg-gray-50">
       <div className="max-w-4xl mx-auto px-5 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
+          <span className="inline-block py-1 px-3 bg-primary bg-opacity-20 text-primary rounded-full text-sm font-medium mb-3">
+            Make An Impact
+          </span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How You Can Help</h2>
-          <p className="text-lg text-gray-600">Your action can make a difference. Here are concrete steps:</p>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">Your action can make a real difference in the lives of these animals. Here are concrete steps you can take today:</p>
+          
+          <div className="flex justify-center mt-8 mb-2">
+            <div className="flex items-center space-x-2 text-primary bg-primary bg-opacity-10 px-4 py-2 rounded-full">
+              <FiHeart className="w-5 h-5" />
+              <span className="font-medium">Every action counts, no matter how small!</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 gap-6 mb-12">
+          <div className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-primary">
+            <p className="text-center text-gray-700">
+              Select any of the options below to expand and learn how you can contribute.
+              The more people who participate, the stronger our collective voice becomes.
+            </p>
+          </div>
         </div>
 
         <div className="space-y-4">
