@@ -51,6 +51,46 @@ const HowToHelpSection: React.FC = () => {
     setOpenAccordion(openAccordion === id ? null : id);
   };
 
+  // Define Email Templates directly here
+  const emailTemplates: EmailTemplate[] = [
+    {
+      id: 'governor',
+      recipient: 'admr-chd@nic.in',
+      title: 'Email to Chandigarh Governor',
+      description: 'A formal request to the Governor of Chandigarh demanding oversight and investigation into SPCA Chandigarh.',
+      subject: 'Urgent Call for Investigation & Oversight: Systemic Failures at SPCA Chandigarh',
+      body: `Honorable Governor,\n\nI am writing as a concerned citizen to demand immediate administrative intervention regarding the deplorable situation at the SPCA Chandigarh shelter. Substantial evidence documented publicly (available at spca.wtf) demonstrates severe systemic failures impacting animal welfare, requiring your urgent attention and executive action.\n\nThe current state of SPCA Chandigarh represents a profound failure of ethical governance and oversight. Specific areas of grave concern include:\n\n1. **Catastrophic Mortality Rates:** Official records previously indicated mortality rates reaching as high as 47%, representing thousands of animal deaths. This unprecedented rate cannot be explained by natural causes and points directly to severe deficiencies in care protocols, disease management, and veterinary oversight. Animals are reportedly dying in unsanitary, overcrowded conditions without adequate medical attention.\n\n2. **Inhumane Living Conditions:** Documented evidence shows animals housed in severely overcrowded kennels with inadequate space, ventilation, and sanitation. Multiple animals are often crammed into spaces designed for fewer, with accumulated excrement, inadequate drainage, and limited protection from elements. These conditions violate basic animal welfare standards and likely constitute legally actionable neglect.\n\n3. **Medical Neglect:** Reports indicate critically inadequate veterinary staffing and medical protocols. Animals with treatable conditions often receive delayed care or no treatment whatsoever. The veterinary infrastructure appears woefully inadequate for the volume of animals, with shortages of essential medicines, equipment, and qualified personnel.\n\n4. **Systemic Mismanagement:** There appears to be a pattern of financial irregularities, negligent record-keeping, and an institutional culture that has normalized substandard care. The persistent nature of these issues suggests entrenched systemic problems rather than isolated incidents.\n\nAs the highest administrative authority in Chandigarh, your office must take immediate and decisive action. I formally request:\n\n1. **Immediate Formation of an Independent Investigative Committee:** This multi-disciplinary committee should include:\n   - Senior veterinary experts with no prior association with SPCA Chandigarh\n   - Financial auditors to trace the allocation and utilization of funds\n   - Legal experts specializing in animal welfare law\n   - Representatives from reputable animal welfare organizations\n   \n2. **Urgent Staff Accountability Measures:**\n   - Immediate suspension and investigation of the veterinary staff demonstrably responsible for negligent care\n   - Comprehensive assessment of all medical protocols and staffing adequacy\n   - Review of hiring practices and qualifications verification for medical personnel\n\n3. **Transparent Public Engagement:**\n   - Establishment of mandatory monthly public meetings with SPCA administration\n   - Publication of complete mortality statistics, medical protocols, and financial expenditures\n   - Creation of a citizen oversight committee with regular access to facilities\n\n4. **Formal Inquiry into Administrative Accountability:**\n   - Full investigation into which public servants were responsible for oversight failures\n   - Determination of whether criminal negligence charges are warranted\n   - Examination of potential dereliction of duty by administrative officials\n\nI remind you that failure to address these issues may constitute a violation of the Prevention of Cruelty to Animals Act and other applicable legislation. The situation at SPCA Chandigarh cannot be allowed to continue, as it represents both an ethical failure and potentially criminal neglect of duties by public officials.\n\nI await your substantive response detailing the specific measures your office will implement to address this crisis of governance.\n\nRespectfully,\nA Concerned Citizen of Chandigarh\n[Optional: Your Name/Contact]`,
+    },
+    {
+      id: 'commissioner',
+      recipient: 'comm-mcc-chd@nic.in',
+      title: 'Email to Municipal Commissioner',
+      description: 'A demand for the Municipal Commissioner to enforce accountability and transform SPCA operations with specific action items.',
+      subject: 'Demand for Immediate Intervention: Critical Failures at SPCA Chandigarh Require Municipal Action',
+      body: `Dear Municipal Commissioner,\n\nI am writing to demand immediate intervention regarding the deeply troubling conditions at SPCA Chandigarh, which falls directly under municipal oversight and receives significant public funding through your office. Documentation available at spca.wtf reveals multiple areas requiring urgent municipal response.\n\nThe Municipal Corporation holds direct responsibility for ensuring SPCA's proper functioning, as it is both a significant funder and the administrative authority with oversight powers. The current situation demonstrates a profound failure of municipal governance that must be addressed immediately. Specific concerns include:\n\n1. **Facility Infrastructure Collapse:**\n   - Kennel facilities reportedly lack basic drainage, resulting in animals standing in accumulated excrement\n   - Broken fencing and inadequate containment creating unsafe conditions for animals and staff\n   - Deteriorated roofing exposing animals to extreme weather conditions\n   - Non-functional quarantine facilities contributing to disease spread\n   - Inadequate water supply and waste management systems creating unsanitary conditions\n\n2. **Operational Dysfunction:**\n   - Critical understaffing across essential positions, particularly veterinary and animal care personnel\n   - Absence of standardized intake, treatment, and care protocols\n   - Negligent record-keeping making it impossible to track individual animal care\n   - Reports of animals receiving no medical assessment for days after intake\n   - Alarming incidence of preventable diseases due to poor vaccination and prophylactic care\n\n3. **Financial Mismanagement:**\n   - Questions surrounding appropriate utilization of municipal grants\n   - Apparent prioritization of administrative expenses over direct animal care\n   - Inadequate expenditure on essential medicines and supplies\n   - Reports of funds designated for facility improvements being diverted or unutilized\n\n4. **Catastrophic Animal Welfare Outcomes:**\n   - Previously documented mortality rates far exceeding acceptable standards\n   - Reports of untreated injuries and illnesses\n   - Chronic stress and suffering due to overcrowding and inadequate care\n   - Systemic failure to meet basic animal welfare standards\n\nAs Municipal Commissioner, you have both the authority and responsibility to take immediate corrective action. I formally request the following specific interventions:\n\n1. **Immediate Infrastructure Assessment and Emergency Repairs:**\n   - Dispatch municipal engineers within 72 hours to assess critical infrastructure deficiencies\n   - Allocate emergency funds for urgent repairs to drainage, containment, and sanitation systems\n   - Engage municipal sanitation services to address immediate hygiene concerns\n\n2. **Staff Accountability and Reconstitution:**\n   - Immediate suspension and investigation of veterinary staff demonstrably negligent in duties\n   - Appointment of qualified interim veterinary team from municipal resources\n   - Comprehensive review of all hiring practices and staff qualifications\n   - Implementation of mandatory training programs for all animal care staff\n\n3. **Financial Accountability Measures:**\n   - Freeze all discretionary spending pending comprehensive audit\n   - Detailed accounting of all municipal funds allocated to SPCA over the past three years\n   - Implementation of transparent financial reporting mechanisms\n   - Development of line-item budgeting with specific allocations for animal care essentials\n\n4. **Transparency and Public Oversight:**\n   - Establishment of monthly public meetings with mandatory attendance by senior SPCA staff\n   - Publication of comprehensive monthly statistics on intake, treatment, and outcomes\n   - Formation of a citizen oversight committee with regular facility access\n   - Development of clear performance metrics with consequences for non-compliance\n\n5. **Administrative Accountability:**\n   - Formal inquiry into which municipal officials failed in their oversight duties\n   - Investigation into potential violations of municipal regulations and bylaws\n   - Establishment of clear lines of responsibility for ongoing SPCA oversight\n\nThe current situation at SPCA Chandigarh reflects poorly on municipal governance and requires immediate intervention. I urge you to treat this as an urgent municipal priority requiring your personal attention.\n\nPlease respond with a specific timeline for implementing these measures. The animals of Chandigarh cannot continue to suffer due to administrative inaction.\n\nSincerely,\nA Concerned Resident\n[Optional: Your Name/Contact]`,
+    },
+    {
+      id: 'maneka',
+      recipient: 'gandhim@nic.in',
+      title: 'Email to Smt. Maneka Gandhi',
+      description: 'A detailed request for intervention from renowned animal welfare advocate Smt. Maneka Gandhi with specific concerns and requests.',
+      subject: 'Urgent Appeal for Intervention: Systemic Animal Welfare Crisis at SPCA Chandigarh',
+      body: `Respected Smt. Maneka Gandhi,\n\nI am writing to you with deep concern regarding the ongoing crisis at SPCA Chandigarh, seeking your invaluable intervention as India's foremost animal welfare advocate. The situation demands attention from someone with your authority, expertise, and commitment to animal welfare.\n\nAs documented comprehensively on spca.wtf, the conditions at SPCA Chandigarh appear to constitute a systemic failure of animal welfare governance. Your decades of experience in animal welfare reform make you uniquely positioned to help address this crisis. The specific issues include:\n\n1. **Catastrophic Animal Care Failures:**\n   - Historical mortality rates of approximately 47% represent thousands of preventable animal deaths\n   - Documented cases of animals with treatable conditions receiving delayed or no treatment\n   - Reports of severe, untreated mange, infected wounds, and preventable diseases\n   - Critical lack of isolation protocols resulting in disease transmission among shelter populations\n   - Inadequate nutrition and hydration protocols, particularly for vulnerable animals\n\n2. **Institutional Governance Breakdown:**\n   - Apparent lack of qualified veterinary oversight and professional standards\n   - Absence of comprehensive intake, treatment, and outcome protocols\n   - Insufficient accountability mechanisms for medical staff and administration\n   - Reports of resistant attitude toward implementing welfare improvements\n   - Lack of transparency in operations and outcome reporting\n\n3. **Facility Inadequacies:**\n   - Severe overcrowding with animals housed in spaces far below minimum welfare standards\n   - Insufficient sanitation infrastructure leading to chronically unsanitary conditions\n   - Inadequate protection from weather extremes and environmental stressors\n   - Reported absence of proper enrichment and exercise provisions\n   - Substandard medical facilities lacking essential equipment and supplies\n\n4. **Systemic Oversight Failures:**\n   - Local authorities appear to have failed in their statutory duty to ensure proper shelter operations\n   - Reported resistance to external assessment and criticism\n   - Lack of implementation of standard operating procedures recommended by national guidelines\n   - Unclear lines of accountability and responsibility among governing authorities\n\nYour intervention could be transformative in several ways:\n\n1. **Expert Assessment and Recommendation:**\n   - Your organization could provide expert assessment of current conditions and protocols\n   - Development of specific, implementable recommendations for immediate and long-term reforms\n   - Provision of standard operating procedure templates based on best practices\n\n2. **Advocacy with Key Officials:**\n   - Your direct communication with local authorities would lend crucial weight to reform demands\n   - Potential to facilitate dialogue between citizen advocates and resistant officials\n   - Ability to elevate the issue to higher administrative levels if local response is inadequate\n\n3. **Implementation Support:**\n   - Guidance on establishing proper oversight committees with appropriate expertise\n   - Assistance in identifying qualified veterinary and administrative personnel\n   - Sharing of proven protocols from successfully reformed shelters across India\n   - Support for establishing transparent public engagement and reporting mechanisms\n\n4. **Accountability Measures:**\n   - Advocacy for formal investigation into officials responsible for oversight failures\n   - Support for necessary administrative or structural changes to governance\n   - Guidance on implementing proper public accountability mechanisms\n\nWe understand that this represents a significant request on your time and resources, but the scale of suffering at SPCA Chandigarh appears to warrant intervention at the highest levels of animal welfare advocacy.\n\nI would be grateful for any form of support you might provide, whether through direct intervention, delegation to your organization's representatives, or guidance to local advocates.\n\nWith profound respect for your lifelong commitment to animal welfare,\n\nA Concerned Animal Advocate\n[Optional: Your Name/Contact]`,
+    },
+  ];
+
+  // Define Email Template type (if not already defined globally)
+  interface EmailTemplate {
+    id: string;
+    recipient: string;
+    title: string;
+    description: string;
+    subject: string;
+    body: string;
+  }
+
+  const googleDriveLink = "https://drive.google.com/drive/folders/12yzHCoecLxzM13fxPGfUz0OWCjLHFZG8?usp=sharing";
+  
   const helpActions: HelpAction[] = [
     {
       id: 'share',
@@ -87,8 +127,47 @@ const HowToHelpSection: React.FC = () => {
             <li>Email Chandigarh Governor: <a href="mailto:admr-chd@nic.in" className="text-primary hover:underline">admr-chd@nic.in</a></li>
             <li>Email MC Commissioner: <a href="mailto:comm-mcc-chd@nic.in" className="text-primary hover:underline">comm-mcc-chd@nic.in</a></li>
             <li>Involve PM Office: File grievances/RTIs at <ExtLink href="https://pgportal.gov.in/">pgportal.gov.in</ExtLink></li>
-            <li>Need help drafting? <Link href="/sample-emails" className="text-primary hover:underline">Download Sample Emails</Link></li>
+            <li>You can find sample email templates in the section below.</li>
           </ul>
+        </div>
+      ),
+    },
+    {
+      id: 'sample-emails',
+      title: 'Use Sample Email Templates',
+      icon: FiMail,
+      content: (
+        <div className="space-y-6">
+          <p className="text-gray-700">Use these pre-drafted emails as a starting point. Remember to personalize them!</p>
+          {emailTemplates.map((template) => (
+            <div key={template.id} className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+              <div className="p-5">
+                <h3 className="text-lg font-semibold text-gray-800 mb-2">{template.title}</h3>
+                <p className="text-sm text-gray-600 mb-4">To: {template.recipient}</p>
+                <p className="text-sm text-gray-600 mb-4">Subject: {template.subject}</p>
+                <div className="bg-gray-50 p-3 rounded-md mb-4 max-h-[250px] overflow-y-auto whitespace-pre-line text-gray-700 text-xs">
+                  {template.body}
+                </div>
+                <div className="mt-3 p-3 bg-blue-50 border border-blue-100 rounded-md text-xs text-blue-700">
+                  <p className="font-medium mb-1">Note:</p>
+                  <p>Consider attaching photographic evidence. Images of shelter conditions can be downloaded from:</p>
+                  <p><ExtLink href={googleDriveLink}>{googleDriveLink}</ExtLink></p>
+                  <p className="mt-1">You can copy the link text: <code className="bg-blue-100 px-1 rounded">{googleDriveLink}</code></p>
+                </div>
+                 <div className="mt-4 flex flex-col sm:flex-row gap-2">
+                    <a
+                      href={`mailto:${template.recipient}?subject=${encodeURIComponent(template.subject)}&body=${encodeURIComponent(template.body + '\n\n[Optional: Add your name/contact and mention attached images from: ' + googleDriveLink + ']')}`}
+                      target="_blank" rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md shadow-sm text-white bg-primary hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+                    >
+                      <FiSend className="mr-1.5 h-3 w-3" />
+                      Open in Email App
+                    </a>
+                    {/* Add download button or other actions if needed */}
+                 </div>
+              </div>
+            </div>
+          ))}
         </div>
       ),
     },
@@ -109,42 +188,6 @@ const HowToHelpSection: React.FC = () => {
           </ul>
           <p className="font-medium">Other In-Kind Donations:</p>
           <p>Consider donating specific food items for different animals (birds, cats, dogs, puppies). Coordinate delivery/needs with the supervisor numbers above.</p>
-        </div>
-      ),
-    },
-    {
-      id: 'complaint',
-      title: 'File an Official Complaint',
-      icon: FiMail,
-      content: (
-        <ComplaintSender
-          defaultRecipient="gandhim@nic.in"
-          ccRecipients={['admr-chd@nic.in', 'comm-mcc-chd@nic.in', 'AsharM@petaindia.org']} 
-          subjectTemplate="Urgent Complaint Regarding Animal Welfare Issues at SPCA Chandigarh"
-          bodyTemplate={complaintBodyTemplate}
-        />
-      ),
-    },
-    {
-      id: 'legal',
-      title: 'Support Upcoming Legal Action',
-      icon: FiBriefcase,
-      content: (
-        <div className="space-y-4 text-gray-700">
-          <p className="font-medium">We are preparing to file a petition in court soon to compel systemic changes at SPCA Chandigarh.</p>
-          <p>This public initiative requires significant effort and resources, especially legal fees. We plan to crowdfund this effort through a partner NGO shortly.</p>
-          <ul className="list-disc list-inside space-y-2">
-            <li>
-              <span className="font-semibold">Join the Petition:</span> Email us at <a href="mailto:info@spca.wtf" className="text-primary hover:underline">info@spca.wtf</a> to express your interest in joining or supporting the legal petition.
-            </li>
-            <li>
-              <span className="font-semibold">Legal Professionals:</span> If you are a lawyer willing to offer pro-bono assistance or advice, please reach out to <a href="mailto:info@spca.wtf" className="text-primary hover:underline">info@spca.wtf</a>. Your expertise would be invaluable.
-            </li>
-            <li>
-              <span className="font-semibold">Crowdfunding:</span> Stay tuned for details on how to contribute financially once the crowdfunding campaign is launched.
-            </li>
-          </ul>
-          <p>Your support in this crucial next step is vital!</p>
         </div>
       ),
     },
