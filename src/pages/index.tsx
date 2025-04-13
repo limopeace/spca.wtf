@@ -116,8 +116,9 @@ const Home: React.FC = () => {
                 <Link href="/legal" className="w-full sm:w-auto px-6 py-3 bg-transparent border border-white text-white font-medium rounded-md hover:bg-white hover:bg-opacity-10 transition-colors text-center">
                   View Legal Cases
                 </Link>
-                <Link href="/#how-to-help" className="w-full sm:w-auto px-6 py-3 bg-yellow-500 text-white font-medium rounded-md hover:bg-opacity-90 transition-colors text-center animate-pulse">
-                  How You Can Help →
+                <Link href="/help" className="w-full sm:w-auto px-6 py-3.5 bg-yellow-500 text-white font-medium rounded-md hover:bg-yellow-600 transition-colors text-center shadow-lg transform hover:scale-105 relative overflow-hidden group">
+                  <span className="absolute inset-0 bg-white opacity-20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-500"></span>
+                  <span className="relative font-bold">How You Can Help →</span>
                 </Link>
                 <Link href="/about#supporters" className="w-full sm:w-auto px-6 py-3 bg-blue-500 text-white font-medium rounded-md hover:bg-opacity-90 transition-colors text-center">
                   See Our Impact
@@ -268,9 +269,9 @@ const Home: React.FC = () => {
             <p className="text-lg sm:text-xl mb-8 text-white text-opacity-90">
               Your voice matters. Join hundreds of concerned citizens advocating for better animal welfare standards at SPCA Chandigarh.
             </p>
-            <a href="#how-to-help" className="inline-block px-8 py-4 text-lg font-bold text-primary bg-white rounded-full shadow-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 animate-pulse">
+            <Link href="/help" className="inline-block px-8 py-4 text-lg font-bold text-primary bg-white rounded-full shadow-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300">
               See How You Can Help →
-            </a>
+            </Link>
           </div>
         </div>
       </section>
