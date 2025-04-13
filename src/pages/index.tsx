@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import Slideshow from '../components/Slideshow'
+import HowToHelpSection from '../components/HowToHelpSection'
 
 const Home: React.FC = () => {
   // Define the images for the carousel
@@ -311,6 +312,10 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* How You Can Help Section */}
+      <HowToHelpSection />
+
     </>
   )
 }
