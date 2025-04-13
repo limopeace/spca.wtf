@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { FiDownload, FiArrowLeft } from 'react-icons/fi'
 import { saveAs } from 'file-saver'
-import { Packer, Document, Paragraph, TextRun } from 'docx'
+import { Packer, Document, Paragraph } from 'docx'
 
 type EmailTemplate = {
   id: string;
@@ -20,90 +20,99 @@ const SampleEmailsPage: React.FC = () => {
       id: 'governor',
       recipient: 'admr-chd@nic.in',
       title: 'Email to Chandigarh Governor',
-      description: 'A formal request to the Governor of Chandigarh to address animal welfare concerns at SPCA.',
-      subject: 'Urgent Request to Address Animal Welfare Issues at SPCA Chandigarh',
-      body: `Dear Sir/Madam,
+      description: 'A formal request to the Governor of Chandigarh demanding oversight and investigation into SPCA Chandigarh.',
+      subject: 'Urgent Call for Investigation & Oversight: Systemic Failures at SPCA Chandigarh',
+      body: `Honorable Governor,
 
-I am writing to bring to your attention the serious concerns regarding animal welfare at the SPCA Chandigarh shelter. As documented on spca.wtf and through other public sources, there appear to be significant issues that need immediate attention:
+I am writing as a concerned citizen to demand immediate administrative intervention regarding the alarming situation at the SPCA Chandigarh shelter. Evidence documented publicly (e.g., via spca.wtf) strongly suggests systemic failures impacting animal welfare, requiring your urgent attention.
 
-1. Documented evidence indicates a mortality rate of approximately 47% (6,383 animals) between January 2019 and September 2021.
-2. Severe overcrowding in kennels creating unsanitary and stressful conditions for animals.
-3. Inadequate veterinary care due to staffing shortages and resource constraints.
+Key areas of concern include:
 
-As the administrative head of Chandigarh, your intervention is crucial to ensure proper governance and accountability at SPCA Chandigarh. I respectfully request the following actions:
+1.  **Shockingly High Mortality Rates:** Official records previously indicated mortality rates reaching as high as 47%. This points to severe deficiencies in care, disease management, or veterinary protocols.
+2.  **Inhumane Housing Conditions:** Reports and photographic evidence suggest persistent severe overcrowding, inadequate sanitation, and potentially unsafe enclosure conditions, contributing to stress and disease spread.
+3.  **Insufficient Veterinary Care:** Concerns exist regarding the availability and quality of veterinary staffing, timely treatment, and appropriate medical protocols for the number of animals housed.
+4.  **Lack of Transparency & Accountability:** There appears to be a pattern of insufficient transparency regarding operations, finances, and animal outcomes, hindering public trust and effective oversight.
 
-1. A formal investigation into the reported issues at SPCA Chandigarh.
-2. Implementation of proper oversight mechanisms.
-3. Ensuring adequate resources are allocated for animal care.
+As the head administrator of Chandigarh, your office holds the ultimate responsibility for ensuring institutions operating within the UT adhere to ethical standards and legal requirements for animal welfare. The current situation appears to represent a significant failure in governance.
 
-This matter requires urgent attention as it concerns the welfare of thousands of vulnerable animals in our community.
+I implore you to initiate:
 
-Thank you for your consideration. I look forward to seeing positive changes in this important animal welfare institution.
+1.  **A Comprehensive, Independent Investigation:** To thoroughly examine the shelter's operations, finances, veterinary practices, and adherence to animal welfare laws (like the Prevention of Cruelty to Animals Act).
+2.  **Immediate Corrective Actions:** Based on findings, enforce necessary changes to leadership, staffing, protocols, and facilities.
+3.  **Establishment of Robust Oversight:** Implement a permanent, transparent oversight mechanism involving qualified veterinarians and independent animal welfare experts.
+
+Failure to act decisively perpetuates animal suffering and undermines public confidence. The citizens and animals of Chandigarh deserve an SPCA that operates with compassion, competence, and transparency.
+
+I await information on the concrete steps your office will take to address this crisis.
 
 Sincerely,
-[Your Name]`,
+A Concerned Citizen of Chandigarh
+[Optional: Your Name/Contact]`,
     },
     {
       id: 'commissioner',
       recipient: 'comm-mcc-chd@nic.in',
       title: 'Email to Municipal Commissioner',
-      description: 'A request to the Municipal Commissioner to improve SPCA administration and facilities.',
-      subject: 'Request for Intervention: Improving SPCA Chandigarh Operations',
-      body: `Dear Sir/Madam,
+      description: 'A request demanding the Municipal Commissioner enforce accountability and improve SPCA infrastructure/operations.',
+      subject: 'Demand for Accountability: Operational & Infrastructure Failures at SPCA Chandigarh',
+      body: `Dear Municipal Commissioner,
 
-I am writing to express my concern regarding the operations and animal care standards at SPCA Chandigarh, which falls under the purview of the Municipal Corporation.
+I am writing to express profound concern regarding the operational management and infrastructure conditions at SPCA Chandigarh, an institution significantly reliant on Municipal Corporation oversight and resources.
 
-Based on documented evidence available at spca.wtf, there appear to be several critical issues requiring immediate attention:
+Publicly available information (e.g., via spca.wtf) highlights critical failures demanding your immediate attention:
 
-1. Inadequate infrastructure and maintenance of animal housing facilities.
-2. Apparent lack of proper medical protocols leading to concerning mortality rates.
-3. Insufficient staffing and resource allocation for proper animal care.
+1.  **Dilapidated Infrastructure:** Reports suggest inadequate maintenance of kennels, drainage issues, and potentially insufficient space, contributing to unsanitary conditions and disease.
+2.  **Operational Deficiencies:** Concerns include inadequate staffing levels (both veterinary and support staff), poor record-keeping practices, and a lack of standardized protocols for animal intake, care, and disease control.
+3.  **Resource Allocation:** Questions exist regarding the effective utilization of funds allocated by the MC and other sources for direct animal care versus administrative overhead.
+4.  **High Mortality & Disease:** The previously reported high mortality figures strongly suggest underlying operational failures in sanitation, quarantine procedures, and veterinary response.
 
-As Municipal Commissioner, your intervention could significantly improve the situation through:
+As the Municipal Commissioner, your office has a direct role in ensuring the SPCA operates effectively and utilizes public resources responsibly. The current state appears unacceptable.
 
-1. Conducting an audit of the SPCA's current operations and facilities.
-2. Establishing a committee to develop and implement improved animal care protocols.
-3. Increasing transparency in the management of funds allocated to animal welfare.
-4. Setting up regular inspections to ensure compliance with animal welfare standards.
+I urge the Municipal Corporation to:
 
-These issues impact not just animal welfare but also public health and the city's commitment to compassionate governance.
+1.  **Conduct an Urgent Audit:** Review SPCA's operational procedures, facility maintenance logs, staffing levels, and financial expenditures related to animal care.
+2.  **Enforce Compliance:** Ensure the SPCA adheres to all relevant municipal bylaws and national animal welfare standards (PCA Act, ABC Rules).
+3.  **Mandate Infrastructure Improvements:** Allocate necessary resources and demand immediate action to repair and upgrade facilities to meet basic humane standards.
+4.  **Improve Management Oversight:** Implement stricter reporting requirements and performance metrics for the SPCA management team.
 
-I respectfully request your prompt attention to these matters. The animals of Chandigarh deserve better care and protection.
+The well-being of animals at the SPCA and the responsible use of municipal resources are at stake. We expect swift action to rectify these failures.
 
 Sincerely,
-[Your Name]`,
+A Concerned Resident
+[Optional: Your Name/Contact]`,
     },
     {
       id: 'maneka',
       recipient: 'gandhim@nic.in',
-      title: 'Email to Maneka Gandhi',
-      description: 'A request to animal welfare advocate and former minister Maneka Gandhi for support.',
-      subject: 'Seeking Support for SPCA Chandigarh Animal Welfare Crisis',
+      title: 'Email to Smt. Maneka Gandhi',
+      description: 'A request for intervention and guidance from renowned animal welfare advocate Smt. Maneka Gandhi.',
+      subject: 'Urgent Plea for Intervention: Animal Welfare Crisis at SPCA Chandigarh',
       body: `Respected Smt. Maneka Gandhi,
 
-I am writing to seek your valuable support and intervention regarding serious animal welfare concerns at SPCA Chandigarh.
+I am writing to you with deep distress regarding the critical situation at the SPCA shelter in Chandigarh, hoping for your invaluable guidance and intervention.
 
-As a prominent advocate for animal rights and welfare in India, your influence could be pivotal in addressing the following documented issues:
+As a leading voice for animal welfare in India, your attention to this matter could be instrumental. Publicly available evidence (collated at spca.wtf and other sources) reveals a deeply troubling picture:
 
-1. RTI responses reveal that 47% of animals (6,383) brought to the shelter between January 2019 and September 2021 died during treatment.
-2. Severe overcrowding in kennels.
-3. Inadequate veterinary care and oversight.
-4. Apparent mismanagement of funds and resources.
+*   **Alarming Mortality Statistics:** Past RTI data indicated nearly half the animals admitted did not survive, suggesting systemic failures in care.
+*   **Deplorable Conditions:** Persistent issues of severe overcrowding, poor sanitation, and inadequate veterinary support have been reported.
+*   **Systemic Issues:** There are indications of potential mismanagement, lack of standard operating procedures, and insufficient oversight contributing to these problems.
+*   **Specific Incidents:** [Optional: Mention a specific incident or timeline event if known, e.g., "Concerns were heightened following the events reported around [Date/Event from timeline.json or complaints.pdf]..."].
 
-These issues have been extensively documented at spca.wtf, with supporting evidence including RTI responses, photographs, and official communications.
+We understand the complexities of shelter management, but the scale and persistence of these reported issues point towards a crisis requiring external pressure and expert guidance.
 
-Given your extensive experience with animal welfare organizations and your influence in policy matters, your intervention could:
+Your intervention could significantly aid efforts to:
 
-1. Bring national attention to this local issue.
-2. Provide expert guidance on implementing proper animal care standards.
-3. Help establish accountability mechanisms.
+1.  **Amplify the Call for Accountability:** Drawing national attention can compel local authorities to act decisively.
+2.  **Share Best Practices:** Your expertise could guide the implementation of humane and effective shelter management protocols.
+3.  **Advocate for Stronger Oversight:** Support the establishment of independent monitoring mechanisms.
 
-I humbly request your support in any capacity possible - whether through direct communication with local authorities, public statements, or guidance to local animal welfare advocates.
+We, the concerned citizens and animal welfare advocates of Chandigarh, are struggling to bring about meaningful change against apparent institutional inertia. Your support, in any form you deem appropriate, would provide immense strength to this cause.
 
-Thank you for your consideration and for your lifelong dedication to animal welfare in India.
+Thank you for your lifelong dedication to animal welfare and for considering this urgent plea.
 
-Respectfully,
-[Your Name]`,
+With deepest respect,
+A Concerned Animal Advocate
+[Optional: Your Name/Contact]`,
     },
   ];
 
@@ -112,14 +121,8 @@ Respectfully,
       sections: [{
         properties: {},
         children: [
-          new Paragraph({
-            text: `To: ${template.recipient}`,
-            style: "Heading2"
-          }),
-          new Paragraph({
-            text: `Subject: ${template.subject}`,
-            style: "Heading2"
-          }),
+          new Paragraph({ text: `To: ${template.recipient}` }),
+          new Paragraph({ text: `Subject: ${template.subject}` }),
           new Paragraph({ text: ' ' }), // Spacer
           ...template.body.split('\n').map(line => new Paragraph({ text: line })),
         ],

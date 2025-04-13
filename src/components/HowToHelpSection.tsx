@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { FiShare2, FiSend, FiMail, FiAlertCircle, FiGift, FiPhone, FiDownload, FiChevronDown, FiChevronUp, FiExternalLink } from 'react-icons/fi';
+import { FiShare2, FiSend, FiMail, FiAlertCircle, FiGift, FiPhone, FiDownload, FiChevronDown, FiChevronUp, FiExternalLink, FiBriefcase, FiHeart } from 'react-icons/fi';
 import ComplaintSender from './ComplaintSender'; // Assuming ComplaintSender is in the same directory
 
 interface HelpAction {
@@ -87,7 +87,7 @@ const HowToHelpSection: React.FC = () => {
             <li>Email Chandigarh Governor: <a href="mailto:admr-chd@nic.in" className="text-primary hover:underline">admr-chd@nic.in</a></li>
             <li>Email MC Commissioner: <a href="mailto:comm-mcc-chd@nic.in" className="text-primary hover:underline">comm-mcc-chd@nic.in</a></li>
             <li>Involve PM Office: File grievances/RTIs at <ExtLink href="https://pgportal.gov.in/">pgportal.gov.in</ExtLink></li>
-            <li>Need help drafting? <Link href="/sample-emails" className="text-primary hover:underline">Download Sample Emails</Link> (Page coming soon!)</li>
+            <li>Need help drafting? <Link href="/sample-emails" className="text-primary hover:underline">Download Sample Emails</Link></li>
           </ul>
         </div>
       ),
@@ -123,6 +123,29 @@ const HowToHelpSection: React.FC = () => {
           subjectTemplate="Urgent Complaint Regarding Animal Welfare Issues at SPCA Chandigarh"
           bodyTemplate={complaintBodyTemplate}
         />
+      ),
+    },
+    {
+      id: 'legal',
+      title: 'Support Upcoming Legal Action',
+      icon: FiBriefcase,
+      content: (
+        <div className="space-y-4 text-gray-700">
+          <p className="font-medium">We are preparing to file a petition in court soon to compel systemic changes at SPCA Chandigarh.</p>
+          <p>This public initiative requires significant effort and resources, especially legal fees. We plan to crowdfund this effort through a partner NGO shortly.</p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>
+              <span className="font-semibold">Join the Petition:</span> Email us at <a href="mailto:info@spca.wtf" className="text-primary hover:underline">info@spca.wtf</a> to express your interest in joining or supporting the legal petition.
+            </li>
+            <li>
+              <span className="font-semibold">Legal Professionals:</span> If you are a lawyer willing to offer pro-bono assistance or advice, please reach out to <a href="mailto:info@spca.wtf" className="text-primary hover:underline">info@spca.wtf</a>. Your expertise would be invaluable.
+            </li>
+            <li>
+              <span className="font-semibold">Crowdfunding:</span> Stay tuned for details on how to contribute financially once the crowdfunding campaign is launched.
+            </li>
+          </ul>
+          <p>Your support in this crucial next step is vital!</p>
+        </div>
       ),
     },
   ];
